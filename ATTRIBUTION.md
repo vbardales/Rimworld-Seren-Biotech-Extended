@@ -6,3 +6,7 @@
 ## Conversion
 
 The originals are HAR channel masks (opaque, red = no mark, green = marking drawn in the second colour, mixed values = blend). Each pixel becomes white with alpha = G / (R + G), so the drawn area and its gradient are kept. The gene tints the white (`colorType` Custom). `Mask.png` of the original is `Mask0` here.
+
+## Not used
+
+The three Seren face mods by OdysseyLotus (Seren Nice Facial Animations 3793591541, Seren Facial Animations for VTE 2844766515, Seren Facial Animations 2844766352) carry no licence and no permission text. Nothing is copied from them. Facial assets that sit inside the CC0 original and the CC0 fork may be used.
