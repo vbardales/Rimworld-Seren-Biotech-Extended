@@ -1,6 +1,6 @@
 # Attribution
 
-- **Seren** (original, Humanoid Alien Races), Steam Workshop 2704627783, by OdysseyLotus. CC0 (LICENSE read 2026-10-26). The twelve body masks `Things/Seren/Masks/Body/Mask*_south/_east/_north.png` are the source of every texture in `Mod/Textures/Things/SerenOriginalMasks/`.
+- **Seren** (original, Humanoid Alien Races), Steam Workshop 2704627783, by OdysseyLotus. CC0 (LICENSE read 2026-10-26). The twelve body masks `Things/Seren/Masks/Body/Mask*_south/_east/_north.png` are the source of every texture in `Mod/Textures/Things/SerenBiotechExtended/`.
 - **Seren, from Stardust [Biotech Fork]**, Steam Workshop 3726565301, packageId `odysseylotus.serenbiotech`, by OdysseyLotus and Lucius. CC0 (LICENSE read 2026-10-26). The gene definitions are modelled on its `GeneDefs_Seren_BodyMasks.xml` and inherit its abstract `GeneSerenBodyMaskBase`.
 
 ## Conversion

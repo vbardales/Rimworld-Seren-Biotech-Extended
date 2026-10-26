@@ -13,7 +13,7 @@
 				<debugLabel>Seren original left horn 0</debugLabel>
 				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
 				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-				<texPath>Things/SerenOriginalMasks/Horns/HornLeft0</texPath>
+				<texPath>Things/SerenBiotechExtended/Horns/HornLeft0</texPath>
 				<color>(255, 255, 255)</color>
 				<parentTagDef>Head</parentTagDef>
 				<drawData>
@@ -29,7 +29,7 @@
 				<debugLabel>Seren original right horn 0</debugLabel>
 				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
 				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-				<texPath>Things/SerenOriginalMasks/Horns/HornRight0</texPath>
+				<texPath>Things/SerenBiotechExtended/Horns/HornRight0</texPath>
 				<color>(255, 255, 255)</color>
 				<parentTagDef>Head</parentTagDef>
 				<drawData>
@@ -64,7 +64,7 @@
 				<debugLabel>Seren original left horn 1</debugLabel>
 				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
 				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-				<texPath>Things/SerenOriginalMasks/Horns/HornLeft1</texPath>
+				<texPath>Things/SerenBiotechExtended/Horns/HornLeft1</texPath>
 				<color>(255, 255, 255)</color>
 				<parentTagDef>Head</parentTagDef>
 				<drawData>
@@ -80,7 +80,7 @@
 				<debugLabel>Seren original right horn 1</debugLabel>
 				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
 				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-				<texPath>Things/SerenOriginalMasks/Horns/HornRight1</texPath>
+				<texPath>Things/SerenBiotechExtended/Horns/HornRight1</texPath>
 				<color>(255, 255, 255)</color>
 				<parentTagDef>Head</parentTagDef>
 				<drawData>
@@ -115,7 +115,7 @@
 				<debugLabel>Seren original left horn 2</debugLabel>
 				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
 				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-				<texPath>Things/SerenOriginalMasks/Horns/HornLeft2</texPath>
+				<texPath>Things/SerenBiotechExtended/Horns/HornLeft2</texPath>
 				<color>(255, 255, 255)</color>
 				<parentTagDef>Head</parentTagDef>
 				<drawData>
@@ -131,7 +131,7 @@
 				<debugLabel>Seren original right horn 2</debugLabel>
 				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
 				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-				<texPath>Things/SerenOriginalMasks/Horns/HornRight2</texPath>
+				<texPath>Things/SerenBiotechExtended/Horns/HornRight2</texPath>
 				<color>(255, 255, 255)</color>
 				<parentTagDef>Head</parentTagDef>
 				<drawData>
@@ -166,7 +166,7 @@
 				<debugLabel>Seren original left horn 3</debugLabel>
 				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
 				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-				<texPath>Things/SerenOriginalMasks/Horns/HornLeft3</texPath>
+				<texPath>Things/SerenBiotechExtended/Horns/HornLeft3</texPath>
 				<color>(255, 255, 255)</color>
 				<parentTagDef>Head</parentTagDef>
 				<drawData>
@@ -182,7 +182,7 @@
 				<debugLabel>Seren original right horn 3</debugLabel>
 				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
 				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-				<texPath>Things/SerenOriginalMasks/Horns/HornRight3</texPath>
+				<texPath>Things/SerenBiotechExtended/Horns/HornRight3</texPath>
 				<color>(255, 255, 255)</color>
 				<parentTagDef>Head</parentTagDef>
 				<drawData>
@@ -217,7 +217,7 @@
 				<debugLabel>Seren original left horn 4</debugLabel>
 				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
 				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-				<texPath>Things/SerenOriginalMasks/Horns/HornLeft4</texPath>
+				<texPath>Things/SerenBiotechExtended/Horns/HornLeft4</texPath>
 				<color>(255, 255, 255)</color>
 				<parentTagDef>Head</parentTagDef>
 				<drawData>
@@ -233,7 +233,7 @@
 				<debugLabel>Seren original right horn 4</debugLabel>
 				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
 				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-				<texPath>Things/SerenOriginalMasks/Horns/HornRight4</texPath>
+				<texPath>Things/SerenBiotechExtended/Horns/HornRight4</texPath>
 				<color>(255, 255, 255)</color>
 				<parentTagDef>Head</parentTagDef>
 				<drawData>
@@ -268,7 +268,7 @@
 				<debugLabel>Seren original left horn 5</debugLabel>
 				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
 				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-				<texPath>Things/SerenOriginalMasks/Horns/HornLeft5</texPath>
+				<texPath>Things/SerenBiotechExtended/Horns/HornLeft5</texPath>
 				<color>(255, 255, 255)</color>
 				<parentTagDef>Head</parentTagDef>
 				<drawData>
@@ -284,7 +284,7 @@
 				<debugLabel>Seren original right horn 5</debugLabel>
 				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
 				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-				<texPath>Things/SerenOriginalMasks/Horns/HornRight5</texPath>
+				<texPath>Things/SerenBiotechExtended/Horns/HornRight5</texPath>
 				<color>(255, 255, 255)</color>
 				<parentTagDef>Head</parentTagDef>
 				<drawData>
@@ -319,7 +319,7 @@
 				<debugLabel>Seren original left horn 6</debugLabel>
 				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
 				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-				<texPath>Things/SerenOriginalMasks/Horns/HornLeft6</texPath>
+				<texPath>Things/SerenBiotechExtended/Horns/HornLeft6</texPath>
 				<color>(255, 255, 255)</color>
 				<parentTagDef>Head</parentTagDef>
 				<drawData>
@@ -335,7 +335,7 @@
 				<debugLabel>Seren original right horn 6</debugLabel>
 				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
 				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-				<texPath>Things/SerenOriginalMasks/Horns/HornRight6</texPath>
+				<texPath>Things/SerenBiotechExtended/Horns/HornRight6</texPath>
 				<color>(255, 255, 255)</color>
 				<parentTagDef>Head</parentTagDef>
 				<drawData>
@@ -370,7 +370,7 @@
 				<debugLabel>Seren original left horn 7</debugLabel>
 				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
 				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-				<texPath>Things/SerenOriginalMasks/Horns/HornLeft7</texPath>
+				<texPath>Things/SerenBiotechExtended/Horns/HornLeft7</texPath>
 				<color>(255, 255, 255)</color>
 				<parentTagDef>Head</parentTagDef>
 				<drawData>
@@ -386,7 +386,7 @@
 				<debugLabel>Seren original right horn 7</debugLabel>
 				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
 				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-				<texPath>Things/SerenOriginalMasks/Horns/HornRight7</texPath>
+				<texPath>Things/SerenBiotechExtended/Horns/HornRight7</texPath>
 				<color>(255, 255, 255)</color>
 				<parentTagDef>Head</parentTagDef>
 				<drawData>

@@ -11,7 +11,7 @@
 			<li>
 				<debugLabel>Seren original body mask 0</debugLabel>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
-				<texPath>Things/SerenOriginalMasks/Mask0</texPath>
+				<texPath>Things/SerenBiotechExtended/Mask0</texPath>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
@@ -29,7 +29,7 @@
 			<li>
 				<debugLabel>Seren original body mask 1</debugLabel>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
-				<texPath>Things/SerenOriginalMasks/Mask1</texPath>
+				<texPath>Things/SerenBiotechExtended/Mask1</texPath>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
@@ -47,7 +47,7 @@
 			<li>
 				<debugLabel>Seren original body mask 2</debugLabel>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
-				<texPath>Things/SerenOriginalMasks/Mask2</texPath>
+				<texPath>Things/SerenBiotechExtended/Mask2</texPath>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
@@ -65,7 +65,7 @@
 			<li>
 				<debugLabel>Seren original body mask 3</debugLabel>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
-				<texPath>Things/SerenOriginalMasks/Mask3</texPath>
+				<texPath>Things/SerenBiotechExtended/Mask3</texPath>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
@@ -83,7 +83,7 @@
 			<li>
 				<debugLabel>Seren original body mask 4</debugLabel>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
-				<texPath>Things/SerenOriginalMasks/Mask4</texPath>
+				<texPath>Things/SerenBiotechExtended/Mask4</texPath>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
@@ -101,7 +101,7 @@
 			<li>
 				<debugLabel>Seren original body mask 5</debugLabel>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
-				<texPath>Things/SerenOriginalMasks/Mask5</texPath>
+				<texPath>Things/SerenBiotechExtended/Mask5</texPath>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
@@ -119,7 +119,7 @@
 			<li>
 				<debugLabel>Seren original body mask 6</debugLabel>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
-				<texPath>Things/SerenOriginalMasks/Mask6</texPath>
+				<texPath>Things/SerenBiotechExtended/Mask6</texPath>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
@@ -137,7 +137,7 @@
 			<li>
 				<debugLabel>Seren original body mask 7</debugLabel>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
-				<texPath>Things/SerenOriginalMasks/Mask7</texPath>
+				<texPath>Things/SerenBiotechExtended/Mask7</texPath>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
@@ -155,7 +155,7 @@
 			<li>
 				<debugLabel>Seren original body mask 8</debugLabel>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
-				<texPath>Things/SerenOriginalMasks/Mask8</texPath>
+				<texPath>Things/SerenBiotechExtended/Mask8</texPath>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
@@ -173,7 +173,7 @@
 			<li>
 				<debugLabel>Seren original body mask 9</debugLabel>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
-				<texPath>Things/SerenOriginalMasks/Mask9</texPath>
+				<texPath>Things/SerenBiotechExtended/Mask9</texPath>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
@@ -191,7 +191,7 @@
 			<li>
 				<debugLabel>Seren original body mask 10</debugLabel>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
-				<texPath>Things/SerenOriginalMasks/Mask10</texPath>
+				<texPath>Things/SerenBiotechExtended/Mask10</texPath>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
@@ -209,7 +209,7 @@
 			<li>
 				<debugLabel>Seren original body mask 11</debugLabel>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
-				<texPath>Things/SerenOriginalMasks/Mask11</texPath>
+				<texPath>Things/SerenBiotechExtended/Mask11</texPath>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>

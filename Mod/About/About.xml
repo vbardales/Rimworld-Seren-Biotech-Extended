@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>Seren Original Masks</name>
+  <name>Seren Biotech Extended</name>
   <author>OdysseyLotus, Lucius - 1.6 adapted by Nelim</author>
-  <url>https://github.com/vbardales/Rimworld-Seren-Original-Masks</url>
-  <packageId>nelim.serenoriginalmasks</packageId>
+  <url>https://github.com/vbardales/Rimworld-Seren-Biotech-Extended</url>
+  <packageId>nelim.serenbiotechextended</packageId>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
@@ -29,5 +29,5 @@ Requires [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3726565301]
 
 [b]Adoption.[/b] If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
 
-[url=https://github.com/vbardales/Rimworld-Seren-Original-Masks]Source code on GitHub[/url]</description>
+[url=https://github.com/vbardales/Rimworld-Seren-Biotech-Extended]Source code on GitHub[/url]</description>
 </ModMetaData>

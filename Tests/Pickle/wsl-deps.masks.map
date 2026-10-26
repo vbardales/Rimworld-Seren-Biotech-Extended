@@ -1,5 +1,5 @@
-# Seren Original Masks: the Seren fork plus the Pickle Tools the scenarios use (copy of PickleTools wsl-deps.seren.map, 2026-10-26).
-#   Submit-PickleRun.ps1 -Mod SerenOriginalMasks -DepMap wsl-deps.masks.map
+# Seren Biotech Extended: the Seren fork plus the Pickle Tools the scenarios use (copy of PickleTools wsl-deps.seren.map, 2026-10-26).
+#   Submit-PickleRun.ps1 -Mod SerenBiotechExtended -DepMap wsl-deps.masks.map
 nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
 nelim.pickletools.camerazoom path:PickleTools/CameraZoom/Mod
 nelim.pickletools.stagedecor path:PickleTools/StageDecor/Mod
@@ -28,4 +28,4 @@ ccj.nlfaloadfix 3721489042
 lordfelix.HatHairControl 3760821540
 OskarPotocki.VanillaFactionsExpanded.Core 2023507013
 odysseylotus.serenbiotech 3726565301
-nelim.serenoriginalmasks path:SerenOriginalMasks/Mod
+nelim.serenbiotechextended path:SerenBiotechExtended/Mod
