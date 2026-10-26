@@ -23,3 +23,6 @@ build/
 Source/**/obj/
 Source/**/bin/
 *.pdb
+
+# Illustration prompt, deleted once the illustration is received (AUDIT.md 2.f).
+PROMPT_*.md
