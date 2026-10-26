@@ -15,8 +15,8 @@ namespace SerenBiotechExtended
     {
         // The pale tones of the original are tinted over grey shaded art, where they read as almost white: raise the
         // saturation and lower the value a little, keeping the hue.
-        private const float SaturationFactor = 2.4f;
-        private const float ValueFactor = 0.88f;
+        private const float SaturationFactor = 1.7f;
+        private const float ValueFactor = 0.94f;
 
         private static Color Deepen(Color c)
         {
