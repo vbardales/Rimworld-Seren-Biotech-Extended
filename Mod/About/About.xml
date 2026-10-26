@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Seren Original Masks</name>
-  <author>Nelim</author>
+  <author>OdysseyLotus, Lucius - 1.6 adapted by Nelim</author>
+  <url>https://github.com/vbardales/Rimworld-Seren-Original-Masks</url>
   <packageId>nelim.serenoriginalmasks</packageId>
   <supportedVersions>
     <li>1.6</li>
@@ -20,7 +21,13 @@
 
 The original masks are drawn for a Humanoid Alien Races skin colour channel. Here they are plain textures that the gene tints, so the colour comes from the gene and not from the skin.
 
-Requires Seren, from Stardust [Biotech Fork]. Not affiliated with it, and it does not need the original mod.
+Requires [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3726565301]Seren, from Stardust [Biotech Fork][/url]. Not affiliated with it, and it does not need the original mod.
 
-[b]Thanks[/b] to OdysseyLotus for Seren and its masks, and to Lucius for the Biotech fork. Both are CC0.</description>
+[b]Thanks[/b] to OdysseyLotus for Seren and its masks, and to Lucius for the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3726565301]Biotech fork[/url]. Both are CC0. The original is [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2704627783]Seren, from Stardust[/url]. The captures were taken with Pickle, a development tool that is never a dependency.
+
+[b]Made with AI.[/b] The conversion of the masks and the assembly were done with Claude Code, which the commit history records as a co-author.
+
+[b]Adoption.[/b] If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
+
+[url=https://github.com/vbardales/Rimworld-Seren-Original-Masks]Source code on GitHub[/url]</description>
 </ModMetaData>
