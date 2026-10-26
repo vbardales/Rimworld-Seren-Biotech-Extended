@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Head horns of the original Seren mod (2704627783), styles 0 to 7, as genes of the Biotech fork. Same exclusion tag as the fork's sensors (SerenSensors): only one pair of horns is worn. -->
+
+	<GeneDef ParentName="GeneSerenSensorBase">
+		<defName>SerenOriginalHorns_0</defName>
+		<label>original seren horns 0</label>
+		<description>Carriers of this gene have the horns of style 0 of the original Seren mod.</description>
+		<iconPath>UI/Icons/Genes/Gene_BackSensors</iconPath>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>Seren original left horn 0</debugLabel>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/SerenOriginalMasks/Horns/HornLeft0</texPath>
+				<color>(255, 255, 255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+			<li>
+				<debugLabel>Seren original right horn 0</debugLabel>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/SerenOriginalMasks/Horns/HornRight0</texPath>
+				<color>(255, 255, 255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<symbolPack>
+			<prefixSymbols>
+				<li><symbol>pointed</symbol></li>
+				<li><symbol>sharp</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>sensor</symbol></li>
+				<li><symbol>horn</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenSensorBase">
+		<defName>SerenOriginalHorns_1</defName>
+		<label>original seren horns 1</label>
+		<description>Carriers of this gene have the horns of style 1 of the original Seren mod.</description>
+		<iconPath>UI/Icons/Genes/Gene_BackSensors</iconPath>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>Seren original left horn 1</debugLabel>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/SerenOriginalMasks/Horns/HornLeft1</texPath>
+				<color>(255, 255, 255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+			<li>
+				<debugLabel>Seren original right horn 1</debugLabel>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/SerenOriginalMasks/Horns/HornRight1</texPath>
+				<color>(255, 255, 255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<symbolPack>
+			<prefixSymbols>
+				<li><symbol>pointed</symbol></li>
+				<li><symbol>sharp</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>sensor</symbol></li>
+				<li><symbol>horn</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenSensorBase">
+		<defName>SerenOriginalHorns_2</defName>
+		<label>original seren horns 2</label>
+		<description>Carriers of this gene have the horns of style 2 of the original Seren mod.</description>
+		<iconPath>UI/Icons/Genes/Gene_BackSensors</iconPath>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>Seren original left horn 2</debugLabel>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/SerenOriginalMasks/Horns/HornLeft2</texPath>
+				<color>(255, 255, 255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+			<li>
+				<debugLabel>Seren original right horn 2</debugLabel>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/SerenOriginalMasks/Horns/HornRight2</texPath>
+				<color>(255, 255, 255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<symbolPack>
+			<prefixSymbols>
+				<li><symbol>pointed</symbol></li>
+				<li><symbol>sharp</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>sensor</symbol></li>
+				<li><symbol>horn</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenSensorBase">
+		<defName>SerenOriginalHorns_3</defName>
+		<label>original seren horns 3</label>
+		<description>Carriers of this gene have the horns of style 3 of the original Seren mod.</description>
+		<iconPath>UI/Icons/Genes/Gene_BackSensors</iconPath>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>Seren original left horn 3</debugLabel>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/SerenOriginalMasks/Horns/HornLeft3</texPath>
+				<color>(255, 255, 255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+			<li>
+				<debugLabel>Seren original right horn 3</debugLabel>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/SerenOriginalMasks/Horns/HornRight3</texPath>
+				<color>(255, 255, 255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<symbolPack>
+			<prefixSymbols>
+				<li><symbol>pointed</symbol></li>
+				<li><symbol>sharp</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>sensor</symbol></li>
+				<li><symbol>horn</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenSensorBase">
+		<defName>SerenOriginalHorns_4</defName>
+		<label>original seren horns 4</label>
+		<description>Carriers of this gene have the horns of style 4 of the original Seren mod.</description>
+		<iconPath>UI/Icons/Genes/Gene_BackSensors</iconPath>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>Seren original left horn 4</debugLabel>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/SerenOriginalMasks/Horns/HornLeft4</texPath>
+				<color>(255, 255, 255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+			<li>
+				<debugLabel>Seren original right horn 4</debugLabel>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/SerenOriginalMasks/Horns/HornRight4</texPath>
+				<color>(255, 255, 255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<symbolPack>
+			<prefixSymbols>
+				<li><symbol>pointed</symbol></li>
+				<li><symbol>sharp</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>sensor</symbol></li>
+				<li><symbol>horn</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenSensorBase">
+		<defName>SerenOriginalHorns_5</defName>
+		<label>original seren horns 5</label>
+		<description>Carriers of this gene have the horns of style 5 of the original Seren mod.</description>
+		<iconPath>UI/Icons/Genes/Gene_BackSensors</iconPath>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>Seren original left horn 5</debugLabel>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/SerenOriginalMasks/Horns/HornLeft5</texPath>
+				<color>(255, 255, 255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+			<li>
+				<debugLabel>Seren original right horn 5</debugLabel>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/SerenOriginalMasks/Horns/HornRight5</texPath>
+				<color>(255, 255, 255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<symbolPack>
+			<prefixSymbols>
+				<li><symbol>pointed</symbol></li>
+				<li><symbol>sharp</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>sensor</symbol></li>
+				<li><symbol>horn</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenSensorBase">
+		<defName>SerenOriginalHorns_6</defName>
+		<label>original seren horns 6</label>
+		<description>Carriers of this gene have the horns of style 6 of the original Seren mod.</description>
+		<iconPath>UI/Icons/Genes/Gene_BackSensors</iconPath>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>Seren original left horn 6</debugLabel>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/SerenOriginalMasks/Horns/HornLeft6</texPath>
+				<color>(255, 255, 255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+			<li>
+				<debugLabel>Seren original right horn 6</debugLabel>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/SerenOriginalMasks/Horns/HornRight6</texPath>
+				<color>(255, 255, 255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<symbolPack>
+			<prefixSymbols>
+				<li><symbol>pointed</symbol></li>
+				<li><symbol>sharp</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>sensor</symbol></li>
+				<li><symbol>horn</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenSensorBase">
+		<defName>SerenOriginalHorns_7</defName>
+		<label>original seren horns 7</label>
+		<description>Carriers of this gene have the horns of style 7 of the original Seren mod.</description>
+		<iconPath>UI/Icons/Genes/Gene_BackSensors</iconPath>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>Seren original left horn 7</debugLabel>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/SerenOriginalMasks/Horns/HornLeft7</texPath>
+				<color>(255, 255, 255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+			<li>
+				<debugLabel>Seren original right horn 7</debugLabel>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/SerenOriginalMasks/Horns/HornRight7</texPath>
+				<color>(255, 255, 255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<drawData>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>10</layer>
+					</dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<symbolPack>
+			<prefixSymbols>
+				<li><symbol>pointed</symbol></li>
+				<li><symbol>sharp</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>sensor</symbol></li>
+				<li><symbol>horn</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+
+</Defs>
