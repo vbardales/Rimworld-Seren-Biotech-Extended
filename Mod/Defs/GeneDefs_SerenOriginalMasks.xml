@@ -10,6 +10,7 @@
 		<renderNodeProperties>
 			<li>
 				<debugLabel>Seren original body mask 0</debugLabel>
+				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask0</texPath>
 				<baseLayer>5</baseLayer>
@@ -28,6 +29,7 @@
 		<renderNodeProperties>
 			<li>
 				<debugLabel>Seren original body mask 1</debugLabel>
+				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask1</texPath>
 				<baseLayer>5</baseLayer>
@@ -46,6 +48,7 @@
 		<renderNodeProperties>
 			<li>
 				<debugLabel>Seren original body mask 2</debugLabel>
+				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask2</texPath>
 				<baseLayer>5</baseLayer>
@@ -64,6 +67,7 @@
 		<renderNodeProperties>
 			<li>
 				<debugLabel>Seren original body mask 3</debugLabel>
+				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask3</texPath>
 				<baseLayer>5</baseLayer>
@@ -82,6 +86,7 @@
 		<renderNodeProperties>
 			<li>
 				<debugLabel>Seren original body mask 4</debugLabel>
+				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask4</texPath>
 				<baseLayer>5</baseLayer>
@@ -100,6 +105,7 @@
 		<renderNodeProperties>
 			<li>
 				<debugLabel>Seren original body mask 5</debugLabel>
+				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask5</texPath>
 				<baseLayer>5</baseLayer>
@@ -118,6 +124,7 @@
 		<renderNodeProperties>
 			<li>
 				<debugLabel>Seren original body mask 6</debugLabel>
+				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask6</texPath>
 				<baseLayer>5</baseLayer>
@@ -136,6 +143,7 @@
 		<renderNodeProperties>
 			<li>
 				<debugLabel>Seren original body mask 7</debugLabel>
+				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask7</texPath>
 				<baseLayer>5</baseLayer>
@@ -154,6 +162,7 @@
 		<renderNodeProperties>
 			<li>
 				<debugLabel>Seren original body mask 8</debugLabel>
+				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask8</texPath>
 				<baseLayer>5</baseLayer>
@@ -172,6 +181,7 @@
 		<renderNodeProperties>
 			<li>
 				<debugLabel>Seren original body mask 9</debugLabel>
+				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask9</texPath>
 				<baseLayer>5</baseLayer>
@@ -190,6 +200,7 @@
 		<renderNodeProperties>
 			<li>
 				<debugLabel>Seren original body mask 10</debugLabel>
+				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask10</texPath>
 				<baseLayer>5</baseLayer>
@@ -208,6 +219,7 @@
 		<renderNodeProperties>
 			<li>
 				<debugLabel>Seren original body mask 11</debugLabel>
+				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask11</texPath>
 				<baseLayer>5</baseLayer>

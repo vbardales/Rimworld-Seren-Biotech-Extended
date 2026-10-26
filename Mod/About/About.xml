@@ -19,7 +19,7 @@
   </loadAfter>
   <description>Adds the twelve body masks of the original Seren mod to the Biotech fork of Seren, as body genes: a galaxy halo with a bright star, a sun starburst, constellations, a layered cape. One gene per mask, and only one body mask is worn at a time, like the fork's own.
 
-The original masks are drawn for a Humanoid Alien Races skin colour channel. Here they are plain textures that the gene tints, so the colour comes from the gene and not from the skin.
+The original draws its masks and horns in a pale second colour picked at random by Humanoid Alien Races. Here that colour is a gene: twelve accent genes (pearl, cream, frost, sky, mist, iris, lavender, lilac, orchid, blush, petal, rose) tint the horns and body masks. Without an accent gene they are drawn in a default tone. A small assembly does the tinting.
 
 Requires [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3726565301]Seren, from Stardust [Biotech Fork][/url]. Not affiliated with it, and it does not need the original mod.
 

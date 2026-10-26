@@ -17,3 +17,9 @@ Art/.render/
 
 # Windows Explorer folder settings.
 desktop.ini
+
+# Build intermediates (Source/Directory.Build.props); the assembly itself is committed.
+build/
+Source/**/obj/
+Source/**/bin/
+*.pdb

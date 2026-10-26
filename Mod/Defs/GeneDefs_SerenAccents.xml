@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- The pale second colour of the original Seren mod (race colour channel "skin", second colour), one gene per tone. The original drew it at random; here it is chosen. It tints the original horns and body masks of this mod. -->
+	<GeneDef Name="GeneSerenAccentBase" Abstract="True">
+		<biostatCpx>0</biostatCpx>
+		<displayCategory>Cosmetic</displayCategory>
+		<iconPath>UI/Icons/Genes/Gene_SerenMarkingSmall</iconPath>
+		<exclusionTags>
+			<li>SerenAccentColor</li>
+		</exclusionTags>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenAccentBase">
+		<defName>SerenAccent_Pearl</defName>
+		<label>pearl accent</label>
+		<description>Carriers of this gene have horns and body masks of the original Seren mod in a pale pearl tone.</description>
+		<iconColor>(255, 255, 255)</iconColor>
+		<displayOrderInCategory>121</displayOrderInCategory>
+		<modExtensions>
+			<li Class="SerenBiotechExtended.AccentColorExtension">
+				<color>(255, 255, 255)</color>
+			</li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenAccentBase">
+		<defName>SerenAccent_Cream</defName>
+		<label>cream accent</label>
+		<description>Carriers of this gene have horns and body masks of the original Seren mod in a pale cream tone.</description>
+		<iconColor>(255, 254, 219)</iconColor>
+		<displayOrderInCategory>122</displayOrderInCategory>
+		<modExtensions>
+			<li Class="SerenBiotechExtended.AccentColorExtension">
+				<color>(255, 254, 219)</color>
+			</li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenAccentBase">
+		<defName>SerenAccent_Frost</defName>
+		<label>frost accent</label>
+		<description>Carriers of this gene have horns and body masks of the original Seren mod in a pale frost tone.</description>
+		<iconColor>(219, 246, 255)</iconColor>
+		<displayOrderInCategory>123</displayOrderInCategory>
+		<modExtensions>
+			<li Class="SerenBiotechExtended.AccentColorExtension">
+				<color>(219, 246, 255)</color>
+			</li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenAccentBase">
+		<defName>SerenAccent_Sky</defName>
+		<label>sky accent</label>
+		<description>Carriers of this gene have horns and body masks of the original Seren mod in a pale sky tone.</description>
+		<iconColor>(219, 233, 255)</iconColor>
+		<displayOrderInCategory>124</displayOrderInCategory>
+		<modExtensions>
+			<li Class="SerenBiotechExtended.AccentColorExtension">
+				<color>(219, 233, 255)</color>
+			</li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenAccentBase">
+		<defName>SerenAccent_Mist</defName>
+		<label>mist accent</label>
+		<description>Carriers of this gene have horns and body masks of the original Seren mod in a pale mist tone.</description>
+		<iconColor>(219, 226, 255)</iconColor>
+		<displayOrderInCategory>125</displayOrderInCategory>
+		<modExtensions>
+			<li Class="SerenBiotechExtended.AccentColorExtension">
+				<color>(219, 226, 255)</color>
+			</li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenAccentBase">
+		<defName>SerenAccent_Iris</defName>
+		<label>iris accent</label>
+		<description>Carriers of this gene have horns and body masks of the original Seren mod in a pale iris tone.</description>
+		<iconColor>(229, 219, 255)</iconColor>
+		<displayOrderInCategory>126</displayOrderInCategory>
+		<modExtensions>
+			<li Class="SerenBiotechExtended.AccentColorExtension">
+				<color>(229, 219, 255)</color>
+			</li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenAccentBase">
+		<defName>SerenAccent_Lavender</defName>
+		<label>lavender accent</label>
+		<description>Carriers of this gene have horns and body masks of the original Seren mod in a pale lavender tone.</description>
+		<iconColor>(233, 219, 255)</iconColor>
+		<displayOrderInCategory>127</displayOrderInCategory>
+		<modExtensions>
+			<li Class="SerenBiotechExtended.AccentColorExtension">
+				<color>(233, 219, 255)</color>
+			</li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenAccentBase">
+		<defName>SerenAccent_Lilac</defName>
+		<label>lilac accent</label>
+		<description>Carriers of this gene have horns and body masks of the original Seren mod in a pale lilac tone.</description>
+		<iconColor>(241, 219, 255)</iconColor>
+		<displayOrderInCategory>128</displayOrderInCategory>
+		<modExtensions>
+			<li Class="SerenBiotechExtended.AccentColorExtension">
+				<color>(241, 219, 255)</color>
+			</li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenAccentBase">
+		<defName>SerenAccent_Orchid</defName>
+		<label>orchid accent</label>
+		<description>Carriers of this gene have horns and body masks of the original Seren mod in a pale orchid tone.</description>
+		<iconColor>(248, 219, 255)</iconColor>
+		<displayOrderInCategory>129</displayOrderInCategory>
+		<modExtensions>
+			<li Class="SerenBiotechExtended.AccentColorExtension">
+				<color>(248, 219, 255)</color>
+			</li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenAccentBase">
+		<defName>SerenAccent_Blush</defName>
+		<label>blush accent</label>
+		<description>Carriers of this gene have horns and body masks of the original Seren mod in a pale blush tone.</description>
+		<iconColor>(255, 217, 251)</iconColor>
+		<displayOrderInCategory>130</displayOrderInCategory>
+		<modExtensions>
+			<li Class="SerenBiotechExtended.AccentColorExtension">
+				<color>(255, 217, 251)</color>
+			</li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenAccentBase">
+		<defName>SerenAccent_Petal</defName>
+		<label>petal accent</label>
+		<description>Carriers of this gene have horns and body masks of the original Seren mod in a pale petal tone.</description>
+		<iconColor>(255, 219, 241)</iconColor>
+		<displayOrderInCategory>131</displayOrderInCategory>
+		<modExtensions>
+			<li Class="SerenBiotechExtended.AccentColorExtension">
+				<color>(255, 219, 241)</color>
+			</li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenAccentBase">
+		<defName>SerenAccent_Rose</defName>
+		<label>rose accent</label>
+		<description>Carriers of this gene have horns and body masks of the original Seren mod in a pale rose tone.</description>
+		<iconColor>(255, 219, 230)</iconColor>
+		<displayOrderInCategory>132</displayOrderInCategory>
+		<modExtensions>
+			<li Class="SerenBiotechExtended.AccentColorExtension">
+				<color>(255, 219, 230)</color>
+			</li>
+		</modExtensions>
+	</GeneDef>
+
+</Defs>
