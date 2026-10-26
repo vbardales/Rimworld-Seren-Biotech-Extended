@@ -13,6 +13,19 @@ namespace SerenBiotechExtended
 
     public static class AccentColor
     {
+        // The pale tones of the original are tinted over grey shaded art, where they read as almost white: raise the
+        // saturation and lower the value a little, keeping the hue.
+        private const float SaturationFactor = 2.4f;
+        private const float ValueFactor = 0.88f;
+
+        private static Color Deepen(Color c)
+        {
+            Color.RGBToHSV(c, out float h, out float s, out float v);
+            Color d = Color.HSVToRGB(h, Mathf.Clamp01(s * SaturationFactor), v * ValueFactor);
+            d.a = c.a;
+            return d;
+        }
+
         // The accent colour of the first accent gene the pawn has, or null when it has none.
         public static Color? For(Pawn pawn)
         {
@@ -23,7 +36,7 @@ namespace SerenBiotechExtended
             {
                 AccentColorExtension ext = genes[i].def.GetModExtension<AccentColorExtension>();
                 if (ext != null)
-                    return ext.color;
+                    return Deepen(ext.color);
             }
             return null;
         }
