@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Body masks of the original Seren mod (2704627783), redrawn as RGBA textures for the Biotech fork. Same exclusion tag as the fork's own masks (SerenBodyMask), so only one body mask is worn. -->
+
+	<GeneDef ParentName="GeneSerenBodyMaskBase">
+		<defName>SerenOriginalMask_0</defName>
+		<label>original body mask 0</label>
+		<description>Carriers of this gene wear body mask 0 of the original Seren mod.</description>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>Seren original body mask 0</debugLabel>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/SerenOriginalMasks/Mask0</texPath>
+				<baseLayer>5</baseLayer>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Custom</colorType>
+				<color>(235, 238, 255)</color>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenBodyMaskBase">
+		<defName>SerenOriginalMask_1</defName>
+		<label>original body mask 1</label>
+		<description>Carriers of this gene wear body mask 1 of the original Seren mod.</description>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>Seren original body mask 1</debugLabel>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/SerenOriginalMasks/Mask1</texPath>
+				<baseLayer>5</baseLayer>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Custom</colorType>
+				<color>(255, 244, 205)</color>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenBodyMaskBase">
+		<defName>SerenOriginalMask_2</defName>
+		<label>original body mask 2</label>
+		<description>Carriers of this gene wear body mask 2 of the original Seren mod.</description>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>Seren original body mask 2</debugLabel>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/SerenOriginalMasks/Mask2</texPath>
+				<baseLayer>5</baseLayer>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Custom</colorType>
+				<color>(235, 238, 255)</color>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenBodyMaskBase">
+		<defName>SerenOriginalMask_3</defName>
+		<label>original body mask 3</label>
+		<description>Carriers of this gene wear body mask 3 of the original Seren mod.</description>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>Seren original body mask 3</debugLabel>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/SerenOriginalMasks/Mask3</texPath>
+				<baseLayer>5</baseLayer>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Custom</colorType>
+				<color>(235, 238, 255)</color>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenBodyMaskBase">
+		<defName>SerenOriginalMask_4</defName>
+		<label>original body mask 4</label>
+		<description>Carriers of this gene wear body mask 4 of the original Seren mod.</description>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>Seren original body mask 4</debugLabel>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/SerenOriginalMasks/Mask4</texPath>
+				<baseLayer>5</baseLayer>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Custom</colorType>
+				<color>(235, 238, 255)</color>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenBodyMaskBase">
+		<defName>SerenOriginalMask_5</defName>
+		<label>original body mask 5</label>
+		<description>Carriers of this gene wear body mask 5 of the original Seren mod.</description>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>Seren original body mask 5</debugLabel>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/SerenOriginalMasks/Mask5</texPath>
+				<baseLayer>5</baseLayer>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Custom</colorType>
+				<color>(215, 232, 255)</color>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenBodyMaskBase">
+		<defName>SerenOriginalMask_6</defName>
+		<label>original body mask 6</label>
+		<description>Carriers of this gene wear body mask 6 of the original Seren mod.</description>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>Seren original body mask 6</debugLabel>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/SerenOriginalMasks/Mask6</texPath>
+				<baseLayer>5</baseLayer>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Custom</colorType>
+				<color>(190, 205, 255)</color>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenBodyMaskBase">
+		<defName>SerenOriginalMask_7</defName>
+		<label>original body mask 7</label>
+		<description>Carriers of this gene wear body mask 7 of the original Seren mod.</description>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>Seren original body mask 7</debugLabel>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/SerenOriginalMasks/Mask7</texPath>
+				<baseLayer>5</baseLayer>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Custom</colorType>
+				<color>(235, 238, 255)</color>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenBodyMaskBase">
+		<defName>SerenOriginalMask_8</defName>
+		<label>original body mask 8</label>
+		<description>Carriers of this gene wear body mask 8 of the original Seren mod.</description>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>Seren original body mask 8</debugLabel>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/SerenOriginalMasks/Mask8</texPath>
+				<baseLayer>5</baseLayer>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Custom</colorType>
+				<color>(235, 238, 255)</color>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenBodyMaskBase">
+		<defName>SerenOriginalMask_9</defName>
+		<label>original body mask 9</label>
+		<description>Carriers of this gene wear body mask 9 of the original Seren mod.</description>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>Seren original body mask 9</debugLabel>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/SerenOriginalMasks/Mask9</texPath>
+				<baseLayer>5</baseLayer>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Custom</colorType>
+				<color>(235, 238, 255)</color>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenBodyMaskBase">
+		<defName>SerenOriginalMask_10</defName>
+		<label>original body mask 10</label>
+		<description>Carriers of this gene wear body mask 10 of the original Seren mod.</description>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>Seren original body mask 10</debugLabel>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/SerenOriginalMasks/Mask10</texPath>
+				<baseLayer>5</baseLayer>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Custom</colorType>
+				<color>(235, 238, 255)</color>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSerenBodyMaskBase">
+		<defName>SerenOriginalMask_11</defName>
+		<label>original body mask 11</label>
+		<description>Carriers of this gene wear body mask 11 of the original Seren mod.</description>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>Seren original body mask 11</debugLabel>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/SerenOriginalMasks/Mask11</texPath>
+				<baseLayer>5</baseLayer>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Custom</colorType>
+				<color>(235, 238, 255)</color>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+</Defs>

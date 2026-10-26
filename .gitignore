@@ -1,0 +1,19 @@
+# Development environments and sessions.
+.vs/
+.vscode/
+.idea/
+.claude/
+
+# Pickle runs land in Inbox/ and failures wait in Parked/ (AGENTS.md, Test evidence); only Evidence/ holds proofs.
+Tests/Pickle/Inbox/
+Tests/Pickle/Parked/
+Tests/Pickle/Evidence/
+evidence/
+PickleReports*/
+pickle-reports*/
+
+# Preview renderer controls, local only (PUBLISHING.md).
+Art/.render/
+
+# Windows Explorer folder settings.
+desktop.ini
