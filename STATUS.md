@@ -25,6 +25,7 @@ remaining:
   - "2026-10-26: unverified Virginie compares captures (Tests/Pickle/Inbox/first-captures, ticket efee, 2/2 green, 20 shots) with her reference image"
   - "2026-10-26: unverified colours (genes tint white textures, values guessed)"
 updated: 2026-10-26
+protocols_read_sha: 43dd90d4b7873c500347fba1be01275a48d5795b
 ---
 
 # Seren Original Masks: status
