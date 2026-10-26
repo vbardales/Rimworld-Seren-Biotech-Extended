@@ -16,6 +16,9 @@
   </modDependencies>
   <loadAfter>
     <li>odysseylotus.serenbiotech</li>
+    <li>Nals.FacialAnimation</li>
+    <li>Nals.FacialAnimationExperimentals</li>
+    <li>VanillaExpanded.VTEXE.FacialAnims</li>
   </loadAfter>
   <description>Adds the twelve body masks of the original Seren mod to the Biotech fork of Seren, as body genes: a galaxy halo with a bright star, a sun starburst, constellations, a layered cape. One gene per mask, and only one body mask is worn at a time, like the fork's own.
 

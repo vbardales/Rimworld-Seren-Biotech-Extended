@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!--
+		Face set choice (cold loading: the setting is read when the game starts, so a change needs a restart).
+		Seren, from Stardust [Biotech Fork] loads its Experimentals face set whenever Nals Facial Animation Experimentals is active, even when
+		Vanilla Textures Expanded - Facial Animation is active too. With the setting on, this patch removes the Experimentals face part defs
+		and adds the Vanilla Textures Expanded ones, copied from the fork (CC0). The setting only exists when both frameworks are active.
+		The ear change and the removal of the eye and marking render nodes are the same in both sets, so they are left as the fork made them.
+	-->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Textures Expanded - [NL] Facial Animation</li>
+		</mods>
+		<match Class="PatchOperationFindMod">
+			<mods>
+				<li>[NL] Facial Animation - Experimentals</li>
+			</mods>
+			<match Class="VFECore.PatchOperationToggableSequence">
+				<enabled>False</enabled>
+				<label>Seren faces: use the Vanilla Textures Expanded set instead of Experimentals</label>
+				<mods>
+					<li>Seren Biotech Extended</li>
+				</mods>
+				<operations>
+
+					<!-- The Experimentals face parts of the fork: every Facial Animation def of the Seren eyes gene whose name starts with Seren. -->
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/*[starts-with(defName, 'Seren') and targetGeneDefs/li = 'OL_SerenEyes']</xpath>
+					</li>
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/*[starts-with(defName, 'Seren') and targetGeneDefs/li[starts-with(., 'SerenMarkings_')]]</xpath>
+					</li>
+
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs</xpath>
+						<value>
+<!-- Markings, from the fork's VTE set; textures copied to Things/SerenBiotechExtended/FaceVTE/Skins so they do not meet the Experimentals ones. -->
+  
+  <FacialAnimation.SkinTypeDef>
+    <defName>SerenBrows</defName>
+    <texPath>Things/SerenBiotechExtended/FaceVTE/Skins/Brows</texPath>
+    <shader>Map/CutoutComplex</shader><!--CutoutComplex-->
+    <probability>100</probability>
+      <targetGeneDefs>
+      <li>SerenMarkings_Brows</li>
+    </targetGeneDefs>
+  </FacialAnimation.SkinTypeDef>
+
+  <FacialAnimation.SkinTypeDef>
+    <defName>SerenCenterLarge</defName>
+    <texPath>Things/SerenBiotechExtended/FaceVTE/Skins/CenterLarge</texPath>
+    <shader>Map/CutoutComplex</shader>
+    <probability>100</probability>
+      <targetGeneDefs>
+      <li>SerenMarkings_Big</li>
+    </targetGeneDefs>
+  </FacialAnimation.SkinTypeDef>
+
+  <FacialAnimation.SkinTypeDef>
+    <defName>SerenCenterSmall</defName>
+    <texPath>Things/SerenBiotechExtended/FaceVTE/Skins/CenterSmall</texPath>
+    <shader>Map/CutoutComplex</shader>
+	<probability>100</probability>
+      <targetGeneDefs>
+      <li>SerenMarkings_Small</li>
+    </targetGeneDefs>
+  </FacialAnimation.SkinTypeDef>
+
+  <FacialAnimation.SkinTypeDef>
+    <defName>SerenCheeks</defName>
+    <texPath>Things/SerenBiotechExtended/FaceVTE/Skins/Cheeks</texPath>
+    <shader>Map/CutoutComplex</shader>
+    <probability>100</probability>
+      <targetGeneDefs>
+      <li>SerenMarkings_Cheeks</li>
+    </targetGeneDefs>
+  </FacialAnimation.SkinTypeDef>
+
+  <FacialAnimation.SkinTypeDef>
+    <defName>SerenFreckles</defName>
+    <texPath>Things/SerenBiotechExtended/FaceVTE/Skins/Freckles</texPath>
+    <shader>Map/CutoutComplex</shader>
+    <probability>100</probability>
+      <targetGeneDefs>
+      <li>SerenMarkings_Freckles</li>
+    </targetGeneDefs>
+  </FacialAnimation.SkinTypeDef>
+
+  <FacialAnimation.SkinTypeDef>
+    <defName>SerenTarget</defName>
+    <texPath>Things/SerenBiotechExtended/FaceVTE/Skins/Target</texPath>
+    <shader>Map/CutoutComplex</shader>
+    <probability>100</probability>
+      <targetGeneDefs>
+      <li>SerenMarkings_Target</li>
+    </targetGeneDefs>
+  </FacialAnimation.SkinTypeDef>
+
+  <FacialAnimation.SkinTypeDef>
+    <defName>SerenTriStar</defName>
+    <texPath>Things/SerenBiotechExtended/FaceVTE/Skins/TriStar</texPath>
+    <shader>Map/CutoutComplex</shader>
+    <probability>100</probability>
+      <targetGeneDefs>
+      <li>SerenMarkings_Tristar</li>
+    </targetGeneDefs>
+  </FacialAnimation.SkinTypeDef>
+
+<!-- Brow from the fork's VTE set. -->
+
+  <FacialAnimation.BrowTypeDef>
+    <defName>OL_SerenBrowNone</defName>
+    <texPath>Blank</texPath>
+    <probability>1</probability>
+    <shader>Map/Transparent</shader>
+    <targetGeneDefs>
+      <li>OL_SerenEyes</li>
+    </targetGeneDefs>
+  </FacialAnimation.BrowTypeDef>
+<!-- Eyes and lids from the fork's VTE patch. -->
+
+						<FacialAnimation.EyeballColorDef>
+							<defName>OL_SerenEyes_FAColor</defName>
+							<geneDef>OL_SerenEyes</geneDef>
+							<eyeballColor>RGB(1.0,1.0,1.0)</eyeballColor>
+						</FacialAnimation.EyeballColorDef>
+
+						<FacialAnimation.EyeballTypeDef>
+							<defName>OL_SerenEyeNormalFA</defName>
+							<texPath>Things/Pawn/Seren/Eyes/Normal</texPath>
+							<probability>1</probability>
+							<shader>Map/CutoutComplex</shader>
+							<minColor>RGB(0.85,0.85,0.85)</minColor>
+							<maxColor>RGB(1.0,1.0,1.0)</maxColor>
+							<targetGeneDefs>
+								<li>OL_SerenEyes</li>
+							</targetGeneDefs>
+						</FacialAnimation.EyeballTypeDef>
+
+						<FacialAnimation.EyeballTypeDef>
+							<defName>OL_SerenEyeWideFA</defName>
+							<texPath>Things/Pawn/Seren/Eyes/Wide</texPath>
+							<probability>1</probability>
+							<shader>Map/CutoutComplex</shader>
+							<minColor>RGB(0.85,0.85,0.85)</minColor>
+							<maxColor>RGB(1.0,1.0,1.0)</maxColor>
+							<targetGeneDefs>
+								<li>OL_SerenEyes</li>
+							</targetGeneDefs>
+						</FacialAnimation.EyeballTypeDef>
+
+						<FacialAnimation.EyeballTypeDef>
+							<defName>OL_SerenEyePointyFA</defName>
+							<texPath>Things/Pawn/Seren/Eyes/Pointy</texPath>
+							<probability>1</probability>
+							<shader>Map/CutoutComplex</shader>
+							<minColor>RGB(0.85,0.85,0.85)</minColor>
+							<maxColor>RGB(1.0,1.0,1.0)</maxColor>
+							<targetGeneDefs>
+								<li>OL_SerenEyes</li>
+							</targetGeneDefs>
+						</FacialAnimation.EyeballTypeDef>
+
+						<FacialAnimation.EyeballTypeDef>
+							<defName>OL_SerenEyeDullFA</defName>
+							<texPath>Things/Pawn/Seren/Eyes/Dull</texPath>
+							<probability>1</probability>
+							<shader>Map/CutoutComplex</shader>
+							<minColor>RGB(0.85,0.85,0.85)</minColor>
+							<maxColor>RGB(1.0,1.0,1.0)</maxColor>
+							<gender>Female</gender>
+							<targetGeneDefs>
+								<li>OL_SerenEyes</li>
+							</targetGeneDefs>
+						</FacialAnimation.EyeballTypeDef>
+
+						<FacialAnimation.LidTypeDef>
+							<defName>OL_SerenLidNormalFA</defName>
+							<texPath>Things/Pawn/Seren/Lids/Normal</texPath>
+							<probability>1</probability>
+							<shader>Map/Transparent</shader>
+							<targetGeneDefs><li>OL_SerenEyes</li></targetGeneDefs>
+						</FacialAnimation.LidTypeDef>
+
+						<FacialAnimation.LidTypeDef>
+							<defName>OL_SerenLidAlmondFA</defName>
+							<texPath>Things/Pawn/Seren/Lids/Almond</texPath>
+							<probability>1</probability>
+							<shader>Map/Transparent</shader>
+							<targetGeneDefs><li>OL_SerenEyes</li></targetGeneDefs>
+						</FacialAnimation.LidTypeDef>
+
+						<FacialAnimation.LidTypeDef>
+							<defName>OL_SerenLidCheerfulFA</defName>
+							<texPath>Things/Pawn/Seren/Lids/Cheerful</texPath>
+							<probability>1</probability>
+							<shader>Map/Transparent</shader>
+							<targetGeneDefs><li>OL_SerenEyes</li></targetGeneDefs>
+						</FacialAnimation.LidTypeDef>
+
+						<FacialAnimation.LidTypeDef>
+							<defName>OL_SerenLidUnimpressedFA</defName>
+							<texPath>Things/Pawn/Seren/Lids/Sleepy</texPath>
+							<probability>1</probability>
+							<shader>Map/Transparent</shader>
+							<targetGeneDefs><li>OL_SerenEyes</li></targetGeneDefs>
+						</FacialAnimation.LidTypeDef>
+
+						<FacialAnimation.LidTypeDef>
+							<defName>OL_SerenLidFlirtyFA</defName>
+							<texPath>Things/Pawn/Seren/Lids/Flashy</texPath>
+							<probability>1</probability>
+							<shader>Map/Transparent</shader>
+							<targetGeneDefs><li>OL_SerenEyes</li></targetGeneDefs>
+						</FacialAnimation.LidTypeDef>
+
+						<FacialAnimation.LidTypeDef>
+							<defName>OL_SerenLidStuffedFA</defName>
+							<texPath>Things/Pawn/Seren/Lids/Stuffed</texPath>
+							<probability>1</probability>
+							<shader>Map/Transparent</shader>
+							<targetGeneDefs><li>OL_SerenEyes</li></targetGeneDefs>
+						</FacialAnimation.LidTypeDef>
+
+						<FacialAnimation.LidTypeDef>
+							<defName>OL_SerenLidHardenedFA</defName>
+							<texPath>Things/Pawn/Seren/Lids/Hardened</texPath>
+							<probability>1</probability>
+							<shader>Map/Transparent</shader>
+							<targetGeneDefs><li>OL_SerenEyes</li></targetGeneDefs>
+						</FacialAnimation.LidTypeDef>
+
+						<FacialAnimation.LidTypeDef>
+							<defName>OL_SerenLidSimpleFA</defName>
+							<texPath>Things/Pawn/Seren/Lids/Simple</texPath>
+							<probability>1</probability>
+							<shader>Map/Transparent</shader>
+							<targetGeneDefs><li>OL_SerenEyes</li></targetGeneDefs>
+						</FacialAnimation.LidTypeDef>
+
+						<FacialAnimation.LidTypeDef>
+							<defName>OL_SerenLidSquintingFA</defName>
+							<texPath>Things/Pawn/Seren/Lids/Squinting</texPath>
+							<probability>1</probability>
+							<shader>Map/Transparent</shader>
+							<targetGeneDefs><li>OL_SerenEyes</li></targetGeneDefs>
+						</FacialAnimation.LidTypeDef>
+
+						<FacialAnimation.LidTypeDef>
+							<defName>OL_SerenBionicLeftFA</defName>
+							<texPath>Things/Pawn/Seren/Lids/BionicLeft</texPath>
+							<probability>0</probability>
+							<shader>Map/CutoutComplex</shader>
+							<targetGeneDefs><li>OL_SerenEyes</li></targetGeneDefs>
+						</FacialAnimation.LidTypeDef>
+
+						<FacialAnimation.LidTypeDef>
+							<defName>OL_SerenBionicRightFA</defName>
+							<texPath>Things/Pawn/Seren/Lids/BionicRight</texPath>
+							<probability>0</probability>
+							<shader>Map/CutoutComplex</shader>
+							<targetGeneDefs><li>OL_SerenEyes</li></targetGeneDefs>
+						</FacialAnimation.LidTypeDef>
+
+						</value>
+					</li>
+
+				</operations>
+			</match>
+		</match>
+	</Operation>
+
+</Patch>
