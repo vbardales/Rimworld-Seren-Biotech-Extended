@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!--
+		Starting pawn kinds of the original Seren mod for the Neolithic and the Vanilla Factions Expanded style scenarios, rebuilt on the fork's
+		player model (race Human, xenotype OL_SerenBase). The original used its own race and relied on its faction for the pawn look; here the
+		xenotype is forced (useFactionXenotypes false) because those factions belong to other mods. Every kind of another mod keeps its MayRequire.
+		The eight psycasters of the original already exist in the fork (VPE folder), they are not repeated.
+	-->
+
+	<RulePackDef>
+		<defName>OL_NamerSerenTribalMale</defName>
+		<include>
+			<li>NamerSerenMale</li>
+			<li>NamerPersonCorunan</li>
+		</include>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>OL_NamerSerenTribalFemale</defName>
+		<include>
+			<li>NamerSerenFemale</li>
+			<li>NamerPersonCorunan</li>
+		</include>
+	</RulePackDef>
+
+	<PawnKindDef ParentName="OL_SerenPlayerModel">
+		<defName>OL_SerenTribalPlayer</defName>
+		<label>seren tribesperson</label>
+		<nameMaker>OL_NamerSerenTribalMale</nameMaker>
+		<nameMakerFemale>OL_NamerSerenTribalFemale</nameMakerFemale>
+		<maxGenerationAge>200</maxGenerationAge>
+		<gearHealthRange>0.5~1.8</gearHealthRange>
+		<backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
+		<backstoryFilters Inherit="False">
+			<li>
+				<categories>
+					<li>Outlander</li>
+				</categories>
+				<commonality>0.1</commonality>
+			</li>
+			<li>
+				<categories>
+					<li>SerenBackstory</li>
+				</categories>
+				<commonality>0.3</commonality>
+			</li>
+			<li>
+				<categories>
+					<li>Tribal</li>
+				</categories>
+				<commonality>0.6</commonality>
+			</li>
+		</backstoryFilters>
+		<apparelTags Inherit="False">
+			<li>Neolithic</li>
+		</apparelTags>
+		<apparelMoney>150~250</apparelMoney>
+		<techHediffsChance>0.05</techHediffsChance>
+		<techHediffsMoney>50~50</techHediffsMoney>
+		<techHediffsTags Inherit="False">
+			<li>Poor</li>
+		</techHediffsTags>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="OL_SerenPlayerModel" MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">
+		<defName>OL_SerenMedievalPlayer</defName>
+		<label>subject</label>
+		<defaultFactionType>VFEM_PlayerKingdom</defaultFactionType>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<backstoryFilters Inherit="False">
+			<li>
+				<categories>
+					<li>Tribal</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+		<apparelTags Inherit="False">
+			<li>MedievalBasic</li>
+		</apparelTags>
+		<apparelMoney>200~200</apparelMoney>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<techHediffsMoney>50~50</techHediffsMoney>
+		<techHediffsTags Inherit="False">
+			<li>Poor</li>
+		</techHediffsTags>
+		<techHediffsChance>0.02</techHediffsChance>
+		<initialResistanceRange>12~17</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="OL_SerenPlayerModel" MayRequire="OskarPotocki.VFE.Vikings">
+		<defName>OL_SerenVikingPlayer</defName>
+		<label>member</label>
+		<defaultFactionType>VFEV_PlayerClan</defaultFactionType>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<backstoryFilters Inherit="False">
+			<li>
+				<categories>
+					<li>Tribal</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+		<apparelTags Inherit="False">
+			<li>Apparel_Viking</li>
+			<li>Neolithic</li>
+		</apparelTags>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelMoney>250~750</apparelMoney>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<techHediffsMoney>50~50</techHediffsMoney>
+		<techHediffsTags Inherit="False">
+			<li>Poor</li>
+		</techHediffsTags>
+		<techHediffsChance>0.02</techHediffsChance>
+		<initialResistanceRange>9~15</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="OL_SerenPlayerModel" MayRequire="OskarPotocki.VFE.Pirates">
+		<defName>OL_SerenPiratePlayer</defName>
+		<label>pirate</label>
+		<defaultFactionType>VFEP_PlayerPirate</defaultFactionType>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<chemicalAddictionChance>0.06</chemicalAddictionChance>
+		<gearHealthRange>0.7~2.3</gearHealthRange>
+		<apparelMoney>400~1000</apparelMoney>
+		<apparelTags Inherit="False">
+			<li>IndustrialBasic</li>
+			<li>IndustrialAdvanced</li>
+			<li>IndustrialMilitaryBasic</li>
+			<li>IndustrialMilitaryAdvanced</li>
+		</apparelTags>
+		<apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>
+		<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+		<techHediffsChance>0.04</techHediffsChance>
+		<techHediffsMoney>50~800</techHediffsMoney>
+		<initialResistanceRange>13~21</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="OL_SerenPlayerModel" MayRequire="OskarPotocki.VFE.Classical">
+		<defName>OL_SerenClassicalPlayer</defName>
+		<label>member</label>
+		<defaultFactionType>VFEC_NewEmpire</defaultFactionType>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<apparelTags Inherit="False">
+			<li>Classical</li>
+		</apparelTags>
+		<apparelMoney>200~200</apparelMoney>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<techHediffsMoney>50~50</techHediffsMoney>
+		<techHediffsTags Inherit="False">
+			<li>Poor</li>
+		</techHediffsTags>
+		<techHediffsChance>0.02</techHediffsChance>
+		<initialResistanceRange>9~15</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="OL_SerenPlayerModel" MayRequire="Trickity.Samurai.Faction">
+		<defName>OL_SerenRoninPlayer</defName>
+		<label>member</label>
+		<defaultFactionType>TSF_PlayerRonin</defaultFactionType>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<backstoryFilters Inherit="False">
+			<li>
+				<categories>
+					<li>Tribal</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+		<apparelTags Inherit="False">
+			<li>Apparel_SamuraiBasic</li>
+		</apparelTags>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelMoney>250~600</apparelMoney>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<techHediffsMoney>50~50</techHediffsMoney>
+		<techHediffsTags Inherit="False">
+			<li>Poor</li>
+		</techHediffsTags>
+		<techHediffsChance>0.02</techHediffsChance>
+		<initialResistanceRange>9~15</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="OL_SerenPlayerModel" MayRequire="Heis.Edo.Themed.Expansion">
+		<defName>OL_SerenEdoPlayer</defName>
+		<label>member</label>
+		<defaultFactionType>HS_PlayerEdoClan</defaultFactionType>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<backstoryFilters Inherit="False">
+			<li>
+				<categories>
+					<li>Tribal</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+		<apparelTags Inherit="False">
+			<li>HSApparel_EdoClanBase</li>
+		</apparelTags>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelMoney>500~1200</apparelMoney>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<techHediffsMoney>50~50</techHediffsMoney>
+		<techHediffsTags Inherit="False">
+			<li>Poor</li>
+		</techHediffsTags>
+		<techHediffsChance>0.02</techHediffsChance>
+		<initialResistanceRange>9~15</initialResistanceRange>
+	</PawnKindDef>
+
+</Defs>
