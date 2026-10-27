@@ -42,7 +42,7 @@
 		<letterLabel>A ragged stranger with leathery skin is approaching your colony.</letterLabel>
 		<letterPrompt>The leathery stranger stares into space and speaks in a monotone, as though {PAWN_pronoun} hardly sees anyone or anything. {PAWN_pronoun} refuses to leave, insisting {PAWN_pronoun} is only interested in your colony. {PAWN_pronoun} says that {PAWN_pronoun} can help.</letterPrompt>
 		<minGenerationAge>50</minGenerationAge>
-		<maxGenerationAge>200</maxGenerationAge>
+		<maxGenerationAge>90</maxGenerationAge>
 		<bodyTypeGraphicPaths>
 			<Male>Things/Pawn/Humanlike/Bodies/Leathery_Male</Male>
 			<Female>Things/Pawn/Humanlike/Bodies/Leathery_Female</Female>
@@ -78,7 +78,7 @@
 		<letterLabel>A dark scholar covered with twisted scars is approaching the colony.</letterLabel>
 		<letterPrompt>The dark scholar slouches in place, lifeless and silent. Only {PAWN_possessive} eyes seem alive, as if {PAWN_pronoun} could look inside you.\n\n{PAWN_pronoun} says that this is where {PAWN_pronoun} belongs and asks to stay for a while. {PAWN_possessive} tone indicates that {PAWN_pronoun} will not take 'no' for an answer.</letterPrompt>
 		<minGenerationAge>75</minGenerationAge>
-		<maxGenerationAge>200</maxGenerationAge>
+		<maxGenerationAge>90</maxGenerationAge>
 		<forcedHeadTypes>
 			<li>DarkScholar_Male</li>
 			<li>DarkScholar_Female</li>
@@ -181,7 +181,7 @@
 		<letterLabel>A visitor is approaching the colony.</letterLabel>
 		<letterPrompt>The weary-looking drifter stretches {PAWN_possessive} legs. {PAWN_pronoun} seems very tired.\n\n{PAWN_pronoun} asks to stay in your colony for a while - at least until {PAWN_pronoun} has recovered {PAWN_possessive} strength.</letterPrompt>
 		<minGenerationAge>35</minGenerationAge>
-		<maxGenerationAge>180</maxGenerationAge>
+		<maxGenerationAge>90</maxGenerationAge>
 		<apparelTags>
 			<li>IndustrialBasic</li>
 		</apparelTags>
@@ -217,8 +217,8 @@
 		<weight>0.2</weight>
 		<letterLabel>A blind healer is approaching the colony.</letterLabel>
 		<letterPrompt>A small, withered {PAWN_genderNoun} stands in front of you. Where {PAWN_possessive} eyes should be, there are only scar-crusted holes in {PAWN_possessive} flesh. Yet, even without eyes, {PAWN_pronoun} somehow looks at you with kindness. {PAWN_pronoun} says that {PAWN_pronoun} knows that {PAWN_possessive} skills are needed here and wants to stay for a while.</letterPrompt>
-		<minGenerationAge>150</minGenerationAge>
-		<maxGenerationAge>210</maxGenerationAge>
+		<minGenerationAge>70</minGenerationAge>
+		<maxGenerationAge>90</maxGenerationAge>
 		<missingParts>
 			<li>
 				<bodyPart>Eye</bodyPart>
@@ -280,7 +280,7 @@
 		<letterLabel>A mangled figure is approaching the colony.</letterLabel>
 		<letterPrompt>The mangled stranger stares at you with empty eyes and speaks in a broken voice. {PAWN_pronoun} claims to have escaped from a terrible cult and begs to join your colony.</letterPrompt>
 		<minGenerationAge>35</minGenerationAge>
-		<maxGenerationAge>200</maxGenerationAge>
+		<maxGenerationAge>90</maxGenerationAge>
 		<bodyTypeGraphicPaths>
 			<Male>Things/Pawn/Humanlike/Bodies/CultEscapee_Male</Male>
 			<Female>Things/Pawn/Humanlike/Bodies/CultEscapee_Female</Female>
@@ -366,7 +366,7 @@
 		<letterLabel>A lone figure is approaching the colony.</letterLabel>
 		<letterPrompt>The strange figure keeps muttering about some scientific breakthrough. All {PAWN_pronoun} needs is a laboratory. If you let {PAWN_objective} stay, {PAWN_pronoun} will share {PAWN_possessive} vast knowledge with you. It's hard to tell whether {PAWN_pronoun}'s insane or a genius - or both.</letterPrompt>
 		<minGenerationAge>65</minGenerationAge>
-		<maxGenerationAge>210</maxGenerationAge>
+		<maxGenerationAge>90</maxGenerationAge>
 		<skills>
 			<li>
 				<skill>Intellectual</skill>
