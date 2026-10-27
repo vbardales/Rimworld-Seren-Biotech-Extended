@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<!-- The original Seren race lives about 300 years; the Biotech fork xenotype ages like a Human (lifespan 80). LifespanFactor 3.75 stretches the adult ageing of a Human to 300 years. Childhood and growth are not changed. -->
+	<!-- The original Seren race lives about 300 years; the Biotech fork xenotype ages like a Human (lifespan 80).
+		Read in the game code (1.6): the ageing curves (frailty, old-age injuries) divide the biological age by the race lifeExpectancy, not by the LifespanFactor stat, so that stat does nothing here.
+		What slows ageing is the biological age tick factor of a gene (Pawn_GeneTracker.BiologicalAgeTickFactor, from biologicalAgeTickFactorFromAgeCurve, the way the vanilla ageless genes do it).
+		Childhood is untouched (factor 1 up to 19 biological years); from 20 the factor is (80 - 20) / (300 - 20) = 0.214, so 20 + 280 calendar years make 80 biological years. -->
 	<GeneDef>
 		<defName>OL_SerenLongevity</defName>
 		<label>seren longevity</label>
@@ -11,9 +14,13 @@
 		<displayOrderInCategory>-5</displayOrderInCategory>
 		<biostatCpx>0</biostatCpx>
 		<biostatMet>0</biostatMet>
-		<statFactors>
-			<LifespanFactor>3.75</LifespanFactor>
-		</statFactors>
+		<biologicalAgeTickFactorFromAgeCurve>
+			<points>
+				<li>(0, 1)</li>
+				<li>(19, 1)</li>
+				<li>(20, 0.214)</li>
+			</points>
+		</biologicalAgeTickFactorFromAgeCurve>
 		<exclusionTags>
 			<li>SerenLongevity</li>
 		</exclusionTags>
