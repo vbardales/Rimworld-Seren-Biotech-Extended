@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- The original Seren race lives about 300 years; the Biotech fork xenotype ages like a Human (lifespan 80). LifespanFactor 3.75 stretches the adult ageing of a Human to 300 years. Childhood and growth are not changed. -->
+	<GeneDef>
+		<defName>OL_SerenLongevity</defName>
+		<label>seren longevity</label>
+		<description>Carriers age very slowly once grown, and live about three hundred years.</description>
+		<iconPath>UI/Icons/Genes/Gene_SerenBlood</iconPath>
+		<displayCategory>Miscellaneous</displayCategory>
+		<displayOrderInCategory>-5</displayOrderInCategory>
+		<biostatCpx>0</biostatCpx>
+		<biostatMet>0</biostatMet>
+		<statFactors>
+			<LifespanFactor>3.75</LifespanFactor>
+		</statFactors>
+		<exclusionTags>
+			<li>SerenLongevity</li>
+		</exclusionTags>
+	</GeneDef>
+
+</Defs>

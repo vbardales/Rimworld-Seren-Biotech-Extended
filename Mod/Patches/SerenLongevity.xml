@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Seren, from Stardust [Biotech Fork] gives its xenotype no long life; the original race lives about 300 years. New Seren pawns get the gene. -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/XenotypeDef[defName="OL_SerenBase"]/genes</xpath>
+		<value>
+			<li>OL_SerenLongevity</li>
+		</value>
+	</Operation>
+
+</Patch>

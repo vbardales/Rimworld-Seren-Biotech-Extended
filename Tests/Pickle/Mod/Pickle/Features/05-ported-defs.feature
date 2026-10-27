@@ -18,6 +18,7 @@ Feature: Ported Seren kinds and genes
     And Nelim's Pickle Tools: a colonist "cj7" of kind "OL_SerenCultEscapee" exists
     And Nelim's Pickle Tools: a colonist "cj8" of kind "OL_SerenLoneGenius" exists
     When Nelim's Pickle Tools: "tribe1" has the gene "OL_SpaceBorn"
+    And Nelim's Pickle Tools: "tribe1" has the gene "OL_SerenLongevity"
     And Nelim's Pickle Tools: the camera frames the head of "tribe1" at root size 3
     And Nelim's Pickle Tools: I let 20 frames pass
     And I take a screenshot "ported-tribal"
