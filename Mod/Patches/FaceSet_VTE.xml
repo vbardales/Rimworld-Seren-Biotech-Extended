@@ -8,21 +8,21 @@
 		and adds the Vanilla Textures Expanded ones, copied from the fork (CC0). The setting only exists when both frameworks are active.
 		The ear change and the removal of the eye and marking render nodes are the same in both sets, so they are left as the fork made them.
 	-->
-	<Operation Class="PatchOperationFindMod">
+	<Operation Class="ModSettingsFramework.PatchOperationModOption">
+		<id>SerenFaceSetVTE</id>
+		<label>Seren faces: use the Vanilla Textures Expanded set instead of Experimentals</label>
+		<tooltip>Only has an effect when Vanilla Textures Expanded - Facial Animation and Facial Animation - Experimentals are both active. Needs a restart.</tooltip>
+		<defaultValue>False</defaultValue>
 		<mods>
-			<li>Vanilla Textures Expanded - [NL] Facial Animation</li>
+			<li>[NL] Facial Animation - Experimentals</li>
 		</mods>
-		<match Class="PatchOperationFindMod">
-			<mods>
-				<li>[NL] Facial Animation - Experimentals</li>
-			</mods>
-			<match Class="VFECore.PatchOperationToggableSequence">
-				<enabled>False</enabled>
-				<label>Seren faces: use the Vanilla Textures Expanded set instead of Experimentals</label>
+		<operations>
+			<li Class="PatchOperationFindMod">
 				<mods>
-					<li>Seren Biotech Extended</li>
+					<li>Vanilla Textures Expanded - [NL] Facial Animation</li>
 				</mods>
-				<operations>
+				<match Class="PatchOperationSequence">
+					<operations>
 
 					<!-- The Experimentals face parts of the fork: every Facial Animation def of the Seren eyes gene whose name starts with Seren. -->
 					<li Class="PatchOperationRemove">
@@ -266,9 +266,10 @@
 						</value>
 					</li>
 
-				</operations>
-			</match>
-		</match>
+					</operations>
+				</match>
+			</li>
+		</operations>
 	</Operation>
 
 </Patch>
