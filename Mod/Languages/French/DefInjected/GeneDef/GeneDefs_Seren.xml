@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<SerenAccent_Pearl.label>accent perle</SerenAccent_Pearl.label>
+	<SerenAccent_Pearl.description>Les colons qui portent ce gène ont les cornes et les masques corporels du mod Seren d&apos;origine dans un ton pâle de perle.</SerenAccent_Pearl.description>
+	<SerenAccent_Cream.label>accent crème</SerenAccent_Cream.label>
+	<SerenAccent_Cream.description>Les colons qui portent ce gène ont les cornes et les masques corporels du mod Seren d&apos;origine dans un ton pâle de crème.</SerenAccent_Cream.description>
+	<SerenAccent_Frost.label>accent givre</SerenAccent_Frost.label>
+	<SerenAccent_Frost.description>Les colons qui portent ce gène ont les cornes et les masques corporels du mod Seren d&apos;origine dans un ton pâle de givre.</SerenAccent_Frost.description>
+	<SerenAccent_Sky.label>accent ciel</SerenAccent_Sky.label>
+	<SerenAccent_Sky.description>Les colons qui portent ce gène ont les cornes et les masques corporels du mod Seren d&apos;origine dans un ton pâle de ciel.</SerenAccent_Sky.description>
+	<SerenAccent_Mist.label>accent brume</SerenAccent_Mist.label>
+	<SerenAccent_Mist.description>Les colons qui portent ce gène ont les cornes et les masques corporels du mod Seren d&apos;origine dans un ton pâle de brume.</SerenAccent_Mist.description>
+	<SerenAccent_Iris.label>accent iris</SerenAccent_Iris.label>
+	<SerenAccent_Iris.description>Les colons qui portent ce gène ont les cornes et les masques corporels du mod Seren d&apos;origine dans un ton pâle d&apos;iris.</SerenAccent_Iris.description>
+	<SerenAccent_Lavender.label>accent lavande</SerenAccent_Lavender.label>
+	<SerenAccent_Lavender.description>Les colons qui portent ce gène ont les cornes et les masques corporels du mod Seren d&apos;origine dans un ton pâle de lavande.</SerenAccent_Lavender.description>
+	<SerenAccent_Lilac.label>accent lilas</SerenAccent_Lilac.label>
+	<SerenAccent_Lilac.description>Les colons qui portent ce gène ont les cornes et les masques corporels du mod Seren d&apos;origine dans un ton pâle de lilas.</SerenAccent_Lilac.description>
+	<SerenAccent_Orchid.label>accent orchidée</SerenAccent_Orchid.label>
+	<SerenAccent_Orchid.description>Les colons qui portent ce gène ont les cornes et les masques corporels du mod Seren d&apos;origine dans un ton pâle d&apos;orchidée.</SerenAccent_Orchid.description>
+	<SerenAccent_Blush.label>accent rosé</SerenAccent_Blush.label>
+	<SerenAccent_Blush.description>Les colons qui portent ce gène ont les cornes et les masques corporels du mod Seren d&apos;origine dans un ton pâle de rosé.</SerenAccent_Blush.description>
+	<SerenAccent_Petal.label>accent pétale</SerenAccent_Petal.label>
+	<SerenAccent_Petal.description>Les colons qui portent ce gène ont les cornes et les masques corporels du mod Seren d&apos;origine dans un ton pâle de pétale.</SerenAccent_Petal.description>
+	<SerenAccent_Rose.label>accent rose</SerenAccent_Rose.label>
+	<SerenAccent_Rose.description>Les colons qui portent ce gène ont les cornes et les masques corporels du mod Seren d&apos;origine dans un ton pâle de rose.</SerenAccent_Rose.description>
+	<SerenOriginalHorns_0.label>cornes d&apos;origine 0</SerenOriginalHorns_0.label>
+	<SerenOriginalHorns_0.description>Les colons qui portent ce gène ont les cornes du style 0 du mod Seren d&apos;origine.</SerenOriginalHorns_0.description>
+	<SerenOriginalHorns_1.label>cornes d&apos;origine 1</SerenOriginalHorns_1.label>
+	<SerenOriginalHorns_1.description>Les colons qui portent ce gène ont les cornes du style 1 du mod Seren d&apos;origine.</SerenOriginalHorns_1.description>
+	<SerenOriginalHorns_2.label>cornes d&apos;origine 2</SerenOriginalHorns_2.label>
+	<SerenOriginalHorns_2.description>Les colons qui portent ce gène ont les cornes du style 2 du mod Seren d&apos;origine.</SerenOriginalHorns_2.description>
+	<SerenOriginalHorns_3.label>cornes d&apos;origine 3</SerenOriginalHorns_3.label>
+	<SerenOriginalHorns_3.description>Les colons qui portent ce gène ont les cornes du style 3 du mod Seren d&apos;origine.</SerenOriginalHorns_3.description>
+	<SerenOriginalHorns_4.label>cornes d&apos;origine 4</SerenOriginalHorns_4.label>
+	<SerenOriginalHorns_4.description>Les colons qui portent ce gène ont les cornes du style 4 du mod Seren d&apos;origine.</SerenOriginalHorns_4.description>
+	<SerenOriginalHorns_5.label>cornes d&apos;origine 5</SerenOriginalHorns_5.label>
+	<SerenOriginalHorns_5.description>Les colons qui portent ce gène ont les cornes du style 5 du mod Seren d&apos;origine.</SerenOriginalHorns_5.description>
+	<SerenOriginalHorns_6.label>cornes d&apos;origine 6</SerenOriginalHorns_6.label>
+	<SerenOriginalHorns_6.description>Les colons qui portent ce gène ont les cornes du style 6 du mod Seren d&apos;origine.</SerenOriginalHorns_6.description>
+	<SerenOriginalHorns_7.label>cornes d&apos;origine 7</SerenOriginalHorns_7.label>
+	<SerenOriginalHorns_7.description>Les colons qui portent ce gène ont les cornes du style 7 du mod Seren d&apos;origine.</SerenOriginalHorns_7.description>
+	<SerenOriginalMask_0.label>masque corporel d&apos;origine 0</SerenOriginalMask_0.label>
+	<SerenOriginalMask_0.description>Les colons qui portent ce gène arborent le masque corporel 0 du mod Seren d&apos;origine.</SerenOriginalMask_0.description>
+	<SerenOriginalMask_1.label>masque corporel d&apos;origine 1</SerenOriginalMask_1.label>
+	<SerenOriginalMask_1.description>Les colons qui portent ce gène arborent le masque corporel 1 du mod Seren d&apos;origine.</SerenOriginalMask_1.description>
+	<SerenOriginalMask_2.label>masque corporel d&apos;origine 2</SerenOriginalMask_2.label>
+	<SerenOriginalMask_2.description>Les colons qui portent ce gène arborent le masque corporel 2 du mod Seren d&apos;origine.</SerenOriginalMask_2.description>
+	<SerenOriginalMask_3.label>masque corporel d&apos;origine 3</SerenOriginalMask_3.label>
+	<SerenOriginalMask_3.description>Les colons qui portent ce gène arborent le masque corporel 3 du mod Seren d&apos;origine.</SerenOriginalMask_3.description>
+	<SerenOriginalMask_4.label>masque corporel d&apos;origine 4</SerenOriginalMask_4.label>
+	<SerenOriginalMask_4.description>Les colons qui portent ce gène arborent le masque corporel 4 du mod Seren d&apos;origine.</SerenOriginalMask_4.description>
+	<SerenOriginalMask_5.label>masque corporel d&apos;origine 5</SerenOriginalMask_5.label>
+	<SerenOriginalMask_5.description>Les colons qui portent ce gène arborent le masque corporel 5 du mod Seren d&apos;origine.</SerenOriginalMask_5.description>
+	<SerenOriginalMask_6.label>masque corporel d&apos;origine 6</SerenOriginalMask_6.label>
+	<SerenOriginalMask_6.description>Les colons qui portent ce gène arborent le masque corporel 6 du mod Seren d&apos;origine.</SerenOriginalMask_6.description>
+	<SerenOriginalMask_7.label>masque corporel d&apos;origine 7</SerenOriginalMask_7.label>
+	<SerenOriginalMask_7.description>Les colons qui portent ce gène arborent le masque corporel 7 du mod Seren d&apos;origine.</SerenOriginalMask_7.description>
+	<SerenOriginalMask_8.label>masque corporel d&apos;origine 8</SerenOriginalMask_8.label>
+	<SerenOriginalMask_8.description>Les colons qui portent ce gène arborent le masque corporel 8 du mod Seren d&apos;origine.</SerenOriginalMask_8.description>
+	<SerenOriginalMask_9.label>masque corporel d&apos;origine 9</SerenOriginalMask_9.label>
+	<SerenOriginalMask_9.description>Les colons qui portent ce gène arborent le masque corporel 9 du mod Seren d&apos;origine.</SerenOriginalMask_9.description>
+	<SerenOriginalMask_10.label>masque corporel d&apos;origine 10</SerenOriginalMask_10.label>
+	<SerenOriginalMask_10.description>Les colons qui portent ce gène arborent le masque corporel 10 du mod Seren d&apos;origine.</SerenOriginalMask_10.description>
+	<SerenOriginalMask_11.label>masque corporel d&apos;origine 11</SerenOriginalMask_11.label>
+	<SerenOriginalMask_11.description>Les colons qui portent ce gène arborent le masque corporel 11 du mod Seren d&apos;origine.</SerenOriginalMask_11.description>
+	<OL_SerenLongevity.label>longévité seren</OL_SerenLongevity.label>
+	<OL_SerenLongevity.description>Les colons qui portent ce gène vieillissent très lentement une fois adultes et vivent environ trois cents ans.</OL_SerenLongevity.description>
+	<OL_SpaceBorn.label>né de l&apos;espace</OL_SpaceBorn.label>
+	<OL_SpaceBorn.description>Les colons qui portent ce gène sont adaptés à l&apos;exposition au vide spatial. Une exposition sans restriction au vide augmente la vitesse de travail et accroît fortement la sensibilité psychique, mais rend aussi plus susceptible de subir une crise mentale.\n\nLes religions seren vénèrent souvent l&apos;étoile centrale de leur système solaire d&apos;origine comme source de leur espèce. Cette affirmation ne peut être vérifiée, mais les Seren réagissent étrangement dans le vide spatial hors de leur système. Après quelques heures d&apos;exposition, ils disent entendre des murmures qui les pressent de retrouver « elle ». Au bout de quelques jours, ils perdent leur cohérence. Certains errent simplement dans le vide, d&apos;autres réagissent avec violence envers l&apos;équipage, affirmant qu&apos;on les a arrachés à « elle ».\nLe soleil de Panastria fait actuellement l&apos;objet d&apos;études, car de nouvelles théories circulent sur sa véritable nature.</OL_SpaceBorn.description>
+
+</LanguageData>
