@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!--
+		Skin colours of the original Seren mod (2704627783, Race_Seren.xml, colour channel skin, first colour): the race draws its skin from the 13 colours the fork turned into the OL_Skin* genes, each with a weight (total 82: Teal 8, Cobalt 10, Indigo 10, Royal 10, Violet 10, Plum 8, Orchid 7, Magenta 7, Rouge 6, Albino 1, Twilight 2, Nebula 2, Planetary 1).
+		The fork lists the 13 genes in the xenotype OL_SerenBase and the game picks one of them with the same chance each; the weight written here is read by SerenBiotechExtended.SkinWeights (a postfix on the generation of the genes of a new pawn). New pawns only.
+	-->
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="OL_SkinTeal"]</xpath>
+		<value><li Class="SerenBiotechExtended.SkinWeightExtension"><weight>8</weight></li></value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="OL_SkinCobalt"]</xpath>
+		<value><li Class="SerenBiotechExtended.SkinWeightExtension"><weight>10</weight></li></value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="OL_SkinIndigo"]</xpath>
+		<value><li Class="SerenBiotechExtended.SkinWeightExtension"><weight>10</weight></li></value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="OL_SkinRoyal"]</xpath>
+		<value><li Class="SerenBiotechExtended.SkinWeightExtension"><weight>10</weight></li></value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="OL_SkinViolet"]</xpath>
+		<value><li Class="SerenBiotechExtended.SkinWeightExtension"><weight>10</weight></li></value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="OL_SkinPlum"]</xpath>
+		<value><li Class="SerenBiotechExtended.SkinWeightExtension"><weight>8</weight></li></value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="OL_SkinOrchid"]</xpath>
+		<value><li Class="SerenBiotechExtended.SkinWeightExtension"><weight>7</weight></li></value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="OL_SkinMagenta"]</xpath>
+		<value><li Class="SerenBiotechExtended.SkinWeightExtension"><weight>7</weight></li></value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="OL_SkinRouge"]</xpath>
+		<value><li Class="SerenBiotechExtended.SkinWeightExtension"><weight>6</weight></li></value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="OL_SkinAlbino"]</xpath>
+		<value><li Class="SerenBiotechExtended.SkinWeightExtension"><weight>1</weight></li></value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="OL_SkinTwilight"]</xpath>
+		<value><li Class="SerenBiotechExtended.SkinWeightExtension"><weight>2</weight></li></value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="OL_SkinNebula"]</xpath>
+		<value><li Class="SerenBiotechExtended.SkinWeightExtension"><weight>2</weight></li></value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/GeneDef[defName="OL_SkinPlanetary"]</xpath>
+		<value><li Class="SerenBiotechExtended.SkinWeightExtension"><weight>1</weight></li></value>
+	</Operation>
+
+</Patch>
