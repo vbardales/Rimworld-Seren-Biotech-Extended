@@ -45,7 +45,7 @@ remaining:
   - "2026-10-26: defect licence of 3793591541, 2844766515, 2844766352 (OdysseyLotus, Seren face assets) not established: nothing taken from them; if their assets are wanted, ask OdysseyLotus for explicit permission (Virginie decides; the author is reachable on Discord per the Seren README) and record the answer"
   - "2026-10-26: unverified upstream_mod_remotes: https://github.com/Lucius127/Steam-Seren-Biotech answers 404 (private or renamed); the original repo https://github.com/OdysseyLotus/Seren is CC0 and public"
 updated: 2026-10-28
-protocols_read_sha: 7a1282c60cc188fb02a1bfaceec231e0f8d53669
+protocols_read_sha: fc7479b7dd4757c1762757f7963e6d4b5266826b
 ---
 
 # Seren Biotech Extended: status
