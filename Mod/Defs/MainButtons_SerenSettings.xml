@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- Shortcut to the mod options page, hidden by default (buttonVisible false); RIMMSQOL and similar mods can reveal it. The same page opens from Mod options. -->
+	<MainButtonDef>
+		<defName>SerenBiotechExtended_Settings</defName>
+		<label>Seren Biotech</label>
+		<description>Open the options of Seren Biotech Extended.</description>
+		<workerClass>SerenBiotechExtended.MainButtonWorker_Settings</workerClass>
+		<buttonVisible>false</buttonVisible>
+		<order>999</order>
+		<minimized>true</minimized>
+		<validWithoutMap>true</validWithoutMap>
+	</MainButtonDef>
+
+</Defs>
