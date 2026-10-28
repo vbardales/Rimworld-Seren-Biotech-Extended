@@ -5,7 +5,7 @@ repo: Rimworld-Seren-Biotech-Extended
 remote: https://github.com/vbardales/Rimworld-Seren-Biotech-Extended.git
 visibility: public
 detached: yes
-workflow_stage: declareDependencies[1.0.0]
+workflow_stage: settings[1.0.0]
 licence: open
 licence_at: "2026-10-26 (rechecked): CC0 for the original Seren 2704627783 (LICENSE file and GitHub OdysseyLotus/Seren, CC0-1.0) and for the Biotech fork 3726565301 (LICENSE file), both reusable. NOT established for the three face mods 3793591541, 2844766515, 2844766352 by OdysseyLotus: no LICENSE, no licence text in About.xml, no GitHub repo, they declare 1.6 so the workflow rule class is alive: nothing is copied from them. The facial assets inside the CC0 original and fork are usable."
 upstream_mod_remotes:
@@ -14,12 +14,13 @@ settings_audit: partial
 localization: unchecked
 translation_en: unchecked
 translation_fr: unchecked
-dependencies: unchecked
+dependencies: complete
 workshop: none
 published: no
 tested_on: never
 # Audit 2026-10-26: setupRepo and makeSources complete (2.a to 2.g: icon, derivatives, prompt, illustration validated by Virginie, prompt deleted, Art holds the minimal set), code[1.0.0] declared.
 remaining:
+  - "2026-10-28: done dependencies (revision 2f5e122, sources read, XML parsed for MayRequire and Class): HARD in About.xml modDependencies: fork odysseylotus.serenbiotech (3726565301), Ludeon.RimWorld.Biotech (genes), OskarPotocki.VanillaFactionsExpanded.Core (2023507013; the patch class ModSettingsFramework.PatchOperationModOption in FaceSet_VTE.xml is unguarded and VEF.Genes classes are used, the fork requires it too); Harmony not used by our assembly (fork has it); OPTIONAL via MayRequire on elements, never on a patch Operation: Ludeon.RimWorld.Anomaly (8 creepjoiner forms), Royalty (one creepjoiner li), VEF Core (space-born conditional stat affecters), player kinds of OskarPotocki.VanillaFactionsExpanded.MedievalModule, OskarPotocki.VFE.Classical, OskarPotocki.VFE.Pirates, OskarPotocki.VFE.Vikings, Heis.Edo.Themed.Expansion, Trickity.Samurai.Faction; FaceSet_VTE.xml is guarded by PatchOperationFindMod on Vanilla Textures Expanded - Facial Animation and its option only shows with Facial Animation Experimentals; loadAfter lists all of them (Nals.FacialAnimation 1635901197, Nals.FacialAnimationExperimentals 2581693737, VanillaExpanded.VTEXE.FacialAnims 2816938779 and the DLCs, VEF, the six theme mods); supportedVersions 1.6 only, no LoadFolders.xml (one folder for all); no incompatibleWith needed; 4.f n/a (no animal); sort-load-order.py needs a staged Mods folder: not run, no cycle possible (every loadAfter target is an upstream mod that does not name this one); unverified: the theme mods Workshop ids, not recorded, MayRequire needs only packageIds"
   - "2026-10-28: docs companion mods for the 300-year lifespan are RECOMMENDATIONS only, out of v1.0.0 (Virginie): to name in the description at writeDocs, none a dependency: 3452215269 Fertility scale with lifespan (installed, 1.5/1.6, not tested with the gene); 3364691662 Lifespan Expectancy Genes (not needed, OL_SerenLongevity exists); 3697024645 Longevity Age Scaling and 3654799710 Birth Quality Lifespan Fix are removed from Steam and act on the race lifeExpectancy, so they do not apply to the gene: do not recommend them"
   - "2026-10-28: Virginie confirmed the factor 0.214 (300 years): 208 calendar years = about 60 biological, 102 = about 37.5, growth normal before 20; no change to the gene"
   - "2026-10-28: lifespan gene checked in the game code (ilspycmd on Assembly-CSharp, needs DOTNET_ROLL_FORWARD=Major): HediffGiver_RandomAgeCurved divides the biological age by RaceProps.lifeExpectancy and Pawn_AgeTracker.BiologicalTicksPerTick uses only the gene biologicalAgeTickFactorFromAgeCurve, so the LifespanFactor 3.75 first written did nothing; OL_SerenLongevity now uses the curve (1 up to 19 years, 0.214 from 20: 20 + 280 calendar years = 80 biological, Gene.Active honours minAgeActive too), ticket c087 for the changed gene GREEN 2026-10-28 (Tests/Pickle/Inbox/longevity2, only scenario seren-ported-1, which gives OL_SerenLongevity in step 16: the def loads and is given, no longevity scenario exists); still unverified in game: the real ageing rate (no step reads the biological age), and the companion mods Longevity Age Scaling and Birth Quality Lifespan Fix still act on the race lifeExpectancy, so they do not apply; Fertility scale with lifespan not tested"
