@@ -3,9 +3,9 @@
 
 	<OL_SerenLeatheryStranger.label>personne à la peau coriace</OL_SerenLeatheryStranger.label>
 	<OL_SerenLeatheryStranger.letterLabel>Une personne en haillons à la peau coriace s&apos;approche de la colonie.</OL_SerenLeatheryStranger.letterLabel>
-	<OL_SerenLeatheryStranger.letterPrompt>La personne à la peau coriace fixe le vide et parle d&apos;une voix monocorde, comme si {PAWN_pronoun} ne voyait presque personne ni rien. {PAWN_pronoun} refuse de partir et affirme que seule la colonie l&apos;intéresse. {PAWN_pronoun} dit pouvoir aider.</OL_SerenLeatheryStranger.letterPrompt>
+	<OL_SerenLeatheryStranger.letterPrompt>La personne à la peau coriace fixe le vide et parle d&apos;une voix monocorde, comme si {PAWN_pronoun} ne voyait presque rien ni personne. {PAWN_pronoun} refuse de partir et affirme que seule la colonie l&apos;intéresse. {PAWN_pronoun} dit pouvoir aider.</OL_SerenLeatheryStranger.letterPrompt>
 	<OL_SerenDarkScholar.label>personne érudite et sombre</OL_SerenDarkScholar.label>
-	<OL_SerenDarkScholar.letterLabel>Une personne érudite au visage couvert de cicatrices tordues s&apos;approche de la colonie.</OL_SerenDarkScholar.letterLabel>
+	<OL_SerenDarkScholar.letterLabel>Une personne érudite et sombre, couverte de cicatrices tordues, s&apos;approche de la colonie.</OL_SerenDarkScholar.letterLabel>
 	<OL_SerenDarkScholar.letterPrompt>La personne érudite se tient affaissée, sans vie et silencieuse. Seuls ses yeux semblent vivants, comme si {PAWN_pronoun} pouvait regarder à l&apos;intérieur de chacun.\n\n{PAWN_pronoun} dit que c&apos;est ici que se trouve sa place et demande à rester un temps. Son ton indique qu&apos;{PAWN_pronoun} n&apos;acceptera pas de refus.</OL_SerenDarkScholar.letterPrompt>
 	<OL_SerenDealMaker.label>personne négociante</OL_SerenDealMaker.label>
 	<OL_SerenDealMaker.letterLabel>Une personne d&apos;une beauté saisissante s&apos;approche de la colonie.</OL_SerenDealMaker.letterLabel>
