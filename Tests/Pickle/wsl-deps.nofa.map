@@ -1,0 +1,7 @@
+# Scenario 5 of 10-options-page.feature: Seren Biotech Extended with no Facial Animation staged, so the Mod options page must not exist (the page shows only while a Facial Animation Experimentals patch can run). Played alone: -Filter seren-options-5.
+#   Submit-PickleRun.ps1 -Mod SerenBiotechExtended -DepMap wsl-deps.nofa.map
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
+nelim.pickletools   path:PickleTools/Tests/Pickle/StandaloneBase/Mod
+OskarPotocki.VanillaFactionsExpanded.Core 2023507013
+odysseylotus.serenbiotech 3726565301
+nelim.serenbiotechextended path:SerenBiotechExtended/Mod
