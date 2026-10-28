@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-	<OL_SerenLeatheryStranger.label>personne au cuir tanné</OL_SerenLeatheryStranger.label>
+	<OL_SerenLeatheryStranger.label>personne à la peau coriace</OL_SerenLeatheryStranger.label>
 	<OL_SerenLeatheryStranger.letterLabel>Une personne en haillons à la peau coriace s&apos;approche de la colonie.</OL_SerenLeatheryStranger.letterLabel>
 	<OL_SerenLeatheryStranger.letterPrompt>La personne à la peau coriace fixe le vide et parle d&apos;une voix monocorde, comme si {PAWN_pronoun} ne voyait presque personne ni rien. {PAWN_pronoun} refuse de partir et affirme que seule la colonie l&apos;intéresse. {PAWN_pronoun} dit pouvoir aider.</OL_SerenLeatheryStranger.letterPrompt>
 	<OL_SerenDarkScholar.label>personne érudite et sombre</OL_SerenDarkScholar.label>
@@ -9,7 +9,7 @@
 	<OL_SerenDarkScholar.letterPrompt>La personne érudite se tient affaissée, sans vie et silencieuse. Seuls ses yeux semblent vivants, comme si {PAWN_pronoun} pouvait regarder à l&apos;intérieur de chacun.\n\n{PAWN_pronoun} dit que c&apos;est ici que se trouve sa place et demande à rester un temps. Son ton indique qu&apos;{PAWN_pronoun} n&apos;acceptera pas de refus.</OL_SerenDarkScholar.letterPrompt>
 	<OL_SerenDealMaker.label>personne négociante</OL_SerenDealMaker.label>
 	<OL_SerenDealMaker.letterLabel>Une personne d&apos;une beauté saisissante s&apos;approche de la colonie.</OL_SerenDealMaker.letterLabel>
-	<OL_SerenDealMaker.letterPrompt>Une personne d&apos;une beauté saisissante se tient devant le groupe. Son visage rayonne de confiance tandis qu&apos;{PAWN_pronoun} ouvre les mains en signe d&apos;amitié.\n\n{PAWN_pronoun} dit être ici pour conclure un marché et offrir son aide en échange d&apos;une simple hospitalité. Tel est son but, et {PAWN_pronoun} remplit toujours son but.</OL_SerenDealMaker.letterPrompt>
+	<OL_SerenDealMaker.letterPrompt>Une personne d&apos;une beauté saisissante se tient devant le groupe. Son visage rayonne de confiance tandis qu&apos;{PAWN_pronoun} ouvre les mains en signe d&apos;amitié.\n\n{PAWN_pronoun} dit être ici pour conclure un marché et offrir son aide en échange d&apos;une simple hospitalité. Tel est son but, et {PAWN_pronoun} l&apos;atteint toujours.</OL_SerenDealMaker.letterPrompt>
 	<OL_SerenCreepDrifter.label>personne itinérante</OL_SerenCreepDrifter.label>
 	<OL_SerenCreepDrifter.letterLabel>Une personne de passage s&apos;approche de la colonie.</OL_SerenCreepDrifter.letterLabel>
 	<OL_SerenCreepDrifter.letterPrompt>La personne itinérante étire ses jambes, l&apos;air las. {PAWN_pronoun} semble {PAWN_gender ? très fatigué : très fatiguée : très fatiguæ}.\n\n{PAWN_pronoun} demande à rester un temps dans la colonie, au moins jusqu&apos;à ce qu&apos;{PAWN_pronoun} ait repris ses forces.</OL_SerenCreepDrifter.letterPrompt>
