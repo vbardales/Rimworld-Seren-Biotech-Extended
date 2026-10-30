@@ -13,10 +13,6 @@
 				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>SerenBiotechExtended.PawnRenderNodeWorker_MaskBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask0</texPath>
-				<bodyTypeGraphicPaths>
-					<li><Child>Things/SerenBiotechExtended/Mask0_Fit</Child></li>
-					<li><Baby>Things/SerenBiotechExtended/Mask0_Fit</Baby></li>
-				</bodyTypeGraphicPaths>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
@@ -36,10 +32,6 @@
 				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>SerenBiotechExtended.PawnRenderNodeWorker_MaskBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask1</texPath>
-				<bodyTypeGraphicPaths>
-					<li><Child>Things/SerenBiotechExtended/Mask1_Fit</Child></li>
-					<li><Baby>Things/SerenBiotechExtended/Mask1_Fit</Baby></li>
-				</bodyTypeGraphicPaths>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
@@ -59,10 +51,6 @@
 				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>SerenBiotechExtended.PawnRenderNodeWorker_MaskBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask2</texPath>
-				<bodyTypeGraphicPaths>
-					<li><Child>Things/SerenBiotechExtended/Mask2_Fit</Child></li>
-					<li><Baby>Things/SerenBiotechExtended/Mask2_Fit</Baby></li>
-				</bodyTypeGraphicPaths>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
@@ -82,10 +70,6 @@
 				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>SerenBiotechExtended.PawnRenderNodeWorker_MaskBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask3</texPath>
-				<bodyTypeGraphicPaths>
-					<li><Child>Things/SerenBiotechExtended/Mask3_Fit</Child></li>
-					<li><Baby>Things/SerenBiotechExtended/Mask3_Fit</Baby></li>
-				</bodyTypeGraphicPaths>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
@@ -105,10 +89,6 @@
 				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>SerenBiotechExtended.PawnRenderNodeWorker_MaskBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask4</texPath>
-				<bodyTypeGraphicPaths>
-					<li><Child>Things/SerenBiotechExtended/Mask4_Fit</Child></li>
-					<li><Baby>Things/SerenBiotechExtended/Mask4_Fit</Baby></li>
-				</bodyTypeGraphicPaths>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
@@ -128,10 +108,6 @@
 				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>SerenBiotechExtended.PawnRenderNodeWorker_MaskBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask5</texPath>
-				<bodyTypeGraphicPaths>
-					<li><Child>Things/SerenBiotechExtended/Mask5_Fit</Child></li>
-					<li><Baby>Things/SerenBiotechExtended/Mask5_Fit</Baby></li>
-				</bodyTypeGraphicPaths>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
@@ -151,10 +127,6 @@
 				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>SerenBiotechExtended.PawnRenderNodeWorker_MaskBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask6</texPath>
-				<bodyTypeGraphicPaths>
-					<li><Child>Things/SerenBiotechExtended/Mask6_Fit</Child></li>
-					<li><Baby>Things/SerenBiotechExtended/Mask6_Fit</Baby></li>
-				</bodyTypeGraphicPaths>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
@@ -174,10 +146,6 @@
 				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>SerenBiotechExtended.PawnRenderNodeWorker_MaskBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask7</texPath>
-				<bodyTypeGraphicPaths>
-					<li><Child>Things/SerenBiotechExtended/Mask7_Fit</Child></li>
-					<li><Baby>Things/SerenBiotechExtended/Mask7_Fit</Baby></li>
-				</bodyTypeGraphicPaths>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
@@ -197,10 +165,6 @@
 				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>SerenBiotechExtended.PawnRenderNodeWorker_MaskBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask8</texPath>
-				<bodyTypeGraphicPaths>
-					<li><Child>Things/SerenBiotechExtended/Mask8_Fit</Child></li>
-					<li><Baby>Things/SerenBiotechExtended/Mask8_Fit</Baby></li>
-				</bodyTypeGraphicPaths>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
@@ -220,10 +184,6 @@
 				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>SerenBiotechExtended.PawnRenderNodeWorker_MaskBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask9</texPath>
-				<bodyTypeGraphicPaths>
-					<li><Child>Things/SerenBiotechExtended/Mask9_Fit</Child></li>
-					<li><Baby>Things/SerenBiotechExtended/Mask9_Fit</Baby></li>
-				</bodyTypeGraphicPaths>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
@@ -243,10 +203,6 @@
 				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>SerenBiotechExtended.PawnRenderNodeWorker_MaskBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask10</texPath>
-				<bodyTypeGraphicPaths>
-					<li><Child>Things/SerenBiotechExtended/Mask10_Fit</Child></li>
-					<li><Baby>Things/SerenBiotechExtended/Mask10_Fit</Baby></li>
-				</bodyTypeGraphicPaths>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
@@ -266,10 +222,6 @@
 				<nodeClass>SerenBiotechExtended.PawnRenderNode_AccentBody</nodeClass>
 				<workerClass>SerenBiotechExtended.PawnRenderNodeWorker_MaskBody</workerClass>
 				<texPath>Things/SerenBiotechExtended/Mask11</texPath>
-				<bodyTypeGraphicPaths>
-					<li><Child>Things/SerenBiotechExtended/Mask11_Fit</Child></li>
-					<li><Baby>Things/SerenBiotechExtended/Mask11_Fit</Baby></li>
-				</bodyTypeGraphicPaths>
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
