@@ -44,6 +44,6 @@ Feature: Seren options page
     And Nelim's Pickle Tools: the settings file of the mod "nelim.serenbiotechextended" holds "SerenFaceSetVTE" as "False"
 
   Scenario: seren-options-5: without Facial Animation there is no page and no empty entry
-    Given the save "Nelims-tribe" is loaded
+    Given the save "test-colony" is loaded
     And game speed is paused
     Then Nelim's Pickle Tools: the mod options page of the mod "nelim.serenbiotechextended" does not exist
