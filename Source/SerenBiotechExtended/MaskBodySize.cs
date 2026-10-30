@@ -9,9 +9,9 @@ namespace SerenBiotechExtended
     public class PawnRenderNodeWorker_MaskBody : PawnRenderNodeWorker_AttachmentBody
     {
         private const float ChildScale = 0.65f;
-        private const float BabyScale = 0.45f;
+        private const float BabyScale = 0.6f;
         private const float ChildLift = 0.08f;
-        private const float BabyLift = 0.12f;
+        private const float BabyLift = 0.0f;
 
         private static void FactorsFor(Pawn pawn, out float scale, out float lift)
         {
