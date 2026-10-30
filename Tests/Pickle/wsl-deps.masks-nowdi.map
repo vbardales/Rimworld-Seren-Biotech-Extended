@@ -1,0 +1,31 @@
+# Seren Biotech Extended: masks map without Realistic Bodies (WDI) and its variant mods, the default pawn bodies, to compare mask 6 on the default adult and on a WDI body (VTW advice 2026-10-30).
+#   Submit-PickleRun.ps1 -Mod SerenBiotechExtended -DepMap wsl-deps.masks-nowdi.map
+nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
+nelim.pickletools.camerazoom path:PickleTools/CameraZoom/Mod
+nelim.pickletools.stagedecor path:PickleTools/StageDecor/Mod
+nelim.pickletools.coatsteps path:PickleTools/CoatSteps/Mod
+nelim.pickletools.clearscreen path:PickleTools/ClearScreen/Mod
+nelim.pickletools.screenshotmode path:PickleTools/ScreenshotMode/Mod
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
+nelim.pickletools.deffields path:PickleTools/DefFieldSteps/Mod
+nelim.pickletools.loadaudit path:PickleTools/LoadAudit/Mod
+nelim.pickletools.clickdiagnostics path:PickleTools/ClickDiagnostics/Mod
+nelim.pickletools   path:PickleTools/Tests/Pickle/StandaloneBase/Mod
+Malistaticy.UnderWhere 1870010563
+ab.vplrf 2986402536
+Nals.FacialAnimation 1635901197
+nals.facialanimationexperimentals 2581693737
+VanillaExpanded.VTEXE.FacialAnims 2816938779
+Newton.AKNExtras.FacialAnimations 2889716301
+lucius.eyegenes3 3745223213
+vk.addeyes.EX 3694711465
+sd.fa.movingvanillaeyes 3753978140
+SleepyFrieren.beautygenefa 3685072616
+ria.cuterkidsforfacialanimation 3807706870
+Moshii.NLFA.InitFix 3609895011
+ccj.nlfaloadfix 3721489042
+lordfelix.HatHairControl 3760821540
+OskarPotocki.VanillaFactionsExpanded.Core 2023507013
+odysseylotus.serenbiotech 3726565301
+nelim.serenbiotechextended path:SerenBiotechExtended/Mod
+ray1203.SimpleCameraSetting 3232415388
