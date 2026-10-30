@@ -5,39 +5,56 @@ using Verse;
 
 namespace SerenBiotechExtended
 {
-    // Where the body of a body type is drawn inside its square texture, read from the alpha of the body's own picture
-    // (Naked_<type>_south), so it follows any body type: vanilla, child, baby, or a mod that swaps the body picture
-    // (Realistic Bodies). Fractions of the square, 0 to 1, bottom up.
+    // Where a body is drawn inside its square texture, read from the alpha of the body picture (Naked_<type>_south), so it
+    // follows any body: vanilla, child, baby, or a mod that swaps or adds body pictures (Realistic Bodies draws a
+    // female Thin, Fat and Hulk body of its own). Fractions of the square, 0 to 1, bottom up.
+    // The pictures are read once at startup, on the main thread: the render tree calls the node workers from
+    // parallel jobs, where Unity textures cannot be touched (a first version read them there and crashed the game).
     public struct BodyBounds
     {
         public float Left, Right, Bottom, Top;
 
         private const byte MinAlpha = 40;
-        private static readonly Dictionary<Texture2D, BodyBounds?> Cache = new Dictionary<Texture2D, BodyBounds?>();
+        private const string BodiesFolder = "Things/Pawn/Humanlike/Bodies";
+        // Texture path (with the _south suffix) to bounds.
+        private static readonly Dictionary<string, BodyBounds> ByPath = new Dictionary<string, BodyBounds>();
 
-        // The bounds of the picture the pawn body node really draws (south view), so a gendered or swapped body
-        // (Realistic Bodies draws a female Thin, Fat or Hulk body of its own) is followed; the body type path otherwise.
+        internal static void Load()
+        {
+            foreach (Texture2D texture in ContentFinder<Texture2D>.GetAllInFolder(BodiesFolder))
+                if (texture.name.EndsWith("_south"))
+                    Add(BodiesFolder + "/" + texture.name, texture);
+            foreach (BodyTypeDef body in DefDatabase<BodyTypeDef>.AllDefs)
+            {
+                string path = body.bodyNakedGraphicPath;
+                if (path == null || ByPath.ContainsKey(path + "_south"))
+                    continue;
+                Texture2D texture = ContentFinder<Texture2D>.Get(path + "_south", false);
+                if (texture != null)
+                    Add(path + "_south", texture);
+            }
+        }
+
+        // The bounds of the body picture the pawn body node draws (its graphic path), the body type path otherwise.
+        // Only reads dictionaries, so it is safe in the parallel render jobs.
         public static BodyBounds? For(Pawn pawn)
         {
-            Texture2D texture = null;
+            string path = null;
             if (pawn.Drawer?.renderer?.renderTree != null
-                && pawn.Drawer.renderer.renderTree.TryGetNodeByTag(PawnRenderNodeTagDefOf.Body, out PawnRenderNode node)
-                && node.PrimaryGraphic is Graphic_Multi multi)
-                texture = multi.MatSouth?.mainTexture as Texture2D;
-            if (texture == null)
-            {
-                string path = pawn.story?.bodyType?.bodyNakedGraphicPath;
-                if (path != null)
-                    texture = ContentFinder<Texture2D>.Get(path + "_south", false);
-            }
-            if (texture == null)
-                return null;
-            if (!Cache.TryGetValue(texture, out BodyBounds? bounds))
-            {
-                bounds = Read(texture);
-                Cache[texture] = bounds;
-            }
-            return bounds;
+                && pawn.Drawer.renderer.renderTree.TryGetNodeByTag(PawnRenderNodeTagDefOf.Body, out PawnRenderNode node))
+                path = (node.PrimaryGraphic as Graphic_Multi)?.path;
+            if (path == null)
+                path = pawn.story?.bodyType?.bodyNakedGraphicPath;
+            if (path != null && ByPath.TryGetValue(path + "_south", out BodyBounds bounds))
+                return bounds;
+            return null;
+        }
+
+        private static void Add(string path, Texture2D texture)
+        {
+            BodyBounds? bounds = Read(texture);
+            if (bounds != null)
+                ByPath[path] = bounds.Value;
         }
 
         private static BodyBounds? Read(Texture2D texture)
@@ -143,5 +160,15 @@ namespace SerenBiotechExtended
             }
             return offset;
         }
+    }
+}
+
+namespace SerenBiotechExtended
+{
+    // Reads the body pictures once, at startup on the main thread (see BodyBounds).
+    [StaticConstructorOnStartup]
+    internal static class BodyBoundsLoader
+    {
+        static BodyBoundsLoader() => BodyBounds.Load();
     }
 }
