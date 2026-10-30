@@ -13,25 +13,35 @@ namespace SerenBiotechExtended
         public float Left, Right, Bottom, Top;
 
         private const byte MinAlpha = 40;
-        private static readonly Dictionary<BodyTypeDef, BodyBounds?> Cache = new Dictionary<BodyTypeDef, BodyBounds?>();
+        private static readonly Dictionary<Texture2D, BodyBounds?> Cache = new Dictionary<Texture2D, BodyBounds?>();
 
-        public static BodyBounds? For(BodyTypeDef body)
+        // The bounds of the picture the pawn body node really draws (south view), so a gendered or swapped body
+        // (Realistic Bodies draws a female Thin, Fat or Hulk body of its own) is followed; the body type path otherwise.
+        public static BodyBounds? For(Pawn pawn)
         {
-            if (body == null)
-                return null;
-            if (!Cache.TryGetValue(body, out BodyBounds? bounds))
+            Texture2D texture = null;
+            if (pawn.Drawer?.renderer?.renderTree != null
+                && pawn.Drawer.renderer.renderTree.TryGetNodeByTag(PawnRenderNodeTagDefOf.Body, out PawnRenderNode node)
+                && node.PrimaryGraphic is Graphic_Multi multi)
+                texture = multi.MatSouth?.mainTexture as Texture2D;
+            if (texture == null)
             {
-                bounds = Read(body);
-                Cache[body] = bounds;
+                string path = pawn.story?.bodyType?.bodyNakedGraphicPath;
+                if (path != null)
+                    texture = ContentFinder<Texture2D>.Get(path + "_south", false);
+            }
+            if (texture == null)
+                return null;
+            if (!Cache.TryGetValue(texture, out BodyBounds? bounds))
+            {
+                bounds = Read(texture);
+                Cache[texture] = bounds;
             }
             return bounds;
         }
 
-        private static BodyBounds? Read(BodyTypeDef body)
+        private static BodyBounds? Read(Texture2D texture)
         {
-            Texture2D texture = ContentFinder<Texture2D>.Get(body.bodyNakedGraphicPath + "_south", false);
-            if (texture == null)
-                return null;
             int width = texture.width, height = texture.height;
             RenderTexture temp = RenderTexture.GetTemporary(width, height, 0, RenderTextureFormat.ARGB32, RenderTextureReadWrite.Default);
             RenderTexture active = RenderTexture.active;
@@ -66,7 +76,7 @@ namespace SerenBiotechExtended
             }
             catch (System.Exception e)
             {
-                Log.Warning("[SerenBiotechExtended] could not read the body picture of " + body.defName + ": " + e.Message);
+                Log.Warning("[SerenBiotechExtended] could not read a body picture: " + e.Message);
                 return null;
             }
             finally
@@ -98,7 +108,7 @@ namespace SerenBiotechExtended
             x = z = width = height = 0f;
             if (!PawnRenderNode_AccentBody.UsesFit(node, pawn))
                 return false;
-            BodyBounds? bounds = BodyBounds.For(pawn.story?.bodyType);
+            BodyBounds? bounds = BodyBounds.For(pawn);
             if (bounds == null)
                 return false;
             BodyBounds b = bounds.Value;
