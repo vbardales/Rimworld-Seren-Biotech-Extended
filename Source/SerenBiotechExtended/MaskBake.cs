@@ -92,12 +92,13 @@ namespace SerenBiotechExtended
         // WDI draws its bodies on 512 px pictures, vanilla on 128: the table only describes the WDI drawings.
         private const int WdiPictureSize = 512;
 
-        // Top row of WDI boxers over the height of its body picture, per body key (Venus Touch Waistlines ShirtCut.Line, MIT,
-        // measured on the WDI Realistic Bodies south pictures). Other bodies have no entry.
-        private static readonly Dictionary<string, float> WaistLine = new Dictionary<string, float>
+        // Where the pants start on the WDI Realistic Bodies, as a share of the skin height from the feet: the navel mark measured on
+        // the south pictures plus about a tenth of the height, so the top of the pants sits just above the navel and never climbs
+        // onto the chest (Fat and Hulk are short and wide). Other bodies have no entry.
+        private static readonly Dictionary<string, float> NavelShare = new Dictionary<string, float>
         {
-            { "Male", 0.711f }, { "Female", 0.686f }, { "Thin", 0.699f }, { "Thin_Female", 0.674f },
-            { "Fat", 0.643f }, { "Fat_Female", 0.643f }, { "Hulk", 0.799f }, { "Hulk_Female", 0.783f },
+            { "Male", 0.35f }, { "Female", 0.47f }, { "Thin", 0.33f }, { "Thin_Female", 0.41f },
+            { "Fat", 0.44f }, { "Fat_Female", 0.44f }, { "Hulk", 0.38f }, { "Hulk_Female", 0.42f },
         };
 
         // The art stretched over the body from the feet to the waist, clipped to the skin (MaskBakeCore).
@@ -106,7 +107,7 @@ namespace SerenBiotechExtended
             string key = name.Substring(name.LastIndexOf('/') + 1);
             key = key.StartsWith("Naked_") ? key.Substring("Naked_".Length) : key;
             key = key.Substring(0, key.LastIndexOf('_'));
-            Color32[] output = ToPixels(MaskBakeCore.Bake(ToImage(art), ToImage(body), body.Width >= WdiPictureSize && WaistLine.TryGetValue(key, out float line) ? line : -1f, out string report));
+            Color32[] output = ToPixels(MaskBakeCore.Bake(ToImage(art), ToImage(body), body.Width >= WdiPictureSize && NavelShare.TryGetValue(key, out float share) ? share : -1f, out string report));
             if (output == null)
                 return null;
             Log.Message("[SerenBiotechExtended] mask 6 bake " + name + ": " + report);

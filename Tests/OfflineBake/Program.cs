@@ -11,12 +11,20 @@ namespace SerenBiotechExtended.OfflineBake
     //   OfflineBake <bodies folder> <mask 6 south png> <output png>
     internal static class Program
     {
-        // Top row of WDI boxers over the height of the body picture (same table as MaskBake.WaistLine).
+        // Share of the skin height from the feet where the pants start (same table as MaskBake.NavelShare).
         private static readonly Dictionary<string, float> WaistLine = new Dictionary<string, float>
         {
-            { "Male", 0.711f }, { "Female", 0.686f }, { "Thin", 0.699f }, { "Thin_Female", 0.674f },
-            { "Fat", 0.643f }, { "Fat_Female", 0.643f }, { "Hulk", 0.799f }, { "Hulk_Female", 0.783f },
+            { "Male", 0.35f }, { "Female", 0.47f }, { "Thin", 0.33f }, { "Thin_Female", 0.41f },
+            { "Fat", 0.44f }, { "Fat_Female", 0.44f }, { "Hulk", 0.38f }, { "Hulk_Female", 0.42f },
         };
+
+        // OFFLINE_WAIST=table uses the per-body table, a number is a share of the skin height from the feet, nothing means half.
+        private static float Waist(string key)
+        {
+            string v = Environment.GetEnvironmentVariable("OFFLINE_WAIST");
+            if (v == "table") return WaistLine[key];
+            return string.IsNullOrEmpty(v) ? -1f : float.Parse(v, System.Globalization.CultureInfo.InvariantCulture);
+        }
 
         private static int Main(string[] args)
         {
@@ -43,7 +51,7 @@ namespace SerenBiotechExtended.OfflineBake
                         continue;
                     }
                     RgbaImage body = Load(path);
-                    Rgba[] mask = MaskBakeCore.Bake(art, body, WaistLine[key], out string report);
+                    Rgba[] mask = MaskBakeCore.Bake(art, body, Waist(key), out string report);
                     Console.WriteLine(key + ": " + report);
                     Draw(sheet, body, null, i * 2 * Cell);
                     Draw(sheet, body, mask, (i * 2 + 1) * Cell);
