@@ -56,7 +56,7 @@ namespace SerenBiotechExtended.OfflineBake
                     Rgba[] mask;
                     string report = "clip";
                     if (Environment.GetEnvironmentVariable("OFFLINE_CLIP") != null)
-                        mask = MaskBakeCore.BakeClip(art, body, 256);
+                        mask = MaskBakeCore.BakeClip(art, body, MaskBakeCore.SkinOf(body), 256);
                     else
                         mask = MaskBakeCore.Bake(art, body, Waist(key), out report);
                     Console.WriteLine(key + ": " + report);

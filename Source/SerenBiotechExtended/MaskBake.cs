@@ -37,7 +37,7 @@ namespace SerenBiotechExtended
         {
             var bodies = new List<KeyValuePair<string, Texture2D>>();
             foreach (Texture2D south in ContentFinder<Texture2D>.GetAllInFolder(BodiesFolder))
-                if (south.name.EndsWith("_south"))
+                if (south.name.EndsWith("_south") && south.name.StartsWith("Naked_"))
                     bodies.Add(new KeyValuePair<string, Texture2D>(BodiesFolder + "/" + south.name.Substring(0, south.name.Length - "_south".Length), south));
             LoadPants(bodies);
             LoadClips(bodies);
@@ -87,8 +87,12 @@ namespace SerenBiotechExtended
             return name.StartsWith("Naked_") && !name.Contains("Child") && !name.Contains("Baby");
         }
 
+        // Bodies outer, masks inner: each body picture is read and its skin found once, not once per mask (a first version
+        // read every body twelve times and was killed for memory at startup on a loaded machine).
         private static void LoadClips(List<KeyValuePair<string, Texture2D>> bodies)
         {
+            var maskPaths = new List<string>();
+            var arts = new List<RgbaImage[]>();
             for (int mask = 0; mask < MaskCount; mask++)
             {
                 string maskPath = MaskFolder + mask;
@@ -97,28 +101,42 @@ namespace SerenBiotechExtended
                 Pixels[] art = ReadArt(maskPath);
                 if (art == null)
                     continue;
-                foreach (KeyValuePair<string, Texture2D> body in bodies)
+                maskPaths.Add(maskPath);
+                arts.Add(new[] { ToImage(art[0]), ToImage(art[1]), ToImage(art[2]) });
+            }
+            foreach (KeyValuePair<string, Texture2D> body in bodies)
+            {
+                if (!IsAdultNaked(body.Key))
+                    continue;
+                var images = new RgbaImage[3];
+                var skins = new bool[3][];
+                for (int i = 0; i < 3; i++)
                 {
-                    if (!IsAdultNaked(body.Key))
-                        continue;
+                    images[i] = ToImage(ReadBody(body.Key, i, body.Value));
+                    skins[i] = images[i] == null ? null : MaskBakeCore.SkinOf(images[i]);
+                }
+                for (int m = 0; m < maskPaths.Count; m++)
+                {
                     Texture2D[] baked = new Texture2D[3];
                     bool ok = true;
                     for (int i = 0; i < 3 && ok; i++)
                     {
-                        baked[i] = Clip(art[i], ReadBody(body.Key, i, body.Value), maskPath + " " + body.Key + "_" + Facings[i]);
+                        baked[i] = Clip(arts[m][i], images[i], skins[i], maskPaths[m] + " " + body.Key + "_" + Facings[i]);
                         ok = baked[i] != null;
                     }
                     if (ok)
-                        Baked[maskPath + "|" + body.Key] = baked;
+                        Baked[maskPaths[m] + "|" + body.Key] = baked;
                 }
             }
         }
 
         // The art of a mask clipped to the skin of a body picture, at the size of the picture (256 for a 512 px body).
-        private static Texture2D Clip(Pixels art, Pixels body, string name)
+        private static Texture2D Clip(RgbaImage art, RgbaImage body, bool[] skin, string name)
         {
+            if (art == null || body == null || skin == null)
+                return null;
             int size = body.Width >= 2 * VanillaPictureSize ? body.Width / 2 : body.Width;
-            Color32[] output = ToPixels(MaskBakeCore.BakeClip(ToImage(art), ToImage(body), size));
+            Color32[] output = ToPixels(MaskBakeCore.BakeClip(art, body, skin, size));
             if (output == null)
                 return null;
             var texture = new Texture2D(size, size, TextureFormat.RGBA32, false)

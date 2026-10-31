@@ -97,11 +97,10 @@ namespace SerenBiotechExtended
         // The art of a mask clipped to the skin of a body picture, as a size x size picture: each output pixel is the average
         // (weighted by alpha) of the art block it covers, and is erased where the body picture, read at the same relative
         // place, is not skin. Null when the art or the body is empty.
-        internal static Rgba[] BakeClip(RgbaImage art, RgbaImage body, int size)
+        internal static Rgba[] BakeClip(RgbaImage art, RgbaImage body, bool[] skin, int size)
         {
             if (art == null || body == null || size <= 0)
                 return null;
-            bool[] skin = SkinOf(body);
             var output = new Rgba[size * size];
             bool any = false;
             for (int y = 0; y < size; y++)
