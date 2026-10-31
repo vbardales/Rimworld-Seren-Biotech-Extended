@@ -118,6 +118,7 @@ namespace SerenBiotechExtended
                     }
             if (aMaxX < 0 || bMaxX < 0)
                 return null;
+            Log.Message("[SerenBiotechExtended] mask 6 bake " + name + ": body " + body.Width + "x" + body.Height + " x " + bMinX + ".." + bMaxX + " y " + bMinY + ".." + bMaxY + ", art x " + aMinX + ".." + aMaxX + " y " + aMinY + ".." + aMaxY);
             int rectBottom = bMinY;
             int rectTop = bMinY + (int)((bMaxY - bMinY + 1) * NavelFromFeet);
             int rectLeft = bMinX, rectWidth = bMaxX - bMinX + 1, rectHeight = System.Math.Max(1, rectTop - rectBottom);
