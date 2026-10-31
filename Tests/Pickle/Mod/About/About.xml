@@ -9,17 +9,12 @@
   <description>In-game captures for Seren Biotech Extended, run by Pickle. Development only: never published.</description>
   <modDependencies>
     <li>
-      <packageId>nelim.serenbiotechextended</packageId>
-      <displayName>Seren Biotech Extended</displayName>
-    </li>
-    <li>
       <packageId>rimworks.pickle</packageId>
       <displayName>Pickle</displayName>
       <steamWorkshopUrl>steam://url/CommunityFilePage/3791648678</steamWorkshopUrl>
     </li>
   </modDependencies>
   <loadAfter>
-    <li>nelim.serenbiotechextended</li>
     <li>rimworks.pickle</li>
   </loadAfter>
 </ModMetaData>
