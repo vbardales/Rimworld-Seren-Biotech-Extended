@@ -193,8 +193,8 @@ namespace SerenBiotechExtended
         // onto the chest (Fat and Hulk are short and wide). Other bodies have no entry.
         private static readonly Dictionary<string, float> NavelShare = new Dictionary<string, float>
         {
-            { "Male", 0.35f }, { "Female", 0.47f }, { "Thin", 0.33f }, { "Thin_Female", 0.41f },
-            { "Fat", 0.44f }, { "Fat_Female", 0.44f }, { "Hulk", 0.38f }, { "Hulk_Female", 0.42f },
+            { "Male", 0.41f }, { "Female", 0.50f }, { "Thin", 0.39f }, { "Thin_Female", 0.47f },
+            { "Fat", 0.50f }, { "Fat_Female", 0.50f }, { "Hulk", 0.44f }, { "Hulk_Female", 0.48f },
         };
 
         // The art stretched over the body from the feet to the waist, clipped to the skin (MaskBakeCore).

@@ -22,8 +22,8 @@ namespace SerenBiotechExtended
         // Darker pixels of a body are its outline, not skin.
         internal const int OutlineLight = 80;
         // The three tones of the art are alpha levels 25, 50 and 75 percent of white: over a dark skin they nearly vanish, so
-        // they are raised to about 45, 65 and 85 percent.
-        internal const float ToneBase = 0.25f, ToneRange = 0.8f;
+        // they are raised to about 60, 75 and 90 percent (the original draws them nearly opaque).
+        internal const float ToneBase = 0.45f, ToneRange = 0.6f;
         // Without a measured waist line, the navel is half of the body height counted from the feet.
         internal const float DefaultNavelFromFeet = 0.5f;
         private const float DenseRow = 0.6f;
