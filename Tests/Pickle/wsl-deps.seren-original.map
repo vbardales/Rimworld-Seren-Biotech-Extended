@@ -1,0 +1,15 @@
+# Seren Biotech Extended: the ORIGINAL Seren mod (HAR race, odysseylotus.seren 2704627783) with the Pickle tools, no Realistic Bodies, no Facial Animation, to photograph its body mask 6 as a reference (Virginie 2026-10-31).
+#   Submit-PickleRun.ps1 -Mod SerenBiotechExtended -DepMap wsl-deps.seren-original.map
+nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
+nelim.pickletools.camerazoom path:PickleTools/CameraZoom/Mod
+nelim.pickletools.stagedecor path:PickleTools/StageDecor/Mod
+nelim.pickletools.coatsteps path:PickleTools/CoatSteps/Mod
+nelim.pickletools.clearscreen path:PickleTools/ClearScreen/Mod
+nelim.pickletools.screenshotmode path:PickleTools/ScreenshotMode/Mod
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
+nelim.pickletools.deffields path:PickleTools/DefFieldSteps/Mod
+nelim.pickletools.loadaudit path:PickleTools/LoadAudit/Mod
+nelim.pickletools.clickdiagnostics path:PickleTools/ClickDiagnostics/Mod
+nelim.pickletools   path:PickleTools/Tests/Pickle/StandaloneBase/Mod
+erdelf.HumanoidAlienRaces 839005762
+odysseylotus.seren 2704627783
