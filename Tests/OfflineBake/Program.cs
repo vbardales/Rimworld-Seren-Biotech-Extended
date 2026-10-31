@@ -1,0 +1,96 @@
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
+
+namespace SerenBiotechExtended.OfflineBake
+{
+    // Offline look at the mask 6 bake: runs MaskBakeCore on the PNG pictures of the bodies (south view) and of the mask, and
+    // writes one sheet, body then body with mask, for every body. No game, no ticket.
+    //   OfflineBake <bodies folder> <mask 6 south png> <output png>
+    internal static class Program
+    {
+        // Top row of WDI boxers over the height of the body picture (same table as MaskBake.WaistLine).
+        private static readonly Dictionary<string, float> WaistLine = new Dictionary<string, float>
+        {
+            { "Male", 0.711f }, { "Female", 0.686f }, { "Thin", 0.699f }, { "Thin_Female", 0.674f },
+            { "Fat", 0.643f }, { "Fat_Female", 0.643f }, { "Hulk", 0.799f }, { "Hulk_Female", 0.783f },
+        };
+
+        private static int Main(string[] args)
+        {
+            if (args.Length != 3)
+            {
+                Console.Error.WriteLine("usage: OfflineBake <bodies folder> <mask 6 south png> <output png>");
+                return 2;
+            }
+            RgbaImage art = Load(args[1]);
+            var keys = new List<string>(WaistLine.Keys);
+            keys.Sort();
+            const int Cell = 512, Scale = 1;
+            using (var sheet = new Bitmap(Cell * 2 * keys.Count, Cell, PixelFormat.Format32bppArgb))
+            using (Graphics g = Graphics.FromImage(sheet))
+            {
+                g.Clear(Color.FromArgb(214, 190, 150));
+                for (int i = 0; i < keys.Count; i++)
+                {
+                    string key = keys[i];
+                    string path = Path.Combine(args[0], "Naked_" + key + "_south.png");
+                    if (!File.Exists(path))
+                    {
+                        Console.WriteLine("missing " + path);
+                        continue;
+                    }
+                    RgbaImage body = Load(path);
+                    Rgba[] mask = MaskBakeCore.Bake(art, body, WaistLine[key], out string report);
+                    Console.WriteLine(key + ": " + report);
+                    Draw(sheet, body, null, i * 2 * Cell);
+                    Draw(sheet, body, mask, (i * 2 + 1) * Cell);
+                }
+                sheet.Save(args[2], ImageFormat.Png);
+            }
+            return 0;
+        }
+
+        // The body picture tinted like a purple skin, then the mask in the pale accent colour, alpha blended.
+        private static void Draw(Bitmap sheet, RgbaImage body, Rgba[] mask, int left)
+        {
+            Color skin = Color.FromArgb(128, 56, 140), accent = Color.FromArgb(235, 228, 250);
+            for (int y = 0; y < body.Height; y++)
+                for (int x = 0; x < body.Width; x++)
+                {
+                    Rgba b = body.Data[y * body.Width + x];
+                    if (b.A == 0)
+                        continue;
+                    float r = b.R / 255f * skin.R, gr = b.G / 255f * skin.G, bl = b.B / 255f * skin.B;
+                    if (mask != null && mask[y * body.Width + x].A > 0)
+                    {
+                        Rgba m = mask[y * body.Width + x];
+                        float a = m.A / 255f;
+                        r = r * (1 - a) + accent.R * m.R / 255f * a;
+                        gr = gr * (1 - a) + accent.G * m.G / 255f * a;
+                        bl = bl * (1 - a) + accent.B * m.B / 255f * a;
+                    }
+                    int px = left + x, py = sheet.Height - 1 - y;
+                    if (px < sheet.Width && py >= 0 && py < sheet.Height)
+                        sheet.SetPixel(px, py, Color.FromArgb(b.A, (int)r, (int)gr, (int)bl));
+                }
+        }
+
+        private static RgbaImage Load(string path)
+        {
+            using (var bmp = new Bitmap(path))
+            {
+                var image = new RgbaImage { Width = bmp.Width, Height = bmp.Height, Data = new Rgba[bmp.Width * bmp.Height] };
+                for (int y = 0; y < bmp.Height; y++)
+                    for (int x = 0; x < bmp.Width; x++)
+                    {
+                        Color c = bmp.GetPixel(x, bmp.Height - 1 - y);
+                        image.Data[y * bmp.Width + x] = new Rgba { R = c.R, G = c.G, B = c.B, A = c.A };
+                    }
+                return image;
+            }
+        }
+    }
+}
