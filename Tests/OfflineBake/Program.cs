@@ -26,6 +26,8 @@ namespace SerenBiotechExtended.OfflineBake
             return string.IsNullOrEmpty(v) ? -1f : float.Parse(v, System.Globalization.CultureInfo.InvariantCulture);
         }
 
+        private static readonly string Facing = Environment.GetEnvironmentVariable("OFFLINE_FACING") ?? "south";
+
         private static int Main(string[] args)
         {
             if (args.Length != 3)
@@ -44,7 +46,7 @@ namespace SerenBiotechExtended.OfflineBake
                 for (int i = 0; i < keys.Count; i++)
                 {
                     string key = keys[i];
-                    string path = Path.Combine(args[0], "Naked_" + key + "_south.png");
+                    string path = Path.Combine(args[0], "Naked_" + key + "_" + Facing + ".png");
                     if (!File.Exists(path))
                     {
                         Console.WriteLine("missing " + path);
