@@ -24,6 +24,7 @@ namespace SerenBiotechExtended
         // "mask path|body graphic path" (without the facing) to its three baked pictures: north, east, south.
         private static readonly Dictionary<string, Texture2D[]> Baked = new Dictionary<string, Texture2D[]>();
         private static readonly Dictionary<string, Graphic> Graphics = new Dictionary<string, Graphic>();
+        private static readonly HashSet<string> Logged = new HashSet<string>();
 
         internal sealed class DirectGraphic : Graphic_Multi
         {
@@ -156,6 +157,9 @@ namespace SerenBiotechExtended
         // the pixels above half alpha, which left one flat tone for mask 6 and only the sparkles of mask 5.
         internal static Graphic GraphicFor(string maskPath, string bodyPath, Graphic source, Shader shader, Color color)
         {
+            bool found = bodyPath != null && Baked.TryGetValue(maskPath + "|" + bodyPath, out Texture2D[] textures0);
+            if (Logged.Add(maskPath + "|" + bodyPath))
+                Log.Message("[SerenBiotechExtended] first draw of " + maskPath + " on body " + bodyPath + ": baked " + found);
             if (bodyPath == null || !Baked.TryGetValue(maskPath + "|" + bodyPath, out Texture2D[] textures) || !(source is Graphic_Multi))
                 return null;
             Color32 c = color;

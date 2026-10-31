@@ -35,7 +35,7 @@
 				<baseLayer>5</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<colorType>Custom</colorType>
-				<color>(255, 244, 205)</color>
+				<color>(235, 238, 255)</color>
 				<parentTagDef>Body</parentTagDef>
 			</li>
 		</renderNodeProperties>
