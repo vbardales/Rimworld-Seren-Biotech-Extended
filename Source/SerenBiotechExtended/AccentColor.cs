@@ -57,6 +57,17 @@ namespace SerenBiotechExtended
 
         public override Color ColorFor(Pawn pawn) => AccentColor.For(pawn) ?? base.ColorFor(pawn);
 
+        // Mask 6 is baked per body (MaskBake): it is already sized to the body, so the node keeps its own size and place.
+        public static bool IsBaked(PawnRenderNode node) => node.Props.texPath == MaskBake.MaskPath;
+
+        public override Graphic GraphicFor(Pawn pawn)
+        {
+            Graphic source = base.GraphicFor(pawn);
+            if (source == null || !IsBaked(this))
+                return source;
+            return MaskBake.GraphicFor(BodyBounds.BodyPathFor(pawn), source, ShaderFor(pawn), ColorFor(pawn)) ?? source;
+        }
+
         public static bool IsChildBody(Pawn pawn)
         {
             BodyTypeDef body = pawn.story?.bodyType;

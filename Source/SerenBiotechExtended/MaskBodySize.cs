@@ -41,15 +41,20 @@ namespace SerenBiotechExtended
         // Only reads dictionaries, so it is safe in the parallel render jobs.
         public static BodyBounds? For(Pawn pawn)
         {
+            string path = BodyPathFor(pawn);
+            if (path != null && ByPath.TryGetValue(path + "_south", out BodyBounds bounds))
+                return bounds;
+            return null;
+        }
+
+        // The graphic path of the body picture the pawn body node draws, the body type path when the node is not built yet.
+        public static string BodyPathFor(Pawn pawn)
+        {
             string path = null;
             if (pawn.Drawer?.renderer?.renderTree != null
                 && pawn.Drawer.renderer.renderTree.TryGetNodeByTag(PawnRenderNodeTagDefOf.Body, out PawnRenderNode node))
                 path = (node.PrimaryGraphic as Graphic_Multi)?.path;
-            if (path == null)
-                path = pawn.story?.bodyType?.bodyNakedGraphicPath;
-            if (path != null && ByPath.TryGetValue(path + "_south", out BodyBounds bounds))
-                return bounds;
-            return null;
+            return path ?? pawn.story?.bodyType?.bodyNakedGraphicPath;
         }
 
         private static void Add(string path, Texture2D texture)
@@ -140,7 +145,7 @@ namespace SerenBiotechExtended
         public override Vector3 ScaleFor(PawnRenderNode node, PawnDrawParms parms)
         {
             Vector3 scale = base.ScaleFor(node, parms);
-            if (!TryMap(parms.pawn, out float sx, out float sz, out _, out _))
+            if (PawnRenderNode_AccentBody.IsBaked(node) || !TryMap(parms.pawn, out float sx, out float sz, out _, out _))
                 return scale;
             return new Vector3(scale.x * sx, scale.y, scale.z * sz);
         }
@@ -148,7 +153,7 @@ namespace SerenBiotechExtended
         public override Vector3 OffsetFor(PawnRenderNode node, PawnDrawParms parms, out Vector3 pivot)
         {
             Vector3 offset = base.OffsetFor(node, parms, out pivot);
-            if (TryMap(parms.pawn, out _, out _, out float x, out float z))
+            if (!PawnRenderNode_AccentBody.IsBaked(node) && TryMap(parms.pawn, out _, out _, out float x, out float z))
             {
                 offset.x += x;
                 offset.z += z;
@@ -164,6 +169,10 @@ namespace SerenBiotechExtended
     [StaticConstructorOnStartup]
     internal static class BodyBoundsLoader
     {
-        static BodyBoundsLoader() => BodyBounds.Load();
+        static BodyBoundsLoader()
+        {
+            BodyBounds.Load();
+            MaskBake.Load();
+        }
     }
 }
