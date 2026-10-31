@@ -151,9 +151,9 @@ namespace SerenBiotechExtended
         }
 
         // The graphic of a mask baked for a body picture, built from the graphic the game made for the node (same fields)
-        // and tinted with the node colour; null when this body has no baked picture. Mask 6 is drawn with the Transparent
-        // shader: the three tones of the pants are alpha levels (white art), and a cutout shader keeps only the pixels above
-        // half alpha, which left one flat tone and dropped the two upper bands.
+        // and tinted with the node colour; null when this body has no baked picture. Every mask is drawn with the Transparent
+        // shader: the tones of the pants and the haze of the galaxy are alpha levels (white art), and a cutout shader keeps only
+        // the pixels above half alpha, which left one flat tone for mask 6 and only the sparkles of mask 5.
         internal static Graphic GraphicFor(string maskPath, string bodyPath, Graphic source, Shader shader, Color color)
         {
             if (bodyPath == null || !Baked.TryGetValue(maskPath + "|" + bodyPath, out Texture2D[] textures) || !(source is Graphic_Multi))
@@ -167,7 +167,7 @@ namespace SerenBiotechExtended
                 {
                     MaterialRequest request = default(MaterialRequest);
                     request.mainTex = textures[i];
-                    request.shader = maskPath == MaskPath ? ShaderDatabase.Transparent : shader;
+                    request.shader = ShaderDatabase.Transparent;
                     request.color = color;
                     mats[i] = MaterialPool.MatFrom(request);
                 }
