@@ -16,6 +16,7 @@ namespace SerenBiotechExtended
         private const string BodiesFolder = "Things/Pawn/Humanlike/Bodies";
         private const byte BodyAlpha = 40;
         private const byte ArtAlpha = 8;
+        private const int OutlineLight = 80;
         // The three tones of the art are alpha levels 25, 50 and 75 percent of white: over a dark skin they nearly vanish, so
         // they are raised to about 45, 65 and 85 percent.
         private const float ToneBase = 0.25f, ToneRange = 0.8f;
@@ -96,6 +97,10 @@ namespace SerenBiotechExtended
             return graphic;
         }
 
+        // A body pixel the pants may cover: opaque and not the dark outline, so the feet and the sides are those of the skin,
+        // not of the outline drawn around it.
+        private static bool IsSkin(Color32 c) => c.a >= BodyAlpha && (c.r + c.g + c.b) / 3 > OutlineLight;
+
         // The art stretched over the body from the feet to the navel, clipped to the body alpha.
         private static Texture2D Bake(Pixels art, Pixels body, string name)
         {
@@ -114,7 +119,7 @@ namespace SerenBiotechExtended
             int bMinX = body.Width, bMaxX = -1, bMinY = body.Height, bMaxY = -1;
             for (int y = 0; y < body.Height; y++)
                 for (int x = 0; x < body.Width; x++)
-                    if (body.Data[y * body.Width + x].a >= BodyAlpha)
+                    if (IsSkin(body.Data[y * body.Width + x]))
                     {
                         if (x < bMinX) bMinX = x;
                         if (x > bMaxX) bMaxX = x;
@@ -135,7 +140,7 @@ namespace SerenBiotechExtended
                 // Row by row: the art width is fitted to the body width on this row, so the pants fill the body whatever its shape.
                 int rowLeft = -1, rowRight = -1;
                 for (int x = bMinX; x <= bMaxX; x++)
-                    if (body.Data[y * body.Width + x].a >= BodyAlpha)
+                    if (IsSkin(body.Data[y * body.Width + x]))
                     {
                         if (rowLeft < 0) rowLeft = x;
                         rowRight = x;
@@ -145,7 +150,7 @@ namespace SerenBiotechExtended
                 int rowWidth = rowRight - rowLeft + 1;
                 for (int x = rowLeft; x <= rowRight; x++)
                 {
-                    if (body.Data[y * body.Width + x].a < BodyAlpha)
+                    if (!IsSkin(body.Data[y * body.Width + x]))
                         continue;
                     int ax = aMinX + System.Math.Min(artWidth - 1, (x - rowLeft) * artWidth / rowWidth);
                     Color32 pixel = art.Data[ay * art.Width + ax];
