@@ -6,17 +6,22 @@ using Verse;
 
 namespace SerenBiotechExtended
 {
-    // Mask 6 is a fluffy pants-like shape drawn for an adult canvas: on every body it hangs below the feet. It is baked
-    // for each body picture (same method as Venus Touch Waistlines, TopFit.ClipToBody): the art is stretched over the part
-    // of the body from the feet up to the navel and every pixel outside the body alpha is erased. The textures are
-    // baked once at startup, on the main thread; the render jobs only read the cache.
+    // The body masks are drawn on a square canvas for the body of the original Seren. Two bakes, once at startup on the main
+    // thread (the render jobs only read the cache), same method as Venus Touch Waistlines (TopFit.ClipToBody):
+    //  - mask 6, a fluffy pants shape that hangs below the feet on every body: stretched over the body from the feet to the
+    //    waist, each row fitted to the skin, clipped to the skin;
+    //  - the other masks, on adult bodies: the art clipped to the skin, so nothing is drawn past the silhouette of a body
+    //    narrower than the original (Realistic Bodies Thin Female). Child and baby bodies keep the mapping of the node worker.
     internal static class MaskBake
     {
         internal const string MaskPath = "Things/SerenBiotechExtended/Mask6";
+        internal const string MaskFolder = "Things/SerenBiotechExtended/Mask";
         private const string BodiesFolder = "Things/Pawn/Humanlike/Bodies";
+        private const int MaskCount = 12;
+        private const int VanillaPictureSize = 128;
         private static readonly string[] Facings = { "north", "east", "south" };
 
-        // Body graphic path (without the facing) to its three baked pictures: north, east, south.
+        // "mask path|body graphic path" (without the facing) to its three baked pictures: north, east, south.
         private static readonly Dictionary<string, Texture2D[]> Baked = new Dictionary<string, Texture2D[]>();
         private static readonly Dictionary<string, Graphic> Graphics = new Dictionary<string, Graphic>();
 
@@ -26,44 +31,117 @@ namespace SerenBiotechExtended
             public override Graphic GetColoredVersion(Shader newShader, Color newColor, Color newColorTwo) => this;
         }
 
+        internal static bool IsMask(string texPath) => texPath != null && texPath.StartsWith(MaskFolder);
+
         internal static void Load()
         {
-            Pixels[] art = new Pixels[3];
+            var bodies = new List<KeyValuePair<string, Texture2D>>();
+            foreach (Texture2D south in ContentFinder<Texture2D>.GetAllInFolder(BodiesFolder))
+                if (south.name.EndsWith("_south"))
+                    bodies.Add(new KeyValuePair<string, Texture2D>(BodiesFolder + "/" + south.name.Substring(0, south.name.Length - "_south".Length), south));
+            LoadPants(bodies);
+            LoadClips(bodies);
+        }
+
+        private static Pixels[] ReadArt(string maskPath)
+        {
+            var art = new Pixels[3];
             for (int i = 0; i < 3; i++)
             {
-                Texture2D texture = ContentFinder<Texture2D>.Get(MaskPath + "_" + Facings[i], false);
+                Texture2D texture = ContentFinder<Texture2D>.Get(maskPath + "_" + Facings[i], false);
                 if (texture == null)
-                    return;
+                    return null;
                 art[i] = Pixels.Read(texture);
+                if (art[i] == null)
+                    return null;
             }
-            foreach (Texture2D south in ContentFinder<Texture2D>.GetAllInFolder(BodiesFolder))
+            return art;
+        }
+
+        private static Pixels ReadBody(string basePath, int facing, Texture2D south) =>
+            Pixels.Read(Facings[facing] == "south" ? south : ContentFinder<Texture2D>.Get(basePath + "_" + Facings[facing], false) ?? south);
+
+        private static void LoadPants(List<KeyValuePair<string, Texture2D>> bodies)
+        {
+            Pixels[] art = ReadArt(MaskPath);
+            if (art == null)
+                return;
+            foreach (KeyValuePair<string, Texture2D> body in bodies)
             {
-                if (!south.name.EndsWith("_south"))
-                    continue;
-                string basePath = BodiesFolder + "/" + south.name.Substring(0, south.name.Length - "_south".Length);
                 Texture2D[] baked = new Texture2D[3];
                 bool ok = true;
                 for (int i = 0; i < 3 && ok; i++)
                 {
-                    Texture2D body = Facings[i] == "south" ? south : ContentFinder<Texture2D>.Get(basePath + "_" + Facings[i], false) ?? south;
-                    baked[i] = Bake(art[i], Pixels.Read(body), basePath + "_" + Facings[i]);
+                    baked[i] = Bake(art[i], ReadBody(body.Key, i, body.Value), body.Key + "_" + Facings[i]);
                     ok = baked[i] != null;
                 }
                 if (ok)
-                    Baked[basePath] = baked;
+                    Baked[MaskPath + "|" + body.Key] = baked;
             }
         }
 
-        // Drawn with the Transparent shader: the three tones of the pants are alpha levels (white art), and a cutout shader
-        // keeps only the pixels above half alpha, which left one flat tone and dropped the two upper bands.
-        // The graphic of mask 6 baked for a body picture, built from the graphic the game made for the node (same fields)
-        // and tinted with the node colour; null when this body has no baked picture.
-        internal static Graphic GraphicFor(string bodyPath, Graphic source, Shader shader, Color color)
+        // Adult bodies only (the child and baby bodies are mapped by the node worker, not clipped).
+        private static bool IsAdultNaked(string basePath)
         {
-            if (bodyPath == null || !Baked.TryGetValue(bodyPath, out Texture2D[] textures) || !(source is Graphic_Multi))
+            string name = basePath.Substring(basePath.LastIndexOf('/') + 1);
+            return name.StartsWith("Naked_") && !name.Contains("Child") && !name.Contains("Baby");
+        }
+
+        private static void LoadClips(List<KeyValuePair<string, Texture2D>> bodies)
+        {
+            for (int mask = 0; mask < MaskCount; mask++)
+            {
+                string maskPath = MaskFolder + mask;
+                if (maskPath == MaskPath)
+                    continue;
+                Pixels[] art = ReadArt(maskPath);
+                if (art == null)
+                    continue;
+                foreach (KeyValuePair<string, Texture2D> body in bodies)
+                {
+                    if (!IsAdultNaked(body.Key))
+                        continue;
+                    Texture2D[] baked = new Texture2D[3];
+                    bool ok = true;
+                    for (int i = 0; i < 3 && ok; i++)
+                    {
+                        baked[i] = Clip(art[i], ReadBody(body.Key, i, body.Value), maskPath + " " + body.Key + "_" + Facings[i]);
+                        ok = baked[i] != null;
+                    }
+                    if (ok)
+                        Baked[maskPath + "|" + body.Key] = baked;
+                }
+            }
+        }
+
+        // The art of a mask clipped to the skin of a body picture, at the size of the picture (256 for a 512 px body).
+        private static Texture2D Clip(Pixels art, Pixels body, string name)
+        {
+            int size = body.Width >= 2 * VanillaPictureSize ? body.Width / 2 : body.Width;
+            Color32[] output = ToPixels(MaskBakeCore.BakeClip(ToImage(art), ToImage(body), size));
+            if (output == null)
+                return null;
+            var texture = new Texture2D(size, size, TextureFormat.RGBA32, false)
+            {
+                name = "SBE_MaskClip_" + name,
+                wrapMode = TextureWrapMode.Clamp,
+                filterMode = FilterMode.Bilinear
+            };
+            texture.SetPixels32(output);
+            texture.Apply(false, false);
+            return texture;
+        }
+
+        // The graphic of a mask baked for a body picture, built from the graphic the game made for the node (same fields)
+        // and tinted with the node colour; null when this body has no baked picture. Mask 6 is drawn with the Transparent
+        // shader: the three tones of the pants are alpha levels (white art), and a cutout shader keeps only the pixels above
+        // half alpha, which left one flat tone and dropped the two upper bands.
+        internal static Graphic GraphicFor(string maskPath, string bodyPath, Graphic source, Shader shader, Color color)
+        {
+            if (bodyPath == null || !Baked.TryGetValue(maskPath + "|" + bodyPath, out Texture2D[] textures) || !(source is Graphic_Multi))
                 return null;
             Color32 c = color;
-            string key = bodyPath + "|" + c.r + "," + c.g + "," + c.b;
+            string key = maskPath + "|" + bodyPath + "|" + c.r + "," + c.g + "," + c.b;
             if (!Graphics.TryGetValue(key, out Graphic graphic))
             {
                 var mats = new Material[4];
@@ -71,7 +149,7 @@ namespace SerenBiotechExtended
                 {
                     MaterialRequest request = default(MaterialRequest);
                     request.mainTex = textures[i];
-                    request.shader = ShaderDatabase.Transparent;
+                    request.shader = maskPath == MaskPath ? ShaderDatabase.Transparent : shader;
                     request.color = color;
                     mats[i] = MaterialPool.MatFrom(request);
                 }

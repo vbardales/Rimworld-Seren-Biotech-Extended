@@ -53,7 +53,12 @@ namespace SerenBiotechExtended.OfflineBake
                         continue;
                     }
                     RgbaImage body = Load(path);
-                    Rgba[] mask = MaskBakeCore.Bake(art, body, Waist(key), out string report);
+                    Rgba[] mask;
+                    string report = "clip";
+                    if (Environment.GetEnvironmentVariable("OFFLINE_CLIP") != null)
+                        mask = MaskBakeCore.BakeClip(art, body, 256);
+                    else
+                        mask = MaskBakeCore.Bake(art, body, Waist(key), out report);
                     Console.WriteLine(key + ": " + report);
                     Draw(sheet, body, null, i * 2 * Cell);
                     Draw(sheet, body, mask, (i * 2 + 1) * Cell);
@@ -74,9 +79,11 @@ namespace SerenBiotechExtended.OfflineBake
                     if (b.A == 0)
                         continue;
                     float r = b.R / 255f * skin.R, gr = b.G / 255f * skin.G, bl = b.B / 255f * skin.B;
-                    if (mask != null && mask[y * body.Width + x].A > 0)
+                    int ms = mask == null ? 0 : (int)Math.Sqrt(mask.Length);
+                    int mi = mask == null ? 0 : (y * ms / body.Height) * ms + x * ms / body.Width;
+                    if (mask != null && mask[mi].A > 0)
                     {
-                        Rgba m = mask[y * body.Width + x];
+                        Rgba m = mask[mi];
                         float a = m.A / 255f;
                         r = r * (1 - a) + accent.R * m.R / 255f * a;
                         gr = gr * (1 - a) + accent.G * m.G / 255f * a;

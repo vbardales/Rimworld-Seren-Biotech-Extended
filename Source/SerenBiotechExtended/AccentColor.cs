@@ -63,9 +63,9 @@ namespace SerenBiotechExtended
         public override Graphic GraphicFor(Pawn pawn)
         {
             Graphic source = base.GraphicFor(pawn);
-            if (source == null || !IsBaked(this))
+            if (source == null || !MaskBake.IsMask(Props.texPath))
                 return source;
-            return MaskBake.GraphicFor(BodyBounds.BodyPathFor(pawn), source, ShaderFor(pawn), ColorFor(pawn)) ?? source;
+            return MaskBake.GraphicFor(Props.texPath, BodyBounds.BodyPathFor(pawn), source, ShaderFor(pawn), ColorFor(pawn)) ?? source;
         }
 
         public static bool IsChildBody(Pawn pawn)

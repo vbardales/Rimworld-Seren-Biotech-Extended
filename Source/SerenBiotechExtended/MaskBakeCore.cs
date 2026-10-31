@@ -94,6 +94,43 @@ namespace SerenBiotechExtended
             return new RgbaImage { Width = art.Width, Height = art.Height, Data = data };
         }
 
+        // The art of a mask clipped to the skin of a body picture, as a size x size picture: each output pixel is the average
+        // (weighted by alpha) of the art block it covers, and is erased where the body picture, read at the same relative
+        // place, is not skin. Null when the art or the body is empty.
+        internal static Rgba[] BakeClip(RgbaImage art, RgbaImage body, int size)
+        {
+            if (art == null || body == null || size <= 0)
+                return null;
+            bool[] skin = SkinOf(body);
+            var output = new Rgba[size * size];
+            bool any = false;
+            for (int y = 0; y < size; y++)
+            {
+                int by = y * body.Height / size, ay0 = y * art.Height / size, ay1 = System.Math.Max(ay0 + 1, (y + 1) * art.Height / size);
+                for (int x = 0; x < size; x++)
+                {
+                    if (!skin[by * body.Width + x * body.Width / size])
+                        continue;
+                    int ax0 = x * art.Width / size, ax1 = System.Math.Max(ax0 + 1, (x + 1) * art.Width / size);
+                    float a = 0f, r = 0f, g = 0f, b = 0f;
+                    int n = 0;
+                    for (int ay = ay0; ay < ay1; ay++)
+                        for (int ax = ax0; ax < ax1; ax++)
+                        {
+                            Rgba p = art.Data[ay * art.Width + ax];
+                            float w = p.A / 255f;
+                            a += w; r += p.R * w; g += p.G * w; b += p.B * w;
+                            n++;
+                        }
+                    if (a <= 0f)
+                        continue;
+                    output[y * size + x] = new Rgba { R = (byte)(r / a), G = (byte)(g / a), B = (byte)(b / a), A = (byte)(255f * a / n) };
+                    any = true;
+                }
+            }
+            return any ? output : new Rgba[size * size];
+        }
+
         // The art stretched over the body from the feet up to the waist row, each row fitted to the skin width of that row
         // (legs gap kept), clipped to the skin. waistFromFeet is where the pants start, as a share of the skin height
         // counted from the feet, or negative to take half of it. Null when the art or the body has no pixel.
