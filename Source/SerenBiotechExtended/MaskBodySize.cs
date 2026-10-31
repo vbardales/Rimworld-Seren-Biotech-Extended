@@ -35,6 +35,8 @@ namespace SerenBiotechExtended
             }
         }
 
+        public static BodyBounds? ForPath(string path) => ByPath.TryGetValue(path + "_south", out BodyBounds bounds) ? bounds : (BodyBounds?)null;
+
         // The bounds of the body picture the pawn body node draws (its graphic path), the body type path otherwise.
         // Only reads dictionaries, so it is safe in the parallel render jobs.
         public static BodyBounds? For(Pawn pawn)
@@ -105,55 +107,48 @@ namespace SerenBiotechExtended
             }
         }
     }
-
-    // Worker of the body mask nodes. The masks are drawn on an adult 512 px canvas whose sides and legs are mostly
-    // transparent, so scaling that canvas down to a child or a baby body leaves almost nothing visible, and Mask 6
-    // (pants-like) hangs below the feet. Where the node uses the MaskN_Fit textures (content cropped to its bounding box,
-    // see PawnRenderNode_AccentBody), this worker sizes the node to a part of the body, measured from the feet:
-    // Mask 6 goes from the feet to the navel, the other masks cover the torso only.
+    // Worker of the body mask nodes. The masks are drawn on a square canvas for an adult body. On a child or a baby
+    // body the same canvas leaves the mask too large and misplaced, so the node is mapped from the adult body onto the
+    // pawn body: a point at some place of the adult body lands at the same relative place of the child body (scale
+    // from the ratio of the two body pictures, read from their alpha, no crop and no stretch of the mask itself).
     public class PawnRenderNodeWorker_MaskBody : PawnRenderNodeWorker_AttachmentBody
     {
-        // Parts of the body height, from the feet (0) to the neck (1): the navel is at about half, the crotch at about a quarter.
-        private const float FeetToNavelTop = 0.48f;
-        private const float TorsoBottom = 0.28f;
-        // Share of the body width the masks cover (the arms are part of the body picture).
-        private const float WidthShare = 0.85f;
+        // The picture the masks were drawn for.
+        private const string ReferenceBodyPath = "Things/Pawn/Humanlike/Bodies/Naked_Thin";
 
-        // The part of the body the node covers, or false when the node keeps its adult drawing.
-        private static bool TryRegion(PawnRenderNode node, Pawn pawn, out float x, out float z, out float width, out float height)
+        // Scale and offset of the node, or false when the node keeps its adult drawing.
+        private static bool TryMap(Pawn pawn, out float scaleX, out float scaleZ, out float offsetX, out float offsetZ)
         {
-            x = z = width = height = 0f;
-            if (!PawnRenderNode_AccentBody.UsesFit(node, pawn))
+            scaleX = scaleZ = 1f;
+            offsetX = offsetZ = 0f;
+            if (!PawnRenderNode_AccentBody.IsChildBody(pawn))
                 return false;
-            BodyBounds? bounds = BodyBounds.For(pawn);
-            if (bounds == null)
+            BodyBounds? body = BodyBounds.For(pawn);
+            BodyBounds? reference = BodyBounds.ForPath(ReferenceBodyPath);
+            if (body == null || reference == null)
                 return false;
-            BodyBounds b = bounds.Value;
-            bool feetToNavel = PawnRenderNode_AccentBody.IsFeetToNavel(node);
-            float low = feetToNavel ? 0f : TorsoBottom;
-            float high = feetToNavel ? FeetToNavelTop : 1f;
-            float bodyHeight = b.Top - b.Bottom;
-            float bottom = b.Bottom + low * bodyHeight;
-            float top = b.Bottom + high * bodyHeight;
-            x = (b.Left + b.Right) / 2f - 0.5f;
-            z = (bottom + top) / 2f - 0.5f;
-            width = (b.Right - b.Left) * WidthShare;
-            height = top - bottom;
+            BodyBounds b = body.Value, r = reference.Value;
+            scaleX = (b.Right - b.Left) / (r.Right - r.Left);
+            scaleZ = (b.Top - b.Bottom) / (r.Top - r.Bottom);
+            float bodyX = (b.Left + b.Right) / 2f, bodyZ = (b.Bottom + b.Top) / 2f;
+            float refX = (r.Left + r.Right) / 2f, refZ = (r.Bottom + r.Top) / 2f;
+            offsetX = (bodyX - 0.5f) - (refX - 0.5f) * scaleX;
+            offsetZ = (bodyZ - 0.5f) - (refZ - 0.5f) * scaleZ;
             return true;
         }
 
         public override Vector3 ScaleFor(PawnRenderNode node, PawnDrawParms parms)
         {
             Vector3 scale = base.ScaleFor(node, parms);
-            if (!TryRegion(node, parms.pawn, out _, out _, out float width, out float height))
+            if (!TryMap(parms.pawn, out float sx, out float sz, out _, out _))
                 return scale;
-            return new Vector3(scale.x * width, scale.y, scale.z * height);
+            return new Vector3(scale.x * sx, scale.y, scale.z * sz);
         }
 
         public override Vector3 OffsetFor(PawnRenderNode node, PawnDrawParms parms, out Vector3 pivot)
         {
             Vector3 offset = base.OffsetFor(node, parms, out pivot);
-            if (TryRegion(node, parms.pawn, out float x, out float z, out _, out _))
+            if (TryMap(parms.pawn, out _, out _, out float x, out float z))
             {
                 offset.x += x;
                 offset.z += z;

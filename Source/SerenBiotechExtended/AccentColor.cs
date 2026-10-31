@@ -57,16 +57,10 @@ namespace SerenBiotechExtended
 
         public override Color ColorFor(Pawn pawn) => AccentColor.For(pawn) ?? base.ColorFor(pawn);
 
-        public static bool IsFeetToNavel(PawnRenderNode node) => node.Props.texPath != null && node.Props.texPath.EndsWith("Mask6");
-
-        // The MaskN_Fit textures (content cropped to its bounding box) are used for Mask 6 on every body,
-        // and for the other masks on a child or a baby.
-        public static bool UsesFit(PawnRenderNode node, Pawn pawn)
+        public static bool IsChildBody(Pawn pawn)
         {
             BodyTypeDef body = pawn.story?.bodyType;
-            return IsFeetToNavel(node) || body == BodyTypeDefOf.Child || body == BodyTypeDefOf.Baby;
+            return body == BodyTypeDefOf.Child || body == BodyTypeDefOf.Baby;
         }
-
-        protected override string TexPathFor(Pawn pawn) => UsesFit(this, pawn) ? Props.texPath + "_Fit" : base.TexPathFor(pawn);
     }
 }
