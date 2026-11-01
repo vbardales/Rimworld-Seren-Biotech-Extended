@@ -145,6 +145,16 @@ namespace SerenBiotechExtended
         public override Vector3 ScaleFor(PawnRenderNode node, PawnDrawParms parms)
         {
             Vector3 scale = base.ScaleFor(node, parms);
+            // The attachment worker multiplies by the average of bodyType.bodyGraphicScale (0.8 on Thin: (0.6 + 1) / 2) but the
+            // body node itself is drawn at scale 1 on a 1.5 square mesh (measured in game, ticket 9653), which left every mask
+            // at 80 percent of the body on an adult. The masks are baked and clipped on the body picture itself: draw them at
+            // the body scale. Child and baby bodies keep the mapping tuned in game.
+            if (!PawnRenderNode_AccentBody.IsChildBody(parms.pawn))
+            {
+                Vector2 graphicScale = parms.pawn.story.bodyType.bodyGraphicScale;
+                float average = (graphicScale.x + graphicScale.y) / 2f;
+                return average > 0f ? scale / average : scale;
+            }
             if (PawnRenderNode_AccentBody.IsBaked(node) || !TryMap(parms.pawn, out float sx, out float sz, out _, out _))
                 return scale;
             return new Vector3(scale.x * sx, scale.y, scale.z * sz);
