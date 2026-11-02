@@ -167,8 +167,8 @@ namespace SerenBiotechExtended
                 + ", offset " + maskOffset + ", pivot " + maskPivot + "; body node: " + body);
         }
 
-        // World units: 0.052 of the 1.5 square picture.
-        private const float ChildLift = 0.078f;
+        // World units. 0.078 put mask 6 above the feet once the mapped masks were fixed: halved, to read on the shots.
+        private const float ChildLift = 0.04f;
 
         private static readonly HashSet<string> MapLogged = new HashSet<string>();
 
