@@ -144,6 +144,22 @@ namespace SerenBiotechExtended
             return true;
         }
 
+        // Diagnosis: scale, offset and pivot the body node and this node get from their own workers on a child or a baby.
+        private void LogBody(PawnRenderNode node, PawnDrawParms parms, Vector3 scale)
+        {
+            if (!PawnRenderNode_AccentBody.IsChildBody(parms.pawn) || !FirstMap("body|" + parms.pawn.story.bodyType.defName + "|" + node.Props.texPath))
+                return;
+            Vector3 maskOffset = base.OffsetFor(node, parms, out Vector3 maskPivot);
+            string body = "no body node";
+            if (parms.pawn.Drawer.renderer.renderTree.TryGetNodeByTag(PawnRenderNodeTagDefOf.Body, out PawnRenderNode bodyNode))
+            {
+                Vector3 bodyOffset = bodyNode.Worker.OffsetFor(bodyNode, parms, out Vector3 bodyPivot);
+                body = "scale " + bodyNode.Worker.ScaleFor(bodyNode, parms) + ", offset " + bodyOffset + ", pivot " + bodyPivot;
+            }
+            Log.Message("[SerenBiotechExtended] mask node " + node.Props.texPath + " on " + parms.pawn.story.bodyType.defName + ": scale " + scale
+                + ", offset " + maskOffset + ", pivot " + maskPivot + "; body node: " + body);
+        }
+
         private static readonly HashSet<string> MapLogged = new HashSet<string>();
 
         // The render jobs run in parallel: one lock for the set.
@@ -165,7 +181,10 @@ namespace SerenBiotechExtended
             if (average > 0f)
                 scale /= average;
             if (PawnRenderNode_AccentBody.IsBaked(node) || !TryMap(parms.pawn, out float sx, out float sz, out float ox, out float oz))
+            {
+                LogBody(node, parms, scale);
                 return scale;
+            }
             if (FirstMap(parms.pawn.story.bodyType.defName + "|" + node.Props.texPath))
                 Log.Message("[SerenBiotechExtended] child mask map " + node.Props.texPath + " on " + parms.pawn.story.bodyType.defName
                     + ": base scale " + scale + ", picture ratio " + sx.ToString("0.###") + " x " + sz.ToString("0.###")
