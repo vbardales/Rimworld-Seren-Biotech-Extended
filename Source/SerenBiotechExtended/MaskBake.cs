@@ -160,10 +160,28 @@ namespace SerenBiotechExtended
             bool found = bodyPath != null && Baked.TryGetValue(maskPath + "|" + bodyPath, out Texture2D[] textures0);
             if (Logged.Add(maskPath + "|" + bodyPath))
                 Log.Message("[SerenBiotechExtended] first draw of " + maskPath + " on body " + bodyPath + ": baked " + found);
-            if (bodyPath == null || !Baked.TryGetValue(maskPath + "|" + bodyPath, out Texture2D[] textures) || !(source is Graphic_Multi))
+            if (!(source is Graphic_Multi))
                 return null;
+            Texture2D[] textures = null;
+            string kind = "baked|";
+            if (bodyPath == null || !Baked.TryGetValue(maskPath + "|" + bodyPath, out textures))
+            {
+                // No baked picture (child and baby bodies): the art as the game loaded it, still drawn with the Transparent shader,
+                // a cutout shader dropped the soft crescent and sun of masks 0 and 1 on a child.
+                var sourceMats = AccessTools.Field(typeof(Graphic_Multi), "mats").GetValue(source) as Material[];
+                if (sourceMats == null || sourceMats.Length < 3)
+                    return null;
+                textures = new Texture2D[3];
+                for (int i = 0; i < 3; i++)
+                {
+                    textures[i] = sourceMats[i]?.mainTexture as Texture2D;
+                    if (textures[i] == null)
+                        return null;
+                }
+                kind = "art|";
+            }
             Color32 c = color;
-            string key = maskPath + "|" + bodyPath + "|" + c.r + "," + c.g + "," + c.b;
+            string key = kind + maskPath + "|" + bodyPath + "|" + c.r + "," + c.g + "," + c.b;
             if (!Graphics.TryGetValue(key, out Graphic graphic))
             {
                 var mats = new Material[4];
