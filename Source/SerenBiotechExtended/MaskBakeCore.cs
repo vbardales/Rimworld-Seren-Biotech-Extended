@@ -156,6 +156,30 @@ namespace SerenBiotechExtended
             return any ? output : new Rgba[size * size];
         }
 
+        // The art of a mask kept at its own size, erased where the node mapping (scale and offset, as fractions of the square, about
+        // the centre) lands it outside the skin of a child or baby body picture. The node worker still draws the picture mapped.
+        internal static Rgba[] BakeMappedClip(RgbaImage art, RgbaImage body, bool[] skin, float scaleX, float scaleZ, float offsetX, float offsetZ)
+        {
+            if (art == null || body == null || skin == null)
+                return null;
+            var output = new Rgba[art.Width * art.Height];
+            for (int y = 0; y < art.Height; y++)
+            {
+                float v = (y + 0.5f) / art.Height;
+                int by = (int)(((v - 0.5f) * scaleZ + 0.5f + offsetZ) * body.Height);
+                if (by < 0 || by >= body.Height)
+                    continue;
+                for (int x = 0; x < art.Width; x++)
+                {
+                    float u = (x + 0.5f) / art.Width;
+                    int bx = (int)(((u - 0.5f) * scaleX + 0.5f + offsetX) * body.Width);
+                    if (bx >= 0 && bx < body.Width && skin[by * body.Width + bx])
+                        output[y * art.Width + x] = art.Data[y * art.Width + x];
+                }
+            }
+            return output;
+        }
+
         // The art stretched over the body from the feet up to the waist row, each row fitted to the skin width of that row
         // (legs gap kept), clipped to the skin. waistFromFeet is where the pants start, as a share of the skin height
         // counted from the feet, or negative to take half of it. Null when the art or the body has no pixel.

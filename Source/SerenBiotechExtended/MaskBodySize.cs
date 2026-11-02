@@ -121,7 +121,7 @@ namespace SerenBiotechExtended
     public class PawnRenderNodeWorker_MaskBody : PawnRenderNodeWorker_AttachmentBody
     {
         // The picture the masks were drawn for.
-        private const string ReferenceBodyPath = "Things/Pawn/Humanlike/Bodies/Naked_Thin";
+        internal const string ReferenceBodyPath = "Things/Pawn/Humanlike/Bodies/Naked_Thin";
 
         // Share of the skin height, from the top, that the head of a child or a baby covers: a first estimate, to read on the shots.
         private const float HeadCover = 0.35f;
@@ -137,18 +137,23 @@ namespace SerenBiotechExtended
             BodyBounds? reference = BodyBounds.ForPath(ReferenceBodyPath);
             if (body == null || reference == null)
                 return false;
-            BodyBounds b = body.Value, r = reference.Value;
+            Map(body.Value, reference.Value, out scaleX, out scaleZ, out offsetX, out offsetZ);
+            return true;
+        }
+
+        // The mapping from the adult reference body onto a child or baby body, also used by the bake to clip the masks to the skin.
+        internal static void Map(BodyBounds b, BodyBounds r, out float scaleX, out float scaleZ, out float offsetX, out float offsetZ)
+        {
             scaleX = (b.Right - b.Left) / (r.Right - r.Left);
             scaleZ = (b.Top - b.Bottom) / (r.Top - r.Bottom);
-            float bodyX = (b.Left + b.Right) / 2f, bodyZ = (b.Bottom + b.Top) / 2f;
-            float refX = (r.Left + r.Right) / 2f, refZ = (r.Bottom + r.Top) / 2f;
+            float bodyX = (b.Left + b.Right) / 2f;
+            float refX = (r.Left + r.Right) / 2f;
             offsetX = (bodyX - 0.5f) - (refX - 0.5f) * scaleX;
             // The big head of a child or a baby covers the top of the skin box, where the adult art keeps the crescent, the sun
             // and the top of the constellations (masks 0 and 1 never showed). Squeeze the art vertically into the part below the
             // head, feet kept at the feet of the body.
             scaleZ *= 1f - HeadCover;
             offsetZ = (b.Bottom - 0.5f) - (r.Bottom - 0.5f) * scaleZ;
-            return true;
         }
 
         // Diagnosis: scale, offset and pivot the body node and this node get from their own workers on a child or a baby.

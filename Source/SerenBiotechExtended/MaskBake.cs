@@ -81,11 +81,12 @@ namespace SerenBiotechExtended
             }
         }
 
-        // Adult bodies only (the child and baby bodies are mapped by the node worker, not clipped).
-        private static bool IsAdultNaked(string basePath)
+        private static bool IsNaked(string basePath) => basePath.Substring(basePath.LastIndexOf('/') + 1).StartsWith("Naked_");
+
+        private static bool IsChildNaked(string basePath)
         {
             string name = basePath.Substring(basePath.LastIndexOf('/') + 1);
-            return name.StartsWith("Naked_") && !name.Contains("Child") && !name.Contains("Baby");
+            return name.Contains("Child") || name.Contains("Baby");
         }
 
         // Bodies outer, masks inner: each body picture is read and its skin found once, not once per mask (a first version
@@ -107,8 +108,18 @@ namespace SerenBiotechExtended
             }
             foreach (KeyValuePair<string, Texture2D> body in bodies)
             {
-                if (!IsAdultNaked(body.Key))
+                if (!IsNaked(body.Key))
                     continue;
+                // A child or baby body: the node worker maps the art, so the art is clipped where the mapping lands it.
+                bool child = IsChildNaked(body.Key);
+                BodyBounds? bounds = BodyBounds.ForPath(body.Key), reference = BodyBounds.ForPath(PawnRenderNodeWorker_MaskBody.ReferenceBodyPath);
+                float sx = 1f, sz = 1f, ox = 0f, oz = 0f;
+                if (child)
+                {
+                    if (bounds == null || reference == null)
+                        continue;
+                    PawnRenderNodeWorker_MaskBody.Map(bounds.Value, reference.Value, out sx, out sz, out ox, out oz);
+                }
                 var images = new RgbaImage[3];
                 var skins = new bool[3][];
                 for (int i = 0; i < 3; i++)
@@ -122,13 +133,30 @@ namespace SerenBiotechExtended
                     bool ok = true;
                     for (int i = 0; i < 3 && ok; i++)
                     {
-                        baked[i] = Clip(arts[m][i], images[i], skins[i], maskPaths[m] + " " + body.Key + "_" + Facings[i]);
+                        baked[i] = child ? ClipMapped(arts[m][i], images[i], skins[i], sx, sz, ox, oz, maskPaths[m] + " " + body.Key + "_" + Facings[i])
+                            : Clip(arts[m][i], images[i], skins[i], maskPaths[m] + " " + body.Key + "_" + Facings[i]);
                         ok = baked[i] != null;
                     }
                     if (ok)
                         Baked[maskPaths[m] + "|" + body.Key] = baked;
                 }
             }
+        }
+
+        private static Texture2D ClipMapped(RgbaImage art, RgbaImage body, bool[] skin, float sx, float sz, float ox, float oz, string name)
+        {
+            Color32[] output = ToPixels(MaskBakeCore.BakeMappedClip(art, body, skin, sx, sz, ox, oz));
+            if (output == null)
+                return null;
+            var texture = new Texture2D(art.Width, art.Height, TextureFormat.RGBA32, false)
+            {
+                name = "SBE_MaskClipMapped_" + name,
+                wrapMode = TextureWrapMode.Clamp,
+                filterMode = FilterMode.Bilinear
+            };
+            texture.SetPixels32(output);
+            texture.Apply(false, false);
+            return texture;
         }
 
         // The art of a mask clipped to the skin of a body picture, at the size of the picture (256 for a 512 px body).
