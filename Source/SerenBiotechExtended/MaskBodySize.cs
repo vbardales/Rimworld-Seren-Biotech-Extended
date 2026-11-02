@@ -209,7 +209,8 @@ namespace SerenBiotechExtended
             // Measured on the child pictures (ticket d410, mask 6 baked on the body picture itself, same scale and offset as the
             // body node in the logs): every mask is drawn about 8 screen pixels, 0.05 of the picture, below the body. Cause not
             // found, the Child body type only (the baby is aligned).
-            if (parms.pawn.story.bodyType == BodyTypeDefOf.Child)
+            // The mapped masks are placed from the body bounds, they need no lift (it hid masks 0 and 1 under the head).
+            if (parms.pawn.story.bodyType == BodyTypeDefOf.Child && PawnRenderNode_AccentBody.IsBaked(node))
                 offset.z += ChildLift;
             if (!PawnRenderNode_AccentBody.IsBaked(node) && TryMap(parms.pawn, out _, out _, out float x, out float z))
             {
