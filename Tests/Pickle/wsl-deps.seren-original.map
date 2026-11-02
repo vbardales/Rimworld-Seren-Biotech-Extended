@@ -13,3 +13,5 @@ nelim.pickletools.clickdiagnostics path:PickleTools/ClickDiagnostics/Mod
 nelim.pickletools   path:PickleTools/Tests/Pickle/StandaloneBase/Mod
 erdelf.HumanoidAlienRaces 839005762
 odysseylotus.seren 2704627783
+odysseylotus.serenbiotech 3726565301
+nelim.serenbiotechextended path:SerenBiotechExtended/Mod
