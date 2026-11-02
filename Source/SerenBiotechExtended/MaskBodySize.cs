@@ -160,6 +160,9 @@ namespace SerenBiotechExtended
                 + ", offset " + maskOffset + ", pivot " + maskPivot + "; body node: " + body);
         }
 
+        // World units: 0.052 of the 1.5 square picture.
+        private const float ChildLift = 0.078f;
+
         private static readonly HashSet<string> MapLogged = new HashSet<string>();
 
         // The render jobs run in parallel: one lock for the set.
@@ -196,6 +199,11 @@ namespace SerenBiotechExtended
         public override Vector3 OffsetFor(PawnRenderNode node, PawnDrawParms parms, out Vector3 pivot)
         {
             Vector3 offset = base.OffsetFor(node, parms, out pivot);
+            // Measured on the child pictures (ticket d410, mask 6 baked on the body picture itself, same scale and offset as the
+            // body node in the logs): every mask is drawn about 8 screen pixels, 0.05 of the picture, below the body. Cause not
+            // found, the Child body type only (the baby is aligned).
+            if (parms.pawn.story.bodyType == BodyTypeDefOf.Child)
+                offset.z += ChildLift;
             if (!PawnRenderNode_AccentBody.IsBaked(node) && TryMap(parms.pawn, out _, out _, out float x, out float z))
             {
                 offset.x += x;
