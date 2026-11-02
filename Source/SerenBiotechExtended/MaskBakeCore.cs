@@ -55,14 +55,14 @@ namespace SerenBiotechExtended
             return skin;
         }
 
-        // The dark band between the skin and the black outline is shading, not outline: the pants stopped a few pixels short of
-        // the outline on both sides and along the rounded feet. The skin grows by SkinGrow pixels per 512 of picture width
-        // into opaque pixels (never into the transparent surroundings).
-        private const int SkinGrow = 5;
+        // The edge of the ink is soft once the picture is drawn (bilinear, mip levels): the pants stopped about two pixels short
+        // of the outline. The skin grows by SkinGrow pixels per 512 of picture width into opaque pixels, nothing on the 128 px
+        // vanilla pictures. Read on the WDI pictures: ink is pure black 13 px thick, skin starts right after it, no shading band.
+        private const int SkinGrow = 2;
 
         private static bool[] Grow(RgbaImage body, bool[] skin)
         {
-            int w = body.Width, h = body.Height, steps = Math.Max(1, w * SkinGrow / 512);
+            int w = body.Width, h = body.Height, steps = w * SkinGrow / 512;
             bool[] current = (bool[])skin.Clone();
             for (int step = 0; step < steps; step++)
             {
