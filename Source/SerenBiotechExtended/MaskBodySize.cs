@@ -123,6 +123,9 @@ namespace SerenBiotechExtended
         // The picture the masks were drawn for.
         private const string ReferenceBodyPath = "Things/Pawn/Humanlike/Bodies/Naked_Thin";
 
+        // Share of the skin height, from the top, that the head of a child or a baby covers: a first estimate, to read on the shots.
+        private const float HeadCover = 0.35f;
+
         // Scale and offset of the node, or false when the node keeps its adult drawing.
         private static bool TryMap(Pawn pawn, out float scaleX, out float scaleZ, out float offsetX, out float offsetZ)
         {
@@ -140,7 +143,11 @@ namespace SerenBiotechExtended
             float bodyX = (b.Left + b.Right) / 2f, bodyZ = (b.Bottom + b.Top) / 2f;
             float refX = (r.Left + r.Right) / 2f, refZ = (r.Bottom + r.Top) / 2f;
             offsetX = (bodyX - 0.5f) - (refX - 0.5f) * scaleX;
-            offsetZ = (bodyZ - 0.5f) - (refZ - 0.5f) * scaleZ;
+            // The big head of a child or a baby covers the top of the skin box, where the adult art keeps the crescent, the sun
+            // and the top of the constellations (masks 0 and 1 never showed). Squeeze the art vertically into the part below the
+            // head, feet kept at the feet of the body.
+            scaleZ *= 1f - HeadCover;
+            offsetZ = (b.Bottom - 0.5f) - (r.Bottom - 0.5f) * scaleZ;
             return true;
         }
 
