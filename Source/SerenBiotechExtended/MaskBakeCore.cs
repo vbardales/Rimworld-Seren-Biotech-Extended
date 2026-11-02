@@ -55,6 +55,32 @@ namespace SerenBiotechExtended
             return skin;
         }
 
+        // The dark band between the skin and the black outline is shading, not outline: the pants stopped a few pixels short of
+        // the outline on both sides and along the rounded feet. The skin grows by SkinGrow pixels per 512 of picture width
+        // into opaque pixels (never into the transparent surroundings).
+        private const int SkinGrow = 5;
+
+        private static bool[] Grow(RgbaImage body, bool[] skin)
+        {
+            int w = body.Width, h = body.Height, steps = Math.Max(1, w * SkinGrow / 512);
+            bool[] current = (bool[])skin.Clone();
+            for (int step = 0; step < steps; step++)
+            {
+                bool[] next = (bool[])current.Clone();
+                for (int y = 0; y < h; y++)
+                    for (int x = 0; x < w; x++)
+                    {
+                        int i = y * w + x;
+                        if (current[i] || body.Data[i].A < BodyAlpha)
+                            continue;
+                        if ((x > 0 && current[i - 1]) || (x < w - 1 && current[i + 1]) || (y > 0 && current[i - w]) || (y < h - 1 && current[i + w]))
+                            next[i] = true;
+                    }
+                current = next;
+            }
+            return current;
+        }
+
         private static void Seed(RgbaImage body, bool[] outside, System.Collections.Generic.Queue<int> queue, int x, int y)
         {
             int i = y * body.Width + x;
@@ -148,7 +174,7 @@ namespace SerenBiotechExtended
                         if (y < aMinY) aMinY = y;
                         if (y > aMaxY) aMaxY = y;
                     }
-            bool[] skin = SkinOf(body);
+            bool[] skin = Grow(body, SkinOf(body));
             int bMinX = body.Width, bMaxX = -1, bMinY = body.Height, bMaxY = -1;
             for (int y = 0; y < body.Height; y++)
                 for (int x = 0; x < body.Width; x++)
