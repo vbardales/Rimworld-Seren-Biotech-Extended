@@ -14,6 +14,8 @@ namespace SerenBiotechExtended
     {
         public float Left, Right, Bottom, Top;
 
+        public override string ToString() => "L" + Left.ToString("0.###") + " R" + Right.ToString("0.###") + " B" + Bottom.ToString("0.###") + " T" + Top.ToString("0.###");
+
         private const byte MinAlpha = 40;
         private const string BodiesFolder = "Things/Pawn/Humanlike/Bodies";
         // Texture path (with the _south suffix) to bounds.
@@ -142,6 +144,15 @@ namespace SerenBiotechExtended
             return true;
         }
 
+        private static readonly HashSet<string> MapLogged = new HashSet<string>();
+
+        // The render jobs run in parallel: one lock for the set.
+        private static bool FirstMap(string key)
+        {
+            lock (MapLogged)
+                return MapLogged.Add(key);
+        }
+
         public override Vector3 ScaleFor(PawnRenderNode node, PawnDrawParms parms)
         {
             Vector3 scale = base.ScaleFor(node, parms);
@@ -153,8 +164,13 @@ namespace SerenBiotechExtended
             float average = (graphicScale.x + graphicScale.y) / 2f;
             if (average > 0f)
                 scale /= average;
-            if (PawnRenderNode_AccentBody.IsBaked(node) || !TryMap(parms.pawn, out float sx, out float sz, out _, out _))
+            if (PawnRenderNode_AccentBody.IsBaked(node) || !TryMap(parms.pawn, out float sx, out float sz, out float ox, out float oz))
                 return scale;
+            if (FirstMap(parms.pawn.story.bodyType.defName + "|" + node.Props.texPath))
+                Log.Message("[SerenBiotechExtended] child mask map " + node.Props.texPath + " on " + parms.pawn.story.bodyType.defName
+                    + ": base scale " + scale + ", picture ratio " + sx.ToString("0.###") + " x " + sz.ToString("0.###")
+                    + ", offset " + ox.ToString("0.###") + " " + oz.ToString("0.###")
+                    + ", body bounds " + (BodyBounds.For(parms.pawn)?.ToString() ?? "none"));
             return new Vector3(scale.x * sx, scale.y, scale.z * sz);
         }
 
