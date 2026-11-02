@@ -60,37 +60,11 @@ namespace SerenBiotechExtended
         // Mask 6 is baked per body (MaskBake): it is already sized to the body, so the node keeps its own size and place.
         public static bool IsBaked(PawnRenderNode node) => node.Props.texPath == MaskBake.MaskPath;
 
-        private static readonly HashSet<string> SizeLogged = new HashSet<string>();
-
-        // Diagnosis of the mask size in game: draw size, mesh and body graphic scale of the mask node and of the body node.
-        private static string Describe(PawnRenderNode node, Pawn pawn)
-        {
-            Bounds mesh = node.MeshSetFor(pawn).MeshAt(Rot4.South).bounds;
-            Graphic graphic = node.PrimaryGraphic;
-            return "drawSize " + node.Props.drawSize + ", graphic drawSize " + (graphic != null ? graphic.drawSize.ToString() : "none")
-                + ", mesh size " + mesh.size.x.ToString("0.###") + "x" + mesh.size.z.ToString("0.###")
-                + ", worker " + node.Worker.GetType().Name;
-        }
-
-        private void LogSize(Pawn pawn)
-        {
-            string key = Props.texPath + "|" + pawn.story?.bodyType?.defName;
-            if (!SizeLogged.Add(key))
-                return;
-            string body = "no body node";
-            if (pawn.Drawer?.renderer?.renderTree != null
-                && pawn.Drawer.renderer.renderTree.TryGetNodeByTag(PawnRenderNodeTagDefOf.Body, out PawnRenderNode bodyNode))
-                body = Describe(bodyNode, pawn);
-            Log.Message("[SerenBiotechExtended] size of " + Props.texPath + " on " + pawn.story?.bodyType?.defName
-                + " (bodyGraphicScale " + pawn.story?.bodyType?.bodyGraphicScale + "): mask node: " + Describe(this, pawn) + "; body node: " + body);
-        }
-
         public override Graphic GraphicFor(Pawn pawn)
         {
             Graphic source = base.GraphicFor(pawn);
             if (source == null || !MaskBake.IsMask(Props.texPath))
                 return source;
-            try { LogSize(pawn); } catch (System.Exception e) { Log.Warning("[SerenBiotechExtended] size log failed: " + e.Message); }
             return MaskBake.GraphicFor(Props.texPath, BodyBounds.BodyPathFor(pawn), source, ShaderFor(pawn), ColorFor(pawn)) ?? source;
         }
 
