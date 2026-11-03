@@ -158,7 +158,7 @@ namespace SerenBiotechExtended
                 offsetZ -= OriginalChildDrop;
         }
 
-        private const float OriginalChildDrop = 0.13f;
+        private const float OriginalChildDrop = 0.11f;
 
         // Diagnosis: scale, offset and pivot the body node and this node get from their own workers on a child or a baby.
         private void LogBody(PawnRenderNode node, PawnDrawParms parms, Vector3 scale)
