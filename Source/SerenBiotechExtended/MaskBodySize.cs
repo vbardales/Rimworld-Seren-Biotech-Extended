@@ -135,12 +135,12 @@ namespace SerenBiotechExtended
             BodyBounds? reference = BodyBounds.ForPath(ReferenceBodyPath);
             if (body == null || reference == null)
                 return false;
-            Map(body.Value, reference.Value, out scaleX, out scaleZ, out offsetX, out offsetZ);
+            Map(body.Value, reference.Value, pawn.story.bodyType == BodyTypeDefOf.Child, out scaleX, out scaleZ, out offsetX, out offsetZ);
             return true;
         }
 
         // The mapping from the adult reference body onto a child or baby body, also used by the bake to clip the masks to the skin.
-        internal static void Map(BodyBounds b, BodyBounds r, out float scaleX, out float scaleZ, out float offsetX, out float offsetZ)
+        internal static void Map(BodyBounds b, BodyBounds r, bool vanillaChild, out float scaleX, out float scaleZ, out float offsetX, out float offsetZ)
         {
             scaleX = (b.Right - b.Left) / (r.Right - r.Left);
             scaleZ = (b.Top - b.Bottom) / (r.Top - r.Bottom);
@@ -151,7 +151,14 @@ namespace SerenBiotechExtended
             float refX = (r.Left + r.Right) / 2f;
             offsetX = (bodyX - 0.5f) - (refX - 0.5f) * scaleX;
             offsetZ = (b.Bottom - 0.5f) - (r.Bottom - 0.5f) * scaleZ;
+            // The original Seren on the vanilla child (registration of its adult and child shots, masks 3 to 11, Docs/reference/
+            // original-masks): same scale, art 0.093 of the picture below the picture centre, the art past the feet cut by the
+            // body. Feet-aligned put it 0.13 higher and hid masks 0 and 1 under the head.
+            if (vanillaChild)
+                offsetZ -= OriginalChildDrop;
         }
+
+        private const float OriginalChildDrop = 0.13f;
 
         // Diagnosis: scale, offset and pivot the body node and this node get from their own workers on a child or a baby.
         private void LogBody(PawnRenderNode node, PawnDrawParms parms, Vector3 scale)

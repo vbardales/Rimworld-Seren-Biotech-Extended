@@ -118,7 +118,7 @@ namespace SerenBiotechExtended
                 {
                     if (bounds == null || reference == null)
                         continue;
-                    PawnRenderNodeWorker_MaskBody.Map(bounds.Value, reference.Value, out sx, out sz, out ox, out oz);
+                    PawnRenderNodeWorker_MaskBody.Map(bounds.Value, reference.Value, body.Key.EndsWith("Naked_Child"), out sx, out sz, out ox, out oz);
                 }
                 var images = new RgbaImage[3];
                 var skins = new bool[3][];
