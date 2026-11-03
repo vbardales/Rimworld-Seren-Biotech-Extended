@@ -123,8 +123,6 @@ namespace SerenBiotechExtended
         // The picture the masks were drawn for.
         internal const string ReferenceBodyPath = "Things/Pawn/Humanlike/Bodies/Naked_Thin";
 
-        // Share of the skin height, from the top, that the head of a child or a baby covers: a first estimate, to read on the shots.
-        private const float HeadCover = 0.35f;
 
         // Scale and offset of the node, or false when the node keeps its adult drawing.
         private static bool TryMap(Pawn pawn, out float scaleX, out float scaleZ, out float offsetX, out float offsetZ)
@@ -146,13 +144,12 @@ namespace SerenBiotechExtended
         {
             scaleX = (b.Right - b.Left) / (r.Right - r.Left);
             scaleZ = (b.Top - b.Bottom) / (r.Top - r.Bottom);
+            // One scale on both axes so the art keeps its proportions (Virginie 2026-11-03: the vertical squeeze by the head share
+            // flattened the sun, the necklace and the constellations). The part under the head is hidden, feet kept at the feet.
+            scaleX = scaleZ = Mathf.Min(scaleX, scaleZ);
             float bodyX = (b.Left + b.Right) / 2f;
             float refX = (r.Left + r.Right) / 2f;
             offsetX = (bodyX - 0.5f) - (refX - 0.5f) * scaleX;
-            // The big head of a child or a baby covers the top of the skin box, where the adult art keeps the crescent, the sun
-            // and the top of the constellations (masks 0 and 1 never showed). Squeeze the art vertically into the part below the
-            // head, feet kept at the feet of the body.
-            scaleZ *= 1f - HeadCover;
             offsetZ = (b.Bottom - 0.5f) - (r.Bottom - 0.5f) * scaleZ;
         }
 
@@ -172,8 +169,8 @@ namespace SerenBiotechExtended
                 + ", offset " + maskOffset + ", pivot " + maskPivot + "; body node: " + body);
         }
 
-        // World units. 0.078 put mask 6 above the feet once the mapped masks were fixed: halved, to read on the shots.
-        private const float ChildLift = 0.04f;
+        // World units. 0.078 then 0.04 left mask 6 above the feet (Virginie 2026-11-03, ticket 0ba0): 0, to read on the shots.
+        private const float ChildLift = 0f;
 
         private static readonly HashSet<string> MapLogged = new HashSet<string>();
 
