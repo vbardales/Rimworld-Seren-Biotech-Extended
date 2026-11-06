@@ -27,3 +27,7 @@ Status of each: `written` (Gherkin in `Tests/Pickle/Mod/Pickle/Features/`), `pla
 Not applicable: no recipes, research, items or alerts in this mod, so no scenario for them. No C# logic beyond the accent tint (`AccentColor.cs`) and the shortcut worker: no unit-test project (`Tests/` holds only Pickle), the tint is covered by scenario 3.
 
 Automated and XML checks replayed 2026-10-28 on revision `ba9f323` (all green): `Check-Status.ps1` 0 error, `Check-Translations.ps1` PASS, `Check-DefRefs.ps1` (with the fork as `-AlsoScan`) no unresolved reference, `Check-ConfigErrors.ps1` no config error, `Check-TypeRefs.ps1` no unguarded third-party type, `Check-XmlFields.ps1` only the 12 `color` fields of `AccentColorExtension` (our own class, not resolved by the script: false positives).
+
+## Offline mask bake tool
+
+`Tests/OfflineBake` is a small C# console project (net48, no game, no ticket) that links `Source/SerenBiotechExtended/MaskBakeCore.cs` and runs the mask 6 bake on the PNG pictures of the bodies and of the mask, writing one sheet (body, then body with mask) per body. One consumer: this mod, to look at the bake without launching RimWorld. Run: `dotnet run --project Tests/OfflineBake -- <bodies folder> <mask 6 south png> <output png>`; env `OFFLINE_WAIST` (`table`, or a share of the skin height) and `OFFLINE_FACING` (default `south`) tune it. It is a visual aid, not an automated test: no pass or fail.
