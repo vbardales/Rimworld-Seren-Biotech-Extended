@@ -143,9 +143,14 @@ namespace SerenBiotechExtended
             }
         }
 
+        private const float MeshSize = 1.5f;
+
         private static Texture2D ClipMapped(RgbaImage art, RgbaImage body, bool[] skin, float sx, float sz, float ox, float oz, string name)
         {
-            Color32[] output = ToPixels(MaskBakeCore.BakeMappedClip(art, body, skin, sx, sz, ox, oz));
+            // The node worker adds the mapping offset to the draw position in world units, and the mask and body meshes are 1.5
+            // world units wide (ticket 9653 logs), so the art lands ox / 1.5 of the square away, not ox. The clip must follow the
+            // art as drawn (Virginie 2026-11-07: child masks spilled outside the body at drop 0.11).
+            Color32[] output = ToPixels(MaskBakeCore.BakeMappedClip(art, body, skin, sx, sz, ox / MeshSize, oz / MeshSize));
             if (output == null)
                 return null;
             var texture = new Texture2D(art.Width, art.Height, TextureFormat.RGBA32, false)
