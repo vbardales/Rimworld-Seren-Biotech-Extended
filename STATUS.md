@@ -13,7 +13,7 @@ upstream_mod_remotes:
 settings_audit: partial
 localization: complete
 translation_en: complete
-translation_fr: complete
+translation_fr: pending_review
 dependencies: complete
 workshop: none
 published: no
