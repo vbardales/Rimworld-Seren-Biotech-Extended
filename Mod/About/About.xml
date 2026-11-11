@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Seren Biotech Extended</name>
   <author>OdysseyLotus, Lucius - 1.6 adapted by Nelim</author>
@@ -61,4 +61,4 @@ Requires [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3726565301]
 [b]Adoption.[/b] If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
 
 [url=https://github.com/vbardales/Rimworld-Seren-Biotech-Extended]Source code on GitHub[/url]</description>
-</ModMetaData>
+<modVersion>0.1.0</modVersion></ModMetaData>
