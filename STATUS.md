@@ -17,6 +17,7 @@ translation_fr: complete
 dependencies: complete
 workshop: none
 published: no
+workshop_required_items: n/a, not released yet
 tested_on: never
 # Audit 2026-10-26: setupRepo and makeSources complete (2.a to 2.g: icon, derivatives, prompt, illustration validated by Virginie, prompt deleted, Art holds the minimal set), code[1.0.0] declared.
 remaining:
