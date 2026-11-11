@@ -5,7 +5,7 @@
 
 	<GeneDef ParentName="GeneSerenSensorBase">
 		<defName>SerenOriginalHorns_0</defName>
-		<label>original seren horns 0</label>
+		<label>original Seren horns 0</label>
 		<description>Carriers of this gene have the horns of style 0 of the original Seren mod.</description>
 		<iconPath>UI/Icons/Genes/Gene_BackSensors</iconPath>
 		<renderNodeProperties>
@@ -56,7 +56,7 @@
 
 	<GeneDef ParentName="GeneSerenSensorBase">
 		<defName>SerenOriginalHorns_1</defName>
-		<label>original seren horns 1</label>
+		<label>original Seren horns 1</label>
 		<description>Carriers of this gene have the horns of style 1 of the original Seren mod.</description>
 		<iconPath>UI/Icons/Genes/Gene_BackSensors</iconPath>
 		<renderNodeProperties>
@@ -107,7 +107,7 @@
 
 	<GeneDef ParentName="GeneSerenSensorBase">
 		<defName>SerenOriginalHorns_2</defName>
-		<label>original seren horns 2</label>
+		<label>original Seren horns 2</label>
 		<description>Carriers of this gene have the horns of style 2 of the original Seren mod.</description>
 		<iconPath>UI/Icons/Genes/Gene_BackSensors</iconPath>
 		<renderNodeProperties>
@@ -158,7 +158,7 @@
 
 	<GeneDef ParentName="GeneSerenSensorBase">
 		<defName>SerenOriginalHorns_3</defName>
-		<label>original seren horns 3</label>
+		<label>original Seren horns 3</label>
 		<description>Carriers of this gene have the horns of style 3 of the original Seren mod.</description>
 		<iconPath>UI/Icons/Genes/Gene_BackSensors</iconPath>
 		<renderNodeProperties>
@@ -209,7 +209,7 @@
 
 	<GeneDef ParentName="GeneSerenSensorBase">
 		<defName>SerenOriginalHorns_4</defName>
-		<label>original seren horns 4</label>
+		<label>original Seren horns 4</label>
 		<description>Carriers of this gene have the horns of style 4 of the original Seren mod.</description>
 		<iconPath>UI/Icons/Genes/Gene_BackSensors</iconPath>
 		<renderNodeProperties>
@@ -260,7 +260,7 @@
 
 	<GeneDef ParentName="GeneSerenSensorBase">
 		<defName>SerenOriginalHorns_5</defName>
-		<label>original seren horns 5</label>
+		<label>original Seren horns 5</label>
 		<description>Carriers of this gene have the horns of style 5 of the original Seren mod.</description>
 		<iconPath>UI/Icons/Genes/Gene_BackSensors</iconPath>
 		<renderNodeProperties>
@@ -311,7 +311,7 @@
 
 	<GeneDef ParentName="GeneSerenSensorBase">
 		<defName>SerenOriginalHorns_6</defName>
-		<label>original seren horns 6</label>
+		<label>original Seren horns 6</label>
 		<description>Carriers of this gene have the horns of style 6 of the original Seren mod.</description>
 		<iconPath>UI/Icons/Genes/Gene_BackSensors</iconPath>
 		<renderNodeProperties>
@@ -362,7 +362,7 @@
 
 	<GeneDef ParentName="GeneSerenSensorBase">
 		<defName>SerenOriginalHorns_7</defName>
-		<label>original seren horns 7</label>
+		<label>original Seren horns 7</label>
 		<description>Carriers of this gene have the horns of style 7 of the original Seren mod.</description>
 		<iconPath>UI/Icons/Genes/Gene_BackSensors</iconPath>
 		<renderNodeProperties>

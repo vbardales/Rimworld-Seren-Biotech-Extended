@@ -5,7 +5,7 @@
 
 	<GeneDef ParentName="GeneSerenBodyMaskBase">
 		<defName>SerenOriginalMask_0</defName>
-		<label>original body mask 0</label>
+		<label>original Seren body mask 0</label>
 		<description>Carriers of this gene wear body mask 0 of the original Seren mod.</description>
 		<renderNodeProperties>
 			<li>
@@ -24,7 +24,7 @@
 
 	<GeneDef ParentName="GeneSerenBodyMaskBase">
 		<defName>SerenOriginalMask_1</defName>
-		<label>original body mask 1</label>
+		<label>original Seren body mask 1</label>
 		<description>Carriers of this gene wear body mask 1 of the original Seren mod.</description>
 		<renderNodeProperties>
 			<li>
@@ -43,7 +43,7 @@
 
 	<GeneDef ParentName="GeneSerenBodyMaskBase">
 		<defName>SerenOriginalMask_2</defName>
-		<label>original body mask 2</label>
+		<label>original Seren body mask 2</label>
 		<description>Carriers of this gene wear body mask 2 of the original Seren mod.</description>
 		<renderNodeProperties>
 			<li>
@@ -62,7 +62,7 @@
 
 	<GeneDef ParentName="GeneSerenBodyMaskBase">
 		<defName>SerenOriginalMask_3</defName>
-		<label>original body mask 3</label>
+		<label>original Seren body mask 3</label>
 		<description>Carriers of this gene wear body mask 3 of the original Seren mod.</description>
 		<renderNodeProperties>
 			<li>
@@ -81,7 +81,7 @@
 
 	<GeneDef ParentName="GeneSerenBodyMaskBase">
 		<defName>SerenOriginalMask_4</defName>
-		<label>original body mask 4</label>
+		<label>original Seren body mask 4</label>
 		<description>Carriers of this gene wear body mask 4 of the original Seren mod.</description>
 		<renderNodeProperties>
 			<li>
@@ -100,7 +100,7 @@
 
 	<GeneDef ParentName="GeneSerenBodyMaskBase">
 		<defName>SerenOriginalMask_5</defName>
-		<label>original body mask 5</label>
+		<label>original Seren body mask 5</label>
 		<description>Carriers of this gene wear body mask 5 of the original Seren mod.</description>
 		<renderNodeProperties>
 			<li>
@@ -119,7 +119,7 @@
 
 	<GeneDef ParentName="GeneSerenBodyMaskBase">
 		<defName>SerenOriginalMask_6</defName>
-		<label>original body mask 6</label>
+		<label>original Seren body mask 6</label>
 		<description>Carriers of this gene wear body mask 6 of the original Seren mod.</description>
 		<renderNodeProperties>
 			<li>
@@ -138,7 +138,7 @@
 
 	<GeneDef ParentName="GeneSerenBodyMaskBase">
 		<defName>SerenOriginalMask_7</defName>
-		<label>original body mask 7</label>
+		<label>original Seren body mask 7</label>
 		<description>Carriers of this gene wear body mask 7 of the original Seren mod.</description>
 		<renderNodeProperties>
 			<li>
@@ -157,7 +157,7 @@
 
 	<GeneDef ParentName="GeneSerenBodyMaskBase">
 		<defName>SerenOriginalMask_8</defName>
-		<label>original body mask 8</label>
+		<label>original Seren body mask 8</label>
 		<description>Carriers of this gene wear body mask 8 of the original Seren mod.</description>
 		<renderNodeProperties>
 			<li>
@@ -176,7 +176,7 @@
 
 	<GeneDef ParentName="GeneSerenBodyMaskBase">
 		<defName>SerenOriginalMask_9</defName>
-		<label>original body mask 9</label>
+		<label>original Seren body mask 9</label>
 		<description>Carriers of this gene wear body mask 9 of the original Seren mod.</description>
 		<renderNodeProperties>
 			<li>
@@ -195,7 +195,7 @@
 
 	<GeneDef ParentName="GeneSerenBodyMaskBase">
 		<defName>SerenOriginalMask_10</defName>
-		<label>original body mask 10</label>
+		<label>original Seren body mask 10</label>
 		<description>Carriers of this gene wear body mask 10 of the original Seren mod.</description>
 		<renderNodeProperties>
 			<li>
@@ -214,7 +214,7 @@
 
 	<GeneDef ParentName="GeneSerenBodyMaskBase">
 		<defName>SerenOriginalMask_11</defName>
-		<label>original body mask 11</label>
+		<label>original Seren body mask 11</label>
 		<description>Carriers of this gene wear body mask 11 of the original Seren mod.</description>
 		<renderNodeProperties>
 			<li>

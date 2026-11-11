@@ -7,7 +7,7 @@
 		Childhood is untouched (factor 1 up to 19 biological years); from 20 the factor is (80 - 20) / (300 - 20) = 0.214, so 20 + 280 calendar years make 80 biological years. -->
 	<GeneDef>
 		<defName>OL_SerenLongevity</defName>
-		<label>seren longevity</label>
+		<label>Seren longevity</label>
 		<description>Carriers age very slowly once grown, and live about three hundred years.</description>
 		<iconPath>UI/Icons/Genes/Gene_SerenBlood</iconPath>
 		<displayCategory>Miscellaneous</displayCategory>

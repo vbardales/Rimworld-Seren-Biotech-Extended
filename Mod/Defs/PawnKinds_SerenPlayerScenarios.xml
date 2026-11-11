@@ -26,7 +26,7 @@
 
 	<PawnKindDef ParentName="OL_SerenPlayerModel">
 		<defName>OL_SerenTribalPlayer</defName>
-		<label>seren tribesperson</label>
+		<label>Seren tribesperson</label>
 		<nameMaker>OL_NamerSerenTribalMale</nameMaker>
 		<nameMakerFemale>OL_NamerSerenTribalFemale</nameMakerFemale>
 		<maxGenerationAge>200</maxGenerationAge>
