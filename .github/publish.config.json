@@ -1,0 +1,16 @@
+{
+  "templateStamp": "41f80d837d8b",
+  "workshopId": "3838121018",
+  "packageId": "nelim.serenbiotechextended",
+  "releaseTitle": "Seren Biotech Extended {version}",
+  "requirePaths": [
+    "Assemblies/SerenBiotechExtended.dll",
+    "Defs"
+  ],
+  "forbidPaths": [],
+  "previewFile": "About/Preview.png",
+  "galleryDir": "Art/Gallery",
+  "build": {
+    "project": "Source/SerenBiotechExtended/SerenBiotechExtended.csproj"
+  }
+}
