@@ -47,3 +47,13 @@ protocols_read_sha: 192591e6ee6ad993971c5f47cf9c89ae5fb1106d
 # Seren Biotech Extended: status
 
 Current state only: the front matter above is the source of truth, run lines go to `docs/runs/`.
+
+## Ecosystem
+
+2026-11-13, by PiI (details: `docs/inventory/ecosystem-steam/SerenBiotechExtended.md` of the protocols repository). Source: Steam Workshop search by Chrome plus corpus scan of our 25 defNames and labels.
+
+- Same purpose: none. Corpus scan hits only the original Seren 2704627783 (8 shared defNames, expected). Nobody else extends Seren with outfits or accents. Verdict: no duplicate, the mod goes on.
+- Translations of the originals (6): Japanese, Chinese x3, Russian, Chinese for the Biotech fork. Data only, nothing copied.
+- Add-ons (4): Seren Facial Animations 2844766352, for VTE 2844766515, Seren Nice Facial Animations 3793591541 (overlap our Facial Animation patches by function, not by defName), Medieval Seren Overhaul (1.4, dead).
+- Biotech fork 3726565301 alive (1.6, 1.7). No other mod requires either original.
+- PiI subscribed nothing, nothing to unsubscribe.
