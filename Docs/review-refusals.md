@@ -4,3 +4,5 @@ Suggestions from the ChatGPT translation review that were refused. `/review-tran
 
 - French letters, `PAWN_possessive` and `PAWN_objective`: restore them in the French letter texts. Refused: vanilla French packs never use them, and French possessives agree with the noun, not the pawn. 2026-11-12.
 - `genderNoun` ask: add a gender noun to the French texts. Refused by the session, same reasoning (French agreement follows the noun). 2026-11-12.
+- French letter `OL_SerenCreepDrifter.letterPrompt`: replace `très fatiguæ` by another neutral form. Refused: `-æ` is the documented neutral ending of the project, same as `ratatinæ`; no better neutral form exists. 2026-11-13.
+- `OL_SpaceBorn.description` English: capitalise `Panastrian sun`. Refused: official name of the star unconfirmed by lore, no change without it. 2026-11-13.
