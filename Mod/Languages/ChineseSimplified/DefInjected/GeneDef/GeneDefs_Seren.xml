@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<SerenAccent_Pearl.label>珍珠色点缀</SerenAccent_Pearl.label>
+	<SerenAccent_Pearl.description>携带此基因的殖民者，其原版星族模组的角和躯干花纹呈淡珍珠色。</SerenAccent_Pearl.description>
+	<SerenAccent_Cream.label>奶油色点缀</SerenAccent_Cream.label>
+	<SerenAccent_Cream.description>携带此基因的殖民者，其原版星族模组的角和躯干花纹呈淡奶油色。</SerenAccent_Cream.description>
+	<SerenAccent_Frost.label>霜色点缀</SerenAccent_Frost.label>
+	<SerenAccent_Frost.description>携带此基因的殖民者，其原版星族模组的角和躯干花纹呈淡霜色。</SerenAccent_Frost.description>
+	<SerenAccent_Sky.label>天空色点缀</SerenAccent_Sky.label>
+	<SerenAccent_Sky.description>携带此基因的殖民者，其原版星族模组的角和躯干花纹呈淡天空色。</SerenAccent_Sky.description>
+	<SerenAccent_Mist.label>薄雾色点缀</SerenAccent_Mist.label>
+	<SerenAccent_Mist.description>携带此基因的殖民者，其原版星族模组的角和躯干花纹呈淡薄雾色。</SerenAccent_Mist.description>
+	<SerenAccent_Iris.label>鸢尾色点缀</SerenAccent_Iris.label>
+	<SerenAccent_Iris.description>携带此基因的殖民者，其原版星族模组的角和躯干花纹呈淡鸢尾色。</SerenAccent_Iris.description>
+	<SerenAccent_Lavender.label>薰衣草色点缀</SerenAccent_Lavender.label>
+	<SerenAccent_Lavender.description>携带此基因的殖民者，其原版星族模组的角和躯干花纹呈淡薰衣草色。</SerenAccent_Lavender.description>
+	<SerenAccent_Lilac.label>丁香色点缀</SerenAccent_Lilac.label>
+	<SerenAccent_Lilac.description>携带此基因的殖民者，其原版星族模组的角和躯干花纹呈淡丁香色。</SerenAccent_Lilac.description>
+	<SerenAccent_Orchid.label>兰花色点缀</SerenAccent_Orchid.label>
+	<SerenAccent_Orchid.description>携带此基因的殖民者，其原版星族模组的角和躯干花纹呈淡兰花色。</SerenAccent_Orchid.description>
+	<SerenAccent_Blush.label>腮红色点缀</SerenAccent_Blush.label>
+	<SerenAccent_Blush.description>携带此基因的殖民者，其原版星族模组的角和躯干花纹呈淡腮红色。</SerenAccent_Blush.description>
+	<SerenAccent_Petal.label>花瓣色点缀</SerenAccent_Petal.label>
+	<SerenAccent_Petal.description>携带此基因的殖民者，其原版星族模组的角和躯干花纹呈淡花瓣色。</SerenAccent_Petal.description>
+	<SerenAccent_Rose.label>玫瑰色点缀</SerenAccent_Rose.label>
+	<SerenAccent_Rose.description>携带此基因的殖民者，其原版星族模组的角和躯干花纹呈淡玫瑰色。</SerenAccent_Rose.description>
+	<OL_SerenLongevity.label>星族长寿</OL_SerenLongevity.label>
+	<OL_SerenLongevity.description>携带者成年后衰老极其缓慢，寿命约三百年。</OL_SerenLongevity.description>
+	<SerenOriginalHorns_0.label>原版星族角 0</SerenOriginalHorns_0.label>
+	<SerenOriginalHorns_0.description>携带此基因的殖民者拥有原版星族模组中样式0的角。</SerenOriginalHorns_0.description>
+	<SerenOriginalHorns_1.label>原版星族角 1</SerenOriginalHorns_1.label>
+	<SerenOriginalHorns_1.description>携带此基因的殖民者拥有原版星族模组中样式1的角。</SerenOriginalHorns_1.description>
+	<SerenOriginalHorns_2.label>原版星族角 2</SerenOriginalHorns_2.label>
+	<SerenOriginalHorns_2.description>携带此基因的殖民者拥有原版星族模组中样式2的角。</SerenOriginalHorns_2.description>
+	<SerenOriginalHorns_3.label>原版星族角 3</SerenOriginalHorns_3.label>
+	<SerenOriginalHorns_3.description>携带此基因的殖民者拥有原版星族模组中样式3的角。</SerenOriginalHorns_3.description>
+	<SerenOriginalHorns_4.label>原版星族角 4</SerenOriginalHorns_4.label>
+	<SerenOriginalHorns_4.description>携带此基因的殖民者拥有原版星族模组中样式4的角。</SerenOriginalHorns_4.description>
+	<SerenOriginalHorns_5.label>原版星族角 5</SerenOriginalHorns_5.label>
+	<SerenOriginalHorns_5.description>携带此基因的殖民者拥有原版星族模组中样式5的角。</SerenOriginalHorns_5.description>
+	<SerenOriginalHorns_6.label>原版星族角 6</SerenOriginalHorns_6.label>
+	<SerenOriginalHorns_6.description>携带此基因的殖民者拥有原版星族模组中样式6的角。</SerenOriginalHorns_6.description>
+	<SerenOriginalHorns_7.label>原版星族角 7</SerenOriginalHorns_7.label>
+	<SerenOriginalHorns_7.description>携带此基因的殖民者拥有原版星族模组中样式7的角。</SerenOriginalHorns_7.description>
+	<SerenOriginalMask_0.label>原版星族躯干花纹 0</SerenOriginalMask_0.label>
+	<SerenOriginalMask_0.description>携带此基因的殖民者身上有原版星族模组中的躯干花纹0。</SerenOriginalMask_0.description>
+	<SerenOriginalMask_1.label>原版星族躯干花纹 1</SerenOriginalMask_1.label>
+	<SerenOriginalMask_1.description>携带此基因的殖民者身上有原版星族模组中的躯干花纹1。</SerenOriginalMask_1.description>
+	<SerenOriginalMask_2.label>原版星族躯干花纹 2</SerenOriginalMask_2.label>
+	<SerenOriginalMask_2.description>携带此基因的殖民者身上有原版星族模组中的躯干花纹2。</SerenOriginalMask_2.description>
+	<SerenOriginalMask_3.label>原版星族躯干花纹 3</SerenOriginalMask_3.label>
+	<SerenOriginalMask_3.description>携带此基因的殖民者身上有原版星族模组中的躯干花纹3。</SerenOriginalMask_3.description>
+	<SerenOriginalMask_4.label>原版星族躯干花纹 4</SerenOriginalMask_4.label>
+	<SerenOriginalMask_4.description>携带此基因的殖民者身上有原版星族模组中的躯干花纹4。</SerenOriginalMask_4.description>
+	<SerenOriginalMask_5.label>原版星族躯干花纹 5</SerenOriginalMask_5.label>
+	<SerenOriginalMask_5.description>携带此基因的殖民者身上有原版星族模组中的躯干花纹5。</SerenOriginalMask_5.description>
+	<SerenOriginalMask_6.label>原版星族躯干花纹 6</SerenOriginalMask_6.label>
+	<SerenOriginalMask_6.description>携带此基因的殖民者身上有原版星族模组中的躯干花纹6。</SerenOriginalMask_6.description>
+	<SerenOriginalMask_7.label>原版星族躯干花纹 7</SerenOriginalMask_7.label>
+	<SerenOriginalMask_7.description>携带此基因的殖民者身上有原版星族模组中的躯干花纹7。</SerenOriginalMask_7.description>
+	<SerenOriginalMask_8.label>原版星族躯干花纹 8</SerenOriginalMask_8.label>
+	<SerenOriginalMask_8.description>携带此基因的殖民者身上有原版星族模组中的躯干花纹8。</SerenOriginalMask_8.description>
+	<SerenOriginalMask_9.label>原版星族躯干花纹 9</SerenOriginalMask_9.label>
+	<SerenOriginalMask_9.description>携带此基因的殖民者身上有原版星族模组中的躯干花纹9。</SerenOriginalMask_9.description>
+	<SerenOriginalMask_10.label>原版星族躯干花纹 10</SerenOriginalMask_10.label>
+	<SerenOriginalMask_10.description>携带此基因的殖民者身上有原版星族模组中的躯干花纹10。</SerenOriginalMask_10.description>
+	<SerenOriginalMask_11.label>原版星族躯干花纹 11</SerenOriginalMask_11.label>
+	<SerenOriginalMask_11.description>携带此基因的殖民者身上有原版星族模组中的躯干花纹11。</SerenOriginalMask_11.description>
+	<OL_SpaceBorn.label>生于太空</OL_SpaceBorn.label>
+	<OL_SpaceBorn.description>携带者已适应在太空真空中生存。不加防护地暴露在真空中，会提高携带者的工作速度，并大幅增强其心灵敏感度，但也更容易出现精神崩溃。\n\n星族的宗教常常把本星系的中心恒星尊为物种的起源。这一说法真假难辨，但当他们被置于本星系之外的太空真空中时，似乎会产生奇怪的反应。暴露数小时后，他们会说听到低语，催促他们去寻找“她”。几天之后，他们便语无伦次。有的人就此漫无目的地走进虚空，有的人则对同船的船员暴力相向，声称自己被人从“她”身边夺走了。\n帕妠斯垂亚的恒星目前正在研究之中，因为关于它真正本质的新理论正在流传。</OL_SpaceBorn.description>
+
+</LanguageData>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<SerenAccent_Pearl.label>перламутровый акцент</SerenAccent_Pearl.label>
+	<SerenAccent_Pearl.description>У носителей этого гена рога и рисунки на теле из оригинального мода Seren окрашены в бледный перламутровый тон.</SerenAccent_Pearl.description>
+	<SerenAccent_Cream.label>кремовый акцент</SerenAccent_Cream.label>
+	<SerenAccent_Cream.description>У носителей этого гена рога и рисунки на теле из оригинального мода Seren окрашены в бледный кремовый тон.</SerenAccent_Cream.description>
+	<SerenAccent_Frost.label>морозный акцент</SerenAccent_Frost.label>
+	<SerenAccent_Frost.description>У носителей этого гена рога и рисунки на теле из оригинального мода Seren окрашены в бледный морозный тон.</SerenAccent_Frost.description>
+	<SerenAccent_Sky.label>небесный акцент</SerenAccent_Sky.label>
+	<SerenAccent_Sky.description>У носителей этого гена рога и рисунки на теле из оригинального мода Seren окрашены в бледный небесный тон.</SerenAccent_Sky.description>
+	<SerenAccent_Mist.label>туманный акцент</SerenAccent_Mist.label>
+	<SerenAccent_Mist.description>У носителей этого гена рога и рисунки на теле из оригинального мода Seren окрашены в бледный туманный тон.</SerenAccent_Mist.description>
+	<SerenAccent_Iris.label>ирисовый акцент</SerenAccent_Iris.label>
+	<SerenAccent_Iris.description>У носителей этого гена рога и рисунки на теле из оригинального мода Seren окрашены в бледный ирисовый тон.</SerenAccent_Iris.description>
+	<SerenAccent_Lavender.label>лавандовый акцент</SerenAccent_Lavender.label>
+	<SerenAccent_Lavender.description>У носителей этого гена рога и рисунки на теле из оригинального мода Seren окрашены в бледный лавандовый тон.</SerenAccent_Lavender.description>
+	<SerenAccent_Lilac.label>сиреневый акцент</SerenAccent_Lilac.label>
+	<SerenAccent_Lilac.description>У носителей этого гена рога и рисунки на теле из оригинального мода Seren окрашены в бледный сиреневый тон.</SerenAccent_Lilac.description>
+	<SerenAccent_Orchid.label>орхидейный акцент</SerenAccent_Orchid.label>
+	<SerenAccent_Orchid.description>У носителей этого гена рога и рисунки на теле из оригинального мода Seren окрашены в бледный орхидейный тон.</SerenAccent_Orchid.description>
+	<SerenAccent_Blush.label>румяный акцент</SerenAccent_Blush.label>
+	<SerenAccent_Blush.description>У носителей этого гена рога и рисунки на теле из оригинального мода Seren окрашены в бледный румяный тон.</SerenAccent_Blush.description>
+	<SerenAccent_Petal.label>лепестковый акцент</SerenAccent_Petal.label>
+	<SerenAccent_Petal.description>У носителей этого гена рога и рисунки на теле из оригинального мода Seren окрашены в бледный лепестковый тон.</SerenAccent_Petal.description>
+	<SerenAccent_Rose.label>розовый акцент</SerenAccent_Rose.label>
+	<SerenAccent_Rose.description>У носителей этого гена рога и рисунки на теле из оригинального мода Seren окрашены в бледный розовый тон.</SerenAccent_Rose.description>
+	<OL_SerenLongevity.label>долголетие серенов</OL_SerenLongevity.label>
+	<OL_SerenLongevity.description>После взросления носители стареют очень медленно и живут около трёхсот лет.</OL_SerenLongevity.description>
+	<SerenOriginalHorns_0.label>оригинальные рога серенов 0</SerenOriginalHorns_0.label>
+	<SerenOriginalHorns_0.description>У носителей этого гена рога стиля 0 из оригинального мода Seren.</SerenOriginalHorns_0.description>
+	<SerenOriginalHorns_1.label>оригинальные рога серенов 1</SerenOriginalHorns_1.label>
+	<SerenOriginalHorns_1.description>У носителей этого гена рога стиля 1 из оригинального мода Seren.</SerenOriginalHorns_1.description>
+	<SerenOriginalHorns_2.label>оригинальные рога серенов 2</SerenOriginalHorns_2.label>
+	<SerenOriginalHorns_2.description>У носителей этого гена рога стиля 2 из оригинального мода Seren.</SerenOriginalHorns_2.description>
+	<SerenOriginalHorns_3.label>оригинальные рога серенов 3</SerenOriginalHorns_3.label>
+	<SerenOriginalHorns_3.description>У носителей этого гена рога стиля 3 из оригинального мода Seren.</SerenOriginalHorns_3.description>
+	<SerenOriginalHorns_4.label>оригинальные рога серенов 4</SerenOriginalHorns_4.label>
+	<SerenOriginalHorns_4.description>У носителей этого гена рога стиля 4 из оригинального мода Seren.</SerenOriginalHorns_4.description>
+	<SerenOriginalHorns_5.label>оригинальные рога серенов 5</SerenOriginalHorns_5.label>
+	<SerenOriginalHorns_5.description>У носителей этого гена рога стиля 5 из оригинального мода Seren.</SerenOriginalHorns_5.description>
+	<SerenOriginalHorns_6.label>оригинальные рога серенов 6</SerenOriginalHorns_6.label>
+	<SerenOriginalHorns_6.description>У носителей этого гена рога стиля 6 из оригинального мода Seren.</SerenOriginalHorns_6.description>
+	<SerenOriginalHorns_7.label>оригинальные рога серенов 7</SerenOriginalHorns_7.label>
+	<SerenOriginalHorns_7.description>У носителей этого гена рога стиля 7 из оригинального мода Seren.</SerenOriginalHorns_7.description>
+	<SerenOriginalMask_0.label>оригинальный рисунок на теле серенов 0</SerenOriginalMask_0.label>
+	<SerenOriginalMask_0.description>Носители этого гена имеют рисунок на теле 0 из оригинального мода Seren.</SerenOriginalMask_0.description>
+	<SerenOriginalMask_1.label>оригинальный рисунок на теле серенов 1</SerenOriginalMask_1.label>
+	<SerenOriginalMask_1.description>Носители этого гена имеют рисунок на теле 1 из оригинального мода Seren.</SerenOriginalMask_1.description>
+	<SerenOriginalMask_2.label>оригинальный рисунок на теле серенов 2</SerenOriginalMask_2.label>
+	<SerenOriginalMask_2.description>Носители этого гена имеют рисунок на теле 2 из оригинального мода Seren.</SerenOriginalMask_2.description>
+	<SerenOriginalMask_3.label>оригинальный рисунок на теле серенов 3</SerenOriginalMask_3.label>
+	<SerenOriginalMask_3.description>Носители этого гена имеют рисунок на теле 3 из оригинального мода Seren.</SerenOriginalMask_3.description>
+	<SerenOriginalMask_4.label>оригинальный рисунок на теле серенов 4</SerenOriginalMask_4.label>
+	<SerenOriginalMask_4.description>Носители этого гена имеют рисунок на теле 4 из оригинального мода Seren.</SerenOriginalMask_4.description>
+	<SerenOriginalMask_5.label>оригинальный рисунок на теле серенов 5</SerenOriginalMask_5.label>
+	<SerenOriginalMask_5.description>Носители этого гена имеют рисунок на теле 5 из оригинального мода Seren.</SerenOriginalMask_5.description>
+	<SerenOriginalMask_6.label>оригинальный рисунок на теле серенов 6</SerenOriginalMask_6.label>
+	<SerenOriginalMask_6.description>Носители этого гена имеют рисунок на теле 6 из оригинального мода Seren.</SerenOriginalMask_6.description>
+	<SerenOriginalMask_7.label>оригинальный рисунок на теле серенов 7</SerenOriginalMask_7.label>
+	<SerenOriginalMask_7.description>Носители этого гена имеют рисунок на теле 7 из оригинального мода Seren.</SerenOriginalMask_7.description>
+	<SerenOriginalMask_8.label>оригинальный рисунок на теле серенов 8</SerenOriginalMask_8.label>
+	<SerenOriginalMask_8.description>Носители этого гена имеют рисунок на теле 8 из оригинального мода Seren.</SerenOriginalMask_8.description>
+	<SerenOriginalMask_9.label>оригинальный рисунок на теле серенов 9</SerenOriginalMask_9.label>
+	<SerenOriginalMask_9.description>Носители этого гена имеют рисунок на теле 9 из оригинального мода Seren.</SerenOriginalMask_9.description>
+	<SerenOriginalMask_10.label>оригинальный рисунок на теле серенов 10</SerenOriginalMask_10.label>
+	<SerenOriginalMask_10.description>Носители этого гена имеют рисунок на теле 10 из оригинального мода Seren.</SerenOriginalMask_10.description>
+	<SerenOriginalMask_11.label>оригинальный рисунок на теле серенов 11</SerenOriginalMask_11.label>
+	<SerenOriginalMask_11.description>Носители этого гена имеют рисунок на теле 11 из оригинального мода Seren.</SerenOriginalMask_11.description>
+	<OL_SpaceBorn.label>рождённый в космосе</OL_SpaceBorn.label>
+	<OL_SpaceBorn.description>Носители приспособлены выживать в космическом вакууме. Неограниченное пребывание в вакууме повышает скорость работы и сильно повышает пси-чувствительность носителей, но также делает их более склонными к нервному срыву.\n\nРелигии серенов часто поклоняются центральной звезде своей родной звёздной системы как первоисточнику своего вида. Подлинность этого утверждения проверить нельзя, но в космическом вакууме за пределами родной системы серены реагируют странно. Через несколько часов они сообщают, что слышат шёпот, который велит им найти «её». Через несколько дней речь и мысли теряют связность. Одни после этого просто уходят в пустоту, другие набрасываются на товарищей по экипажу, утверждая, что их забрали от «неё».\nСолнце Панастрии сейчас изучают: ходят новые теории о его истинной природе.</OL_SpaceBorn.description>
+
+</LanguageData>

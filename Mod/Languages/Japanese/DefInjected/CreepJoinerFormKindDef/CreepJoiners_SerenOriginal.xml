@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<OL_SerenLeatheryStranger.label>革肌の見知らぬ人</OL_SerenLeatheryStranger.label>
+	<OL_SerenLeatheryStranger.letterLabel>ぼろぼろの身なりで革のような肌をした見知らぬ人が、コロニーに近づいています。</OL_SerenLeatheryStranger.letterLabel>
+	<OL_SerenLeatheryStranger.letterPrompt>革肌の見知らぬ人は虚空を見つめ、抑揚のない声で話します。ほとんど誰の姿も何も見えていないかのようです。立ち去ろうとせず、関心があるのはこのコロニーだけだと言い張ります。力になれると言っています。</OL_SerenLeatheryStranger.letterPrompt>
+	<OL_SerenDarkScholar.label>闇の学者</OL_SerenDarkScholar.label>
+	<OL_SerenDarkScholar.letterLabel>歪んだ傷跡に覆われた闇の学者が、コロニーに近づいています。</OL_SerenDarkScholar.letterLabel>
+	<OL_SerenDarkScholar.letterPrompt>闇の学者は生気なく黙ったまま、その場にうずくまっています。目だけが生きているようで、あなたの心の中まで見通しているかのようです。\n\nここが自分の居場所だと言い、しばらく滞在させてほしいと頼みます。その口ぶりからは、断られるつもりがないことが分かります。</OL_SerenDarkScholar.letterPrompt>
+	<OL_SerenDealMaker.label>交渉人</OL_SerenDealMaker.label>
+	<OL_SerenDealMaker.letterLabel>息をのむほど美しい見知らぬ人が、コロニーに近づいています。</OL_SerenDealMaker.letterLabel>
+	<OL_SerenDealMaker.letterPrompt>息をのむほど美しい見知らぬ人が、あなたの前に立っています。顔は自信に満ち、親愛の印に両手を開いています。\n\n取引をしに来たと言い、ささやかなもてなしと引き換えに力を貸すと申し出ます。それが自分の使命であり、使命は必ず果たすのだと言います。</OL_SerenDealMaker.letterPrompt>
+	<OL_SerenCreepDrifter.label>放浪者</OL_SerenCreepDrifter.label>
+	<OL_SerenCreepDrifter.letterLabel>訪問者がコロニーに近づいています。</OL_SerenCreepDrifter.letterLabel>
+	<OL_SerenCreepDrifter.letterPrompt>疲れ果てた様子の放浪者が、脚を伸ばしています。ひどく疲れているようです。\n\n力を取り戻すまでの間だけでも、コロニーに滞在させてほしいと頼みます。</OL_SerenCreepDrifter.letterPrompt>
+	<OL_SerenBlindhealer.label>盲目の癒し手</OL_SerenBlindhealer.label>
+	<OL_SerenBlindhealer.letterLabel>盲目の癒し手が、コロニーに近づいています。</OL_SerenBlindhealer.letterLabel>
+	<OL_SerenBlindhealer.letterPrompt>小柄でやせ衰えた人があなたの前に立っています。目があるはずの場所には、傷跡で固まった穴があるだけです。それでも、目がないはずなのに、なぜか優しいまなざしを向けてきます。ここで自分の技能が必要とされていると知っていると言い、しばらく滞在したいと願い出ます。</OL_SerenBlindhealer.letterPrompt>
+	<OL_SerenTimelessOne.label>時間なき者</OL_SerenTimelessOne.label>
+	<OL_SerenTimelessOne.letterLabel>十代の若者がコロニーに近づいています。周囲に不思議な自信をまとっています。</OL_SerenTimelessOne.letterLabel>
+	<OL_SerenTimelessOne.letterPrompt>{PAWN_nameDef}はほとんど子どもですが、思慮深い瞳には太古の知恵が感じられます。話す言葉は、果てしない時への人間離れした知識から出てくるかのようです。星々に導かれて運命を果たすためにここへ来たと言い、あなたのもとにとどまって力になりたいと望んでいます。</OL_SerenTimelessOne.letterPrompt>
+	<OL_SerenCultEscapee.label>カルト脱走者</OL_SerenCultEscapee.label>
+	<OL_SerenCultEscapee.letterLabel>痛めつけられた人影が、コロニーに近づいています。</OL_SerenCultEscapee.letterLabel>
+	<OL_SerenCultEscapee.letterPrompt>傷だらけの見知らぬ人が、うつろな目であなたを見つめ、かすれた声で話します。恐ろしいカルトから逃げ出してきたと言い、コロニーに加えてほしいと懇願します。</OL_SerenCultEscapee.letterPrompt>
+	<OL_SerenLoneGenius.label>孤独な天才</OL_SerenLoneGenius.label>
+	<OL_SerenLoneGenius.letterLabel>孤独な人影が、コロニーに近づいています。</OL_SerenLoneGenius.letterLabel>
+	<OL_SerenLoneGenius.letterPrompt>奇妙な人影が、ある科学的突破口についてぶつぶつとつぶやいています。必要なのは研究室だけだと言います。滞在を許せば、膨大な知識を分けてくれるでしょう。正気を失っているのか、天才なのか、あるいはその両方なのか、見分けがつきません。</OL_SerenLoneGenius.letterPrompt>
+
+</LanguageData>

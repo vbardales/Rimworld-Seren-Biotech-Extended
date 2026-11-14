@@ -10,6 +10,7 @@
 - Seren longevity gene (`OL_SerenLongevity`, biological ageing slowed to 0.214 from age 20): new Seren pawns live about three hundred years like the original race, instead of ageing like a human.
 - French translation of every text of the mod, except the label of the face-set option, which the options framework does not translate.
 - The eight Seren creepjoiner forms of the original mod (Anomaly) and the space-born gene (`OL_SpaceBorn`).
+- Japanese, Simplified Chinese and Russian translations of every text of the mod (completed by AI, vocabulary aligned on the community translations of the original Seren).
 
 ## [0.1.0]
 

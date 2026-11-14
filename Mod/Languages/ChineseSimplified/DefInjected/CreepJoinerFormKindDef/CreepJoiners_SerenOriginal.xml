@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<OL_SerenLeatheryStranger.label>革皮陌生人</OL_SerenLeatheryStranger.label>
+	<OL_SerenLeatheryStranger.letterLabel>一个衣衫褴褛、皮肤如皮革般的陌生人正在接近你的殖民地。</OL_SerenLeatheryStranger.letterLabel>
+	<OL_SerenLeatheryStranger.letterPrompt>革皮陌生人凝视着虚空，用单调的语气说话，仿佛几乎看不见任何人或任何东西。对方拒绝离开，坚称只对你的殖民地感兴趣，并说自己能帮上忙。</OL_SerenLeatheryStranger.letterPrompt>
+	<OL_SerenDarkScholar.label>黑暗学者</OL_SerenDarkScholar.label>
+	<OL_SerenDarkScholar.letterLabel>一个满身扭曲伤疤的黑暗学者正在接近殖民地。</OL_SerenDarkScholar.letterLabel>
+	<OL_SerenDarkScholar.letterPrompt>黑暗学者瘫坐在原地，毫无生气，一言不发。只有眼睛似乎还活着，仿佛能看穿你的内心。\n\n对方说这里就是自己的归处，请求暂时留下。听那语气，是不会接受拒绝的。</OL_SerenDarkScholar.letterPrompt>
+	<OL_SerenDealMaker.label>交易谈判家</OL_SerenDealMaker.label>
+	<OL_SerenDealMaker.letterLabel>一个美得惊人的陌生人正在接近殖民地。</OL_SerenDealMaker.letterLabel>
+	<OL_SerenDealMaker.letterPrompt>一个美得惊人的陌生人站在你面前。脸上洋溢着自信，张开双手，做出友好的姿态。\n\n对方说是来做一笔交易的，只求简单的款待，就会帮助你。这就是对方的使命，而对方总会完成自己的使命。</OL_SerenDealMaker.letterPrompt>
+	<OL_SerenCreepDrifter.label>流浪者</OL_SerenCreepDrifter.label>
+	<OL_SerenCreepDrifter.letterLabel>一位访客正在接近殖民地。</OL_SerenCreepDrifter.letterLabel>
+	<OL_SerenCreepDrifter.letterPrompt>面带倦容的流浪者伸展着双腿，看起来非常疲惫。\n\n对方请求在你的殖民地暂住一段时间，至少等体力恢复之后再走。</OL_SerenCreepDrifter.letterPrompt>
+	<OL_SerenBlindhealer.label>盲者医师</OL_SerenBlindhealer.label>
+	<OL_SerenBlindhealer.letterLabel>一位盲者医师正在接近殖民地。</OL_SerenBlindhealer.letterLabel>
+	<OL_SerenBlindhealer.letterPrompt>一个瘦小干瘪的人站在你面前。本该是眼睛的地方，只剩下结痂的伤疤和空洞。可即便没有眼睛，对方看你的目光依然不知为何带着善意。对方说知道这里需要自己的医术，想留下来住一阵子。</OL_SerenBlindhealer.letterPrompt>
+	<OL_SerenTimelessOne.label>永恒之人</OL_SerenTimelessOne.label>
+	<OL_SerenTimelessOne.letterLabel>一名少年正在接近殖民地，周身带着一种奇异的自信。</OL_SerenTimelessOne.letterLabel>
+	<OL_SerenTimelessOne.letterPrompt>{PAWN_nameDef}几乎还是个孩子，但在那双沉思的眼睛里，你能感受到古老的智慧。说话时，字句仿佛来自对无尽时间的超凡认知。对方说是群星把自己带到这里来完成命运的，希望留在你身边帮忙。</OL_SerenTimelessOne.letterPrompt>
+	<OL_SerenCultEscapee.label>邪教逃脱者</OL_SerenCultEscapee.label>
+	<OL_SerenCultEscapee.letterLabel>一个伤痕累累的身影正在接近殖民地。</OL_SerenCultEscapee.letterLabel>
+	<OL_SerenCultEscapee.letterPrompt>这个遍体鳞伤的陌生人用空洞的眼神盯着你，声音支离破碎。对方声称自己从一个可怕的邪教中逃了出来，恳求加入你的殖民地。</OL_SerenCultEscapee.letterPrompt>
+	<OL_SerenLoneGenius.label>孤单天才</OL_SerenLoneGenius.label>
+	<OL_SerenLoneGenius.letterLabel>一个孤身的身影正在接近殖民地。</OL_SerenLoneGenius.letterLabel>
+	<OL_SerenLoneGenius.letterPrompt>这个古怪的身影不停地嘟囔着某项科学突破。对方只需要一间实验室。如果你让对方留下，对方会与你分享自己渊博的知识。很难说对方是疯子还是天才，或者两者皆是。</OL_SerenLoneGenius.letterPrompt>
+
+</LanguageData>

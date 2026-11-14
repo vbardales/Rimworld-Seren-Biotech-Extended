@@ -12,3 +12,7 @@ The originals are HAR channel masks (opaque, red = no mark, green = marking draw
 ## Not used
 
 The three Seren face mods by OdysseyLotus (Seren Nice Facial Animations 3793591541, Seren Facial Animations for VTE 2844766515, Seren Facial Animations 2844766352) carry no licence and no permission text. Nothing is copied from them. Facial assets that sit inside the CC0 original and the CC0 fork may be used.
+
+## Translations of the original Seren (vocabulary only)
+
+The Japanese, Simplified Chinese and Russian texts of this mod are our own translation, completed by AI. For the names and short labels of the Seren universe we aligned our wording with the community translations of the original, so that a player finds the same terms: Japanese by Lucifel (Workshop 2726516648), Simplified Chinese by Rf.O32-Lincarson (3324850003, 3599424242, 3742702210), Russian by Sinoptick (3742767409). None of these packs states a licence (no LICENSE file, nothing in `About.xml`), so no sentence of theirs is copied: only single terms (the race and place names and a few creepjoiner labels).

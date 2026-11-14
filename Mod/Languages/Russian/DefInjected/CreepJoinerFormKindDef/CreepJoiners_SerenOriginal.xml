@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<OL_SerenLeatheryStranger.label>кожистый незнакомец</OL_SerenLeatheryStranger.label>
+	<OL_SerenLeatheryStranger.letterLabel>К колонии приближается оборванный незнакомец с задубевшей кожей.</OL_SerenLeatheryStranger.letterLabel>
+	<OL_SerenLeatheryStranger.letterPrompt>Кожистый незнакомец смотрит в пустоту и говорит монотонно, словно почти никого и ничего не видит. Он отказывается уходить и твердит, что интересует его только ваша колония. Говорит, что может помочь.</OL_SerenLeatheryStranger.letterPrompt>
+	<OL_SerenDarkScholar.label>мрачный учёный</OL_SerenDarkScholar.label>
+	<OL_SerenDarkScholar.letterLabel>К колонии приближается мрачный учёный, покрытый уродливыми шрамами.</OL_SerenDarkScholar.letterLabel>
+	<OL_SerenDarkScholar.letterPrompt>Мрачный учёный сутулится на месте, безжизненный и молчаливый. Только глаза кажутся живыми, словно он может заглянуть вам в душу.\n\nГоворит, что его место здесь, и просит остаться на какое-то время. По его тону ясно, что отказа он не примет.</OL_SerenDarkScholar.letterPrompt>
+	<OL_SerenDealMaker.label>посредник сделок</OL_SerenDealMaker.label>
+	<OL_SerenDealMaker.letterLabel>К колонии приближается поразительно красивый незнакомец.</OL_SerenDealMaker.letterLabel>
+	<OL_SerenDealMaker.letterPrompt>Перед вами стоит поразительно красивый незнакомец. Лицо излучает уверенность, а руки раскрыты в знак дружбы.\n\nГоворит, что пришёл заключить сделку и поможет в обмен на простое гостеприимство. Это его предназначение, и своё предназначение он всегда выполняет.</OL_SerenDealMaker.letterPrompt>
+	<OL_SerenCreepDrifter.label>бродяга</OL_SerenCreepDrifter.label>
+	<OL_SerenCreepDrifter.letterLabel>К колонии приближается посетитель.</OL_SerenCreepDrifter.letterLabel>
+	<OL_SerenCreepDrifter.letterPrompt>Усталый на вид бродяга разминает ноги. Он очень утомлён.\n\nПросит позволить ему остаться в колонии на какое-то время, по крайней мере пока не восстановит силы.</OL_SerenCreepDrifter.letterPrompt>
+	<OL_SerenBlindhealer.label>слепой целитель</OL_SerenBlindhealer.label>
+	<OL_SerenBlindhealer.letterLabel>К колонии приближается слепой целитель.</OL_SerenBlindhealer.letterLabel>
+	<OL_SerenBlindhealer.letterPrompt>Перед вами стоит маленькая иссохшая фигура. Там, где должны быть глаза, лишь покрытые шрамами впадины. И всё же, даже без глаз, она почему-то смотрит на вас с добротой. Говорит, что знает: здесь нужны её умения, и хочет ненадолго остаться.</OL_SerenBlindhealer.letterPrompt>
+	<OL_SerenTimelessOne.label>вневременной</OL_SerenTimelessOne.label>
+	<OL_SerenTimelessOne.letterLabel>К колонии приближается подросток. В нём чувствуется странная уверенность.</OL_SerenTimelessOne.letterLabel>
+	<OL_SerenTimelessOne.letterPrompt>{PAWN_nameDef} — почти ещё ребёнок, но в задумчивых глазах чувствуется древняя мудрость. Слова звучат так, будто рождены нечеловеческим знанием бесконечного времени. Говорит, что звёзды привели сюда, чтобы исполнить предназначение. Хочет остаться с вами и помогать.</OL_SerenTimelessOne.letterPrompt>
+	<OL_SerenCultEscapee.label>беглец из культа</OL_SerenCultEscapee.label>
+	<OL_SerenCultEscapee.letterLabel>К колонии приближается изувеченная фигура.</OL_SerenCultEscapee.letterLabel>
+	<OL_SerenCultEscapee.letterPrompt>Изувеченный незнакомец смотрит на вас пустыми глазами и говорит срывающимся голосом. Утверждает, что сбежал из ужасного культа, и умоляет принять его в колонию.</OL_SerenCultEscapee.letterPrompt>
+	<OL_SerenLoneGenius.label>гений-одиночка</OL_SerenLoneGenius.label>
+	<OL_SerenLoneGenius.letterLabel>К колонии приближается одинокая фигура.</OL_SerenLoneGenius.letterLabel>
+	<OL_SerenLoneGenius.letterPrompt>Странная фигура всё бормочет о каком-то научном прорыве. Всё, что нужно, — лаборатория. Если позволите остаться, поделится с вами своими обширными знаниями. Трудно сказать, безумец это или гений, а может, и то и другое.</OL_SerenLoneGenius.letterPrompt>
+
+</LanguageData>
