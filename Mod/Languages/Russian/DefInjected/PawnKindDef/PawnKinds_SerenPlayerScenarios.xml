@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-	<OL_SerenTribalPlayer.label>член племени серенов</OL_SerenTribalPlayer.label>
+	<OL_SerenTribalPlayer.label>член племени Seren</OL_SerenTribalPlayer.label>
 	<OL_SerenMedievalPlayer.label>подданный</OL_SerenMedievalPlayer.label>
 	<OL_SerenVikingPlayer.label>участник</OL_SerenVikingPlayer.label>
 	<OL_SerenPiratePlayer.label>пират</OL_SerenPiratePlayer.label>
