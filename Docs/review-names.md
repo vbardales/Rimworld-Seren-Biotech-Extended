@@ -9,3 +9,5 @@ Names decided by Virginie. `/review-translation` sends this file to ChatGPT with
 | Panastrian | translated to Panastrien (masculine) and Panastrienne (feminine) in French | French adjective, agrees in gender with the noun. The current French text uses the place name (`Le soleil de Panastria`), which stays. | 2026-11-13 |
 | Seren Biotech Extended (mod title) | translated to Extension Seren Biotech; written form `Seren Biotech Extended (Extension Seren Biotech)` | Registry decision (Audit), title word rule "X Expanded/Extended" in front. | 2026-11-13 |
 | Facial Animation - Experimentals (mod title) | translated to Visage animé - expérimentations; written form `Facial Animation - Experimentals (Visage animé - expérimentations)` | Registry decision (Audit), "Facial Animation" = "Visage animé". | 2026-11-13 |
+| Seren Biotech (settings button label) | kept as is | Short label chosen for the main button bar; the full title is in the button description. | 2026-11-15 |
+| Panastria (Chinese, Japanese, Russian) | kept as is, written `Panastria` | Same rule as Seren: no official form, one spelling in every language. Replaces 帕妠斯垂亚, パナストリア, Панастрия. | 2026-11-15 |
